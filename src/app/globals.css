@@ -3,31 +3,65 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --black: #020412;
+  --white: #fff;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  margin: 0px;
 }
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--white);
+  background: var(--black);
+  font-size: 12px;
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.navbar-toggler {
+  color: var(--white);
+  background: var(--white);
+}
+.navbarBg {
+  background: rgba(58, 127, 208, 0.05) !important;
+  padding: 0px;
+}
+.navbar {
+  color: var(--white);
+  border-bottom: 1px solid #2a2f3d;
+  border-right: 1px solid #2a2f3d;
+  .nav-link {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: var(--white);
+    padding: 0px 20px !important;
   }
+}
+.heroFocus {
+  position: relative;
+  width: 100%;
+  background: url("/images/hero-bg.svg") no-repeat top right;
+  background-size: 110% 200%;
+}
+.para1 {
+  margin: 0px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+}
+.exploreLink {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #51b29c;
+  &:hover {
+    color: var(--white);
+  }
+}
+.borderRight {
+  border-right: 1px solid #2a2f3d;
+}
+.missionFocus {
+  background: url("/images/mission-bg.svg") no-repeat;
+  background-position: 0% -50%;
 }
