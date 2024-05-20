@@ -10,7 +10,7 @@ import { Collapse, Card } from "antd";
 // };
 export const Wrapper = styled.section`
   position: relative;
-  width: 80%;
+  width: 90%;
   margin: 0px auto;
 `;
 export const Hero = styled.section`
@@ -87,7 +87,7 @@ export const Title = styled.h1`
     text-fill-color: transparent;
   }
 `;
-export const XCardProject = styled(Card)`
+export const XCardProject = styled.section`
   background: #161825;
   border: none;
   border-radius: 0px;
