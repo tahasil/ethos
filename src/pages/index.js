@@ -298,10 +298,16 @@ export default function Home() {
       <Wrapper className="py-5 borderRight borderBottom">
         <XCardMember>
           <Row gutter={[15, 15]} className="align-items-center">
-            <Col xs={24} sm={20} lg={18}>
+            <Col
+              xs={24}
+              sm={16}
+              md={16}
+              lg={18}
+              className="text-center text-lg-start"
+            >
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
             </Col>
-            <Col xs={24} sm={4} lg={6} className="text-center">
+            <Col xs={24} sm={8} md={8} lg={6} className="text-center">
               <a href="#" className="heroButton" type="link">
                 BECOME MEMBER
               </a>
@@ -357,23 +363,24 @@ export default function Home() {
       <XFooter>
         <Wrapper className="py-4 borderRight">
           <Row gutter={[15, 15]} className="align-items-center">
-            <Col xs={12} sm={12} lg={5}>
+            <Col xs={24} sm={8} md={4} lg={5}>
               <img className="img-fluid" src="/images/logo-footer.svg" alt="" />
             </Col>
-            <Col xs={12} sm={12} lg={5}>
+            <Col xs={24} sm={16} md={6} lg={5}>
               <p className="para1">
                 Mi tempus imperdiet nulla malesuada pellentesque
               </p>
             </Col>
             <Col
-              xs={{ span: 12 }}
-              sm={{ span: 12 }}
+              xs={{ span: 24 }}
+              sm={{ span: 14 }}
+              md={6}
               lg={{ span: 6, offset: 2 }}
             >
               <a href="#">+1 12345678 </a> <br />
               <a href="#">info@aethos.com</a>
             </Col>
-            <Col xs={12} sm={12} lg={6} className="text-lg-end">
+            <Col xs={24} sm={10} md={8} lg={6} className="text-lg-end">
               <ul className="socialLinks">
                 <li>
                   <a href="#">

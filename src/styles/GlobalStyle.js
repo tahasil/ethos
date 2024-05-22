@@ -225,6 +225,10 @@ export const XCollapse = styled(Collapse)`
     font-size: 24px;
     line-height: 30px;
     color: #ffffff !important;
+    @media only screen and (max-width: 991.99px) {
+      font-size: 20px;
+      line-height: 28px;
+    }
   }
   .ant-collapse-item {
     border-bottom: 1px solid #2a2f3d;
@@ -260,6 +264,10 @@ export const XCardMember = styled(Card)`
     line-height: 48px;
     text-transform: uppercase;
     color: #ffffff;
+    @media only screen and (max-width: 991.99px) {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 `;
 export const XCardSubscribe = styled(Card)`
@@ -326,11 +334,17 @@ export const XFooter = styled.section`
   }
   ul.socialLinks {
     margin: 0px;
+    @media only screen and (max-width: 575.99px) {
+      margin-top: 15px;
+    }
   }
   ul.socialLinks li {
     display: inline-block;
     list-style-type: none;
     margin: 0px 15px;
+    &:first-child {
+      margin-left: 0px;
+    }
   }
   ul.socialLinks li a {
     border: 1px solid #2a2f3d;

@@ -55,6 +55,10 @@ body {
   line-height: 30px;
   text-transform: uppercase;
   color: #ffffff;
+  @media only screen and (max-width: 991.99px) {
+    font-size: 14px;
+    line-height: 26px;
+  }
   &:hover {
     color: #ffffff;
   }
@@ -91,6 +95,14 @@ h1.subscribeHead {
   font-size: 64px;
   line-height: 70px;
   color: #ffffff;
+  @media only screen and (max-width: 991.99px) {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  @media only screen and (max-width: 768.99px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 .para2 {
   margin: 0px;
@@ -119,4 +131,8 @@ ul.subscribeList li a {
   line-height: 37px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
+  @media only screen and (max-width: 991.99px) {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
