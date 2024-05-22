@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Header from "../../src/component/header/header";
-import Footer from "../../src/component/footer/footer";
+import Header from "../../component/header/header";
+import Footer from "../../component/footer/footer";
 import { Row, Col, Space, Input, Button } from "antd";
 import {
   Wrapper,
@@ -15,7 +15,7 @@ import {
   XCardMember,
   XCardSubscribe,
   XFooter,
-} from "../../src/styles/GlobalStyle";
+} from "../../../src/styles/GlobalStyle";
 import {
   ArrowRightOutlined,
   XOutlined,
@@ -133,12 +133,15 @@ export default function Home() {
   ];
   return (
     <>
-      <div className="heroFocus">
+      <div className="heroFocus2">
         <Header />
         <Hero>
           <Wrapper className="borderRight">
             <div className="heroInner">
-              <Row gutter={[15, 15]} className="align-items-center">
+              <Row
+                gutter={[15, 15]}
+                className="align-items-center borderBottom"
+              >
                 <Col xs={24} sm={24} md={12} lg={12}>
                   <h1>Character of shared beliefs held by a community</h1>
                 </Col>
@@ -148,13 +151,32 @@ export default function Home() {
                       We are creating a community where entrepreneurs share
                       values
                     </p>
-                    <a href="#" className="heroButton" type="link">
+                    <a href="#" className="heroButton heroButton2" type="link">
                       BECOME MEMBER
                     </a>
                   </div>
                 </Col>
               </Row>
             </div>
+            <Row gutter={[15, 15]} className="align-items-center">
+              <Col xs={24} sm={24} lg={12} className="text-center">
+                <img className="img-fluid" src="/images/image-7.svg" alt="" />
+              </Col>
+              <Col xs={24} sm={24} lg={12}>
+                <span className="tags">LOREM IPSUM</span>
+                <h1 className="hedingSub mt-1">
+                  Quis enim lobortis scelerisque fermentum dui
+                </h1>
+                <p className="para3 mb-4">
+                  Project Æthos gathers leading innovators to invent the future
+                  of responsible artificial intelligence for humanity in a
+                  trusting, diverse community.
+                </p>
+                <a href="#" className="heroButton heroButton2" type="link">
+                  BECOME MEMBER
+                </a>
+              </Col>
+            </Row>
           </Wrapper>
         </Hero>
       </div>
@@ -309,7 +331,7 @@ export default function Home() {
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
             </Col>
             <Col xs={24} sm={8} md={8} lg={6} className="text-center">
-              <a href="#" className="heroButton" type="link">
+              <a href="#" className="heroButton heroButton2" type="link">
                 BECOME MEMBER
               </a>
             </Col>

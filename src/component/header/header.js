@@ -11,7 +11,7 @@ export default function Home() {
     <div className="navbarBg">
       <Wrapper>
         <Navbar key="md" expand="lg" className="navbar">
-          <Navbar.Brand href="#">
+          <Navbar.Brand href="/">
             <img src="/images/logo.svg" alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md`} />
@@ -28,7 +28,7 @@ export default function Home() {
 
             <Offcanvas.Body>
               <Nav className="justify-content-center flex-grow-1 pe-3">
-                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/home">Home</Nav.Link>
                 <Nav.Link href="/community">Community</Nav.Link>
                 <Nav.Link href="/station">The Station</Nav.Link>
                 <Nav.Link href="/programming">Public Programming</Nav.Link>
