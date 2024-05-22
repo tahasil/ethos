@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../component/header/header";
-import { Row, Col } from "antd";
+import { Row, Col, Space, Input, Button } from "antd";
 import {
   Wrapper,
   Hero,
@@ -11,7 +11,16 @@ import {
   XMission,
   CollspanWrap,
   XCollapse,
+  XCardMember,
+  XCardSubscribe,
+  XFooter,
 } from "../../src/styles/GlobalStyle";
+import {
+  ArrowRightOutlined,
+  XOutlined,
+  FacebookOutlined,
+  LinkedinOutlined,
+} from "@ant-design/icons";
 export default function Home() {
   const collapseData = [
     {
@@ -56,8 +65,71 @@ export default function Home() {
       ),
       showArrow: false,
     },
+    {
+      key: "4",
+      label: "Students, Academia and Responsible AI Institutes",
+      children: (
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets.
+        </p>
+      ),
+      showArrow: false,
+    },
+    {
+      key: "5",
+      label: "Non Profit Community Builders",
+      children: (
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets.
+        </p>
+      ),
+      showArrow: false,
+    },
+    {
+      key: "6",
+      label: "Service Providers",
+      children: (
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets.
+        </p>
+      ),
+      showArrow: false,
+    },
+    {
+      key: "7",
+      label: "Investors and Accelerators",
+      children: (
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets.
+        </p>
+      ),
+      showArrow: false,
+    },
   ];
-
   return (
     <>
       <div className="heroFocus">
@@ -66,10 +138,10 @@ export default function Home() {
           <Wrapper className="borderRight">
             <div className="heroInner">
               <Row gutter={[15, 15]} className="align-items-center">
-                <Col xs={24} sm={12} md={12} lg={12}>
+                <Col xs={24} sm={24} md={12} lg={12}>
                   <h1>Character of shared beliefs held by a community</h1>
                 </Col>
-                <Col xs={24} sm={12} md={12} lg={12}>
+                <Col xs={24} sm={24} md={12} lg={12}>
                   <div className="heroRight">
                     <p className="mb-3">
                       We are creating a community where entrepreneurs share
@@ -109,54 +181,42 @@ export default function Home() {
             </Row>
 
             <Row gutter={[15, 15]} className="mt-5">
-              <Col xs={24} sm={12} md={8} lg={8}>
+              <Col xs={24} sm={24} md={8} lg={8}>
                 <XCardProject>
                   <p className="text-end">01</p>
-                  <img
-                    className="img-fluid"
-                    src="/images/project-img.svg"
-                    alt=""
-                  />
-                  <h3 className="my-3">General Public</h3>
+                  <img className="img-fluid" src="/images/image-4.svg" alt="" />
+                  <h3 className="my-3">Lorem ipsum</h3>
                   <p>
-                    learn about Project Æthos’ mission and vision. If they are
-                    one of the following stakeholders, it should show them how
-                    they can get involved. If they are not involved in any of
-                    these groups and don’t know much about artificial
-                    intelligence, they should be informed by the website of the
-                    technological possibilities and risks.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
                 </XCardProject>
               </Col>
-              <Col xs={24} sm={12} md={8} lg={8}>
-                <XCardProject>
+              <Col xs={24} sm={24} md={8} lg={8}>
+                <XCardProject className="rounded-0">
                   <p className="text-end">02</p>
-                  <img
-                    className="img-fluid"
-                    src="/images/project-img.svg"
-                    alt=""
-                  />
-                  <h3 className="my-3">AI Entrepreneurs</h3>
+                  <img className="img-fluid" src="/images/image-5.svg" alt="" />
+                  <h3 className="my-3">Lorem ipsum</h3>
                   <p>
-                    learn about the community: its policies, its resources, and
-                    the space we offer for founders. The draft criteria for
-                    application should also be spelled out. They should be able
-                    to pre-register their interest in joining.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
                 </XCardProject>
               </Col>
-              <Col xs={24} sm={12} md={8} lg={8}>
-                <XCardProject>
+              <Col xs={24} sm={24} md={8} lg={8}>
+                <XCardProject className="rounded-0">
                   <p className="text-end">03</p>
-                  <img
-                    className="img-fluid"
-                    src="/images/project-img.svg"
-                    alt=""
-                  />
-                  <h3 className="my-3">AI Foundational Companies</h3>
+                  <img className="img-fluid" src="/images/image-6.svg" alt="" />
+                  <h3 className="my-3">Lorem ipsum</h3>
                   <p>
-                    learn about the companies in the community applying key AI
-                    models at the application tier in industry verticals.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
                 </XCardProject>
               </Col>
@@ -191,6 +251,9 @@ export default function Home() {
                 <div className="missionDataWrap">
                   <div className="count">02</div>
                   <h1 className="my-2">Honesty and Trust</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
                 </div>
               </XMission>
             </Col>
@@ -200,6 +263,9 @@ export default function Home() {
                 <div className="missionDataWrap">
                   <div className="count">03</div>
                   <h1 className="my-2">Impact</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
                 </div>
               </XMission>
             </Col>
@@ -229,7 +295,106 @@ export default function Home() {
           </Row>
         </Wrapper>
       </CollspanWrap>
-      <div style={{ height: "500px" }}>Footer</div>
+      <Wrapper className="py-5 borderRight borderBottom">
+        <XCardMember>
+          <Row gutter={[15, 15]} className="align-items-center">
+            <Col xs={24} sm={20} lg={18}>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </Col>
+            <Col xs={24} sm={4} lg={6} className="text-center">
+              <a href="#" className="heroButton" type="link">
+                BECOME MEMBER
+              </a>
+            </Col>
+          </Row>
+        </XCardMember>
+      </Wrapper>
+      <Wrapper className="py-5 borderRight borderBottom">
+        <Row gutter={[30, 15]}>
+          <Col xs={24} sm={24} lg={16}>
+            <h1 className="subscribeHead">Begin Your Journey With Æthos</h1>
+            <p className="para2 my-4">
+              Subscribe to the Flow Research Collective’s newsletter
+            </p>
+            <Row>
+              <Col xs={24} sm={24} lg={12}>
+                <XCardSubscribe>
+                  <Space.Compact
+                    style={{
+                      width: "100%",
+                    }}
+                  >
+                    <Input placeholder="Enter email address" />
+                    <Button type="primary">
+                      <ArrowRightOutlined />
+                    </Button>
+                  </Space.Compact>
+                </XCardSubscribe>
+              </Col>
+            </Row>
+          </Col>
+          <Col xs={24} sm={24} lg={8}>
+            <ul className="subscribeList">
+              <li>
+                <a href="#">Community</a>
+              </li>
+              <li>
+                <a href="#">the station</a>
+              </li>
+              <li>
+                <a href="#">public programming</a>
+              </li>
+              <li>
+                <a href="#">about us</a>
+              </li>
+              <li>
+                <a href="#">contact</a>
+              </li>
+            </ul>
+          </Col>
+        </Row>
+      </Wrapper>
+      <XFooter>
+        <Wrapper className="py-4 borderRight">
+          <Row gutter={[15, 15]} className="align-items-center">
+            <Col xs={12} sm={12} lg={5}>
+              <img className="img-fluid" src="/images/logo-footer.svg" alt="" />
+            </Col>
+            <Col xs={12} sm={12} lg={5}>
+              <p className="para1">
+                Mi tempus imperdiet nulla malesuada pellentesque
+              </p>
+            </Col>
+            <Col
+              xs={{ span: 12 }}
+              sm={{ span: 12 }}
+              lg={{ span: 6, offset: 2 }}
+            >
+              <a href="#">+1 12345678 </a> <br />
+              <a href="#">info@aethos.com</a>
+            </Col>
+            <Col xs={12} sm={12} lg={6} className="text-lg-end">
+              <ul className="socialLinks">
+                <li>
+                  <a href="#">
+                    <XOutlined />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <FacebookOutlined />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <LinkedinOutlined />
+                  </a>
+                </li>
+              </ul>
+            </Col>
+          </Row>
+        </Wrapper>
+      </XFooter>
     </>
   );
 }

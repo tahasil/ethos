@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="navbarBg">
       <Wrapper>
-        <Navbar key="md" expand="md" className="navbar">
+        <Navbar key="md" expand="lg" className="navbar">
           <Navbar.Brand href="#">
             <img src="/images/logo.svg" alt="Logo" />
           </Navbar.Brand>

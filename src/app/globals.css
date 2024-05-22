@@ -26,6 +26,9 @@ body {
   color: var(--white);
   border-bottom: 1px solid #2a2f3d;
   border-right: 1px solid #2a2f3d;
+  @media only screen and (max-width: 991.99px) {
+    border-right: none;
+  }
   .nav-link {
     font-style: normal;
     font-weight: 800;
@@ -41,6 +44,20 @@ body {
   width: 100%;
   background: url("/images/hero-bg.svg") no-repeat top right;
   background-size: 110% 200%;
+}
+.heroButton {
+  background: linear-gradient(90deg, #51b29c 0%, #234c43 100%);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #ffffff;
+  &:hover {
+    color: #ffffff;
+  }
 }
 .para1 {
   margin: 0px;
@@ -64,4 +81,42 @@ body {
 .missionFocus {
   background: url("/images/mission-bg.svg") no-repeat;
   background-position: 0% -50%;
+}
+.borderBottom {
+  border-bottom: 1px solid #2a2f3d;
+}
+h1.subscribeHead {
+  margin: 0px;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 70px;
+  color: #ffffff;
+}
+.para2 {
+  margin: 0px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+}
+ul.subscribeList {
+  margin: 0px;
+}
+
+ul.subscribeList li {
+  display: list-item;
+  list-style-type: none;
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+ul.subscribeList li a {
+  display: inline-block;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
 }
