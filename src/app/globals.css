@@ -73,7 +73,7 @@ h6 {
   position: relative;
   width: 100%;
   background: url("/images/hero-bg.svg") no-repeat top right;
-  background-size: 80% 80%;
+  background-size: 80% 70%;
 }
 .heroButton {
   background: linear-gradient(90deg, #51b29c 0%, #234c43 100%);

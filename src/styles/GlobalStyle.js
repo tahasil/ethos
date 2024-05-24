@@ -16,6 +16,7 @@ export const Wrapper = styled.section`
     width: 95% !important;
   }
 `;
+
 export const Hero = styled.section`
   margin: 0px;
   background: rgba(58, 127, 208, 0.05) !important;
