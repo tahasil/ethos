@@ -12,18 +12,18 @@ export default function Home() {
   return (
     <div className="navbarBg">
       <Wrapper>
-        <Navbar key="md" expand="lg" className="navbar">
+        <Navbar key="lg" expand="lg" className="navbar">
           <Navbar.Brand href="/">
             <img src="/images/logo2.svg" alt="Logo" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md`} />
+          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
           <Navbar.Offcanvas
-            id={`offcanvasNavbar-expand-md`}
-            aria-labelledby={`offcanvasNavbarLabel-expand-md`}
+            id={`offcanvasNavbar-expand-lg`}
+            aria-labelledby={`offcanvasNavbarLabel-expand-lg`}
             placement="end"
           >
             <Offcanvas.Header closeButton>
-              <Offcanvas.Title id={`offcanvasNavbarLabel-expand-md`}>
+              <Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}>
                 <img src="/images/logo2.svg" alt="Logo" />
               </Offcanvas.Title>
             </Offcanvas.Header>

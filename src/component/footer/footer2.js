@@ -15,8 +15,8 @@ export default function Home() {
   return (
     <XFooter2 className="py-5">
       <Wrapper>
-        <Row gutter={[15, 15]}>
-          <Col xs={24} sm={12} md={12} lg={7}>
+        <Row gutter={[15, 30]}>
+          <Col xs={24} sm={24} md={24} lg={7}>
             <h6>Duis aute irure dolor in reprehenderit</h6>
             <p className="my-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -28,7 +28,7 @@ export default function Home() {
               </XHeroButton>
             </div>
           </Col>
-          <Col xs={24} sm={12} md={12} lg={{ span: 5, offset: 2 }}>
+          <Col xs={24} sm={8} md={8} lg={{ span: 5, offset: 2 }}>
             <h4>Company</h4>
             <ul className="footerLinks">
               <li>
@@ -45,7 +45,7 @@ export default function Home() {
               </li>
             </ul>
           </Col>
-          <Col xs={24} sm={12} md={12} lg={5}>
+          <Col xs={24} sm={8} md={8} lg={5}>
             <h4>Resources</h4>
             <ul className="footerLinks">
               <li>
@@ -62,7 +62,7 @@ export default function Home() {
               </li>
             </ul>
           </Col>
-          <Col xs={24} sm={12} md={12} lg={5} className="text-lg-end">
+          <Col xs={24} sm={8} md={8} lg={5} className="text-lg-end">
             <ul className="socialLinks">
               <li>
                 <a href="#">

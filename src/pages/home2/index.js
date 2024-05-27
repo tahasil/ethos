@@ -30,15 +30,32 @@ export default function Home() {
         <Hero>
           <Wrapper>
             <Row>
-              <Col xs={24} sm={24} lg={{ span: 16, offset: 4 }}>
+              <Col
+                xs={24}
+                sm={{ span: 20, offset: 2 }}
+                lg={{ span: 16, offset: 4 }}
+              >
                 <h1>Building a network of entrepreneurs_</h1>
               </Col>
-              <Col className="mt-4" xs={24} sm={24} lg={{ span: 8, offset: 8 }}>
+              <Col
+                className="mt-4"
+                xs={24}
+                sm={{ span: 20, offset: 2 }}
+                lg={{ span: 10, offset: 7 }}
+                xl={{ span: 8, offset: 8 }}
+              >
                 <p>
                   We are creating a community where entrepreneurs share values
                 </p>
               </Col>
-              <Col className="mt-4" xs={24} sm={24} lg={{ span: 8, offset: 8 }}>
+              <Col
+                className="mt-4"
+                xs={24}
+                sm={{ span: 16, offset: 4 }}
+                // md={{ span: 10, offset: 7 }}
+                lg={{ span: 10, offset: 7 }}
+                xl={{ span: 8, offset: 8 }}
+              >
                 <XInputHero size="large" placeholder="Your email" />
                 <XHeroButton size="large">Send</XHeroButton>
               </Col>
@@ -92,7 +109,11 @@ export default function Home() {
               </Col>
             </Row>
             <Row gutter={[15, 15]} className="align-items-center">
-              <Col xs={24} sm={24} lg={12}>
+              <Col
+                xs={24}
+                sm={{ span: 24, order: 2 }}
+                lg={{ span: 12, order: 1 }}
+              >
                 <XTags>LOREM IPSUM</XTags>
                 <XTitle className="my-4">
                   Quis enim lobortis scelerisque fermentum dui
@@ -103,7 +124,12 @@ export default function Home() {
                   trusting, diverse community.
                 </XPara1>
               </Col>
-              <Col xs={24} sm={24} lg={12}>
+              <Col
+                xs={24}
+                sm={{ span: 24, order: 1 }}
+                lg={{ span: 12, order: 2 }}
+                order="2"
+              >
                 <img
                   className="img-fluid m-auto"
                   src="/images/image-9.png"

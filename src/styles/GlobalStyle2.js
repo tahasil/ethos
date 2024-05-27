@@ -18,6 +18,7 @@ export const Wrapper = styled.section`
 `;
 export const Hero = styled.section`
   padding: 5% 0% 16% 0%;
+
   h1 {
     margin: 0px;
     font-weight: 900;
@@ -26,6 +27,10 @@ export const Hero = styled.section`
     text-align: center;
     color: #ffffff;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @media only screen and (max-width: 768.99px) {
+      font-size: 40px;
+      line-height: 40px;
+    }
   }
   p {
     margin: 0px;
@@ -46,6 +51,9 @@ export const XInputHero = styled(Input)`
   font-weight: 400;
   font-size: 20px;
   line-height: 26px;
+  @media only screen and (max-width: 400.99px) {
+    width: 60%;
+  }
   &::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.2) !important;
   }
@@ -77,6 +85,9 @@ export const XHeroButton = styled(Button)`
   text-align: center;
   letter-spacing: -0.25px;
   color: #ffffff;
+  @media only screen and (max-width: 400.99px) {
+    width: 30%;
+  }
   &:focus,
   &:hover {
     background: linear-gradient(90deg, #3a7fd0 0%, #51b29c 100%) !important;
@@ -92,6 +103,10 @@ export const XBecomeMember = styled.section`
     left: 46%;
     margin-top: -40%;
     z-index: 1;
+    @media only screen and (max-width: 991.99px) {
+      width: 30%;
+      margin-top: -20%;
+    }
   }
   .imgOverlay2 {
     position: relative;
@@ -115,6 +130,10 @@ export const XTitle = styled.h1`
   line-height: 60px;
   letter-spacing: -0.02em;
   color: #ffffff;
+  @media only screen and (max-width: 768.99px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 `;
 export const XPara1 = styled.p`
   margin: 0px;
@@ -188,6 +207,10 @@ export const XTitle2 = styled.h1`
   line-height: 52px;
   letter-spacing: -0.4px;
   color: #ffffff;
+  @media only screen and (max-width: 768.99px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 `;
 export const XTitle3 = styled.h1`
   font-weight: 700;
@@ -195,6 +218,10 @@ export const XTitle3 = styled.h1`
   line-height: 60px;
   letter-spacing: -1px;
   color: #ffffff;
+  @media only screen and (max-width: 768.99px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 `;
 export const XCardTrsap = styled(Card)`
   background: rgba(255, 255, 255, 0.1);
