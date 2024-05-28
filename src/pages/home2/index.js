@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header2 from "../../component/header/header2";
 import Footer2 from "../../component/footer/footer2";
 import { Row, Col, Space } from "antd";
@@ -22,6 +22,9 @@ import {
   XCardTrsap,
   FreeSample,
 } from "../../styles/GlobalStyle2";
+
+//import AnimatedCursor from "../../component/cursor1.js";
+
 export default function Home() {
   return (
     <>
