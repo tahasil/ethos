@@ -11,7 +11,7 @@ export default function myApp({ Component, pageprops }) {
   return (
     <div className="App">
       <AnimatedCursor
-        color="255,255,255"
+        color="58,127,208"
         innerSize={8}
         outerSize={35}
         innerScale={1}
@@ -22,7 +22,7 @@ export default function myApp({ Component, pageprops }) {
           mixBlendMode: "exclusion",
         }}
         innerStyle={{
-          backgroundColor: "#FFF",
+          backgroundColor: "#FFFFFF",
           mixBlendMode: "exclusion",
         }}
         clickables={[

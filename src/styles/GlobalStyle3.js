@@ -69,7 +69,6 @@ export const Hero = styled.section`
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.4);
     transform: rotate(-90deg);
-    z-index: 1;
   }
 `;
 export const XInputHero = styled(Input)`

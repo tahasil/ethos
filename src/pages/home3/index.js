@@ -36,7 +36,9 @@ export default function Home() {
               className="scrollDown"
               onClick={() => window.scrollTo({ top: 1100, behavior: "smooth" })}
             >
-              <LeftOutlined /> Scroll
+              <span>
+                <LeftOutlined /> Scroll
+              </span>
             </div>
             <Row>
               <Col
@@ -219,7 +221,7 @@ export default function Home() {
             >
               <img
                 className="img-fluid m-auto"
-                src="/images/image-12.svg"
+                src="/images/image-13.svg"
                 alt=""
               />
             </Col>
