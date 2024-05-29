@@ -22,7 +22,7 @@ import {
   XCardTrsap,
   FreeSample,
 } from "../../styles/GlobalStyle3";
-
+import { LeftOutlined } from "@ant-design/icons";
 //import AnimatedCursor from "../../component/cursor1.js";
 
 export default function Home() {
@@ -32,6 +32,12 @@ export default function Home() {
         <Header3 />
         <Hero>
           <Wrapper>
+            <div
+              className="scrollDown"
+              onClick={() => window.scrollTo({ top: 1100, behavior: "smooth" })}
+            >
+              <LeftOutlined /> Scroll
+            </div>
             <Row>
               <Col
                 xs={24}

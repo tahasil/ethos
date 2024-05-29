@@ -44,7 +44,8 @@ export const Wrapper = styled.section`
 `;
 export const Hero = styled.section`
   padding: 4% 0% 4% 0%;
-
+  width: 100%;
+  position: relative;
   h1 {
     margin: 0px;
     font-weight: 900;
@@ -57,6 +58,18 @@ export const Hero = styled.section`
       font-size: 40px;
       line-height: 40px;
     }
+  }
+  .scrollDown {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    transform: rotate(-90deg);
+    z-index: 1;
   }
 `;
 export const XInputHero = styled(Input)`
