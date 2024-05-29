@@ -32,16 +32,13 @@ export default function Home() {
             <h4>Company</h4>
             <ul className="footerLinks">
               <li>
-                <a href="#">Community</a>
+                <a href="/story">Story</a>
               </li>
               <li>
-                <a href="#">The Station</a>
+                <a href="/community">Community</a>
               </li>
               <li>
-                <a href="#">Public Programming</a>
-              </li>
-              <li>
-                <a href="#">About Us</a>
+                <a href="/events">Events</a>
               </li>
             </ul>
           </Col>

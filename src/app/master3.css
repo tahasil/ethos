@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black: #020412;
+  --white: #fff;
+}
+* {
+  margin: 0px;
+}
+/******************* Fonts **************/
+@font-face {
+  font-family: "Avenir Next Cyr";
+  src: url("../fonts/AvenirNextCyr-Medium.eot");
+  src: local("Avenir Next Cyr Bold"), local("../fonts/AvenirNextCyr-Medium"),
+    url("../fonts/AvenirNextCyr-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/AvenirNextCyr-Medium.woff2") format("woff2"),
+    url("../fonts/AvenirNextCyr-Medium.woff") format("woff"),
+    url("../fonts/AvenirNextCyr-Medium.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+/****************************************/
+body {
+  color: var(--white);
+  background: var(--black);
+  font-size: 12px;
+  font-family: Avenir Next Cyr !important;
+}
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: "Avenir Next Cyr" !important;
+}
+.navbar-toggler {
+  color: var(--white);
+  background: var(--white);
+}
+.navbarBg {
+  background: transparent;
+  padding: 0px;
+}
+.navbar {
+  color: var(--white);
+  @media only screen and (max-width: 991.99px) {
+  }
+  .nav-link {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: var(--white);
+    padding: 0px 20px !important;
+  }
+}
+button.headerBtn {
+  margin-left: 15px !important;
+}
+.heroFocus {
+  position: relative;
+  background: url("/images/hero-bg3.svg") no-repeat top left;
+  background-size: 100% 100%;
+}
+/* .heroFocus::before {
+  content: "";
+  background: url("/images/ae-hero-bottom.svg") no-repeat bottom right;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+} */
+.animationFocus {
+  position: relative;
+  background: url("/images/animation-focus.svg") no-repeat top left;
+  background-size: 30% 100%;
+}
+.missionFocus {
+  position: relative;
+  background: url("/images/missionBG.svg") no-repeat center right;
+  background-size: 50% 150%;
+}
+.borderBottom {
+  border-bottom: 1px solid #2a2f3d;
+}
+.challengesFocus {
+  position: relative;
+  background: url("/images/challengesFocus.svg") no-repeat center right;
+  background-size: 40% 100%;
+}
+/*************************************/
+:root {
+  --color-cursor: 220, 90, 90;
+  --cursor-outline-shade: 0.3;
+  --cursor-size: 10px;
+  --cursor-outline-size: 12px;
+}
+.cursor-inner,
+.cursor-outer {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: opacity 0.05s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.cursor-inner {
+  background-color: rgba(220, 90, 90, 1);
+  width: 2px; /* Adjust size as needed */
+  height: 8px; /* Adjust size as needed */
+  z-index: 9999; /* Ensure cursor is above other elements */
+}
+
+.cursor-outer {
+  background-color: rgba(220, 90, 90, 0.4);
+  width: 8px; /* Adjust size as needed */
+  height: 8px; /* Adjust size as needed */
+  z-index: 9998; /* Ensure cursor is above other elements */
+}
+
+.cursor-inner.active {
+  transform: translate3d(-50%, -50%, 0) scale(1.3);
+}
+
+.cursor-outer.active {
+  transform: translate3d(-50%, -50%, 0) scale(1.4);
+}
