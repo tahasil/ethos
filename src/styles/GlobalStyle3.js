@@ -48,12 +48,11 @@ export const Hero = styled.section`
   position: relative;
   h1 {
     margin: 0px;
-    font-weight: 900;
+    font-weight: 800;
     font-size: 70px;
-    line-height: 80px;
+    line-height: 70px;
     text-align: center;
     color: #ffffff;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     @media only screen and (max-width: 768.99px) {
       font-size: 40px;
       line-height: 40px;
@@ -324,12 +323,6 @@ export const XFooter = styled.section`
     line-height: 24px;
     color: rgba(255, 255, 255, 0.5);
   }
-  ul.socialLinks {
-    margin: 0px;
-    @media only screen and (max-width: 575.99px) {
-      margin-top: 15px;
-    }
-  }
   ul.socialLinks li {
     display: inline-block;
     list-style-type: none;
@@ -339,15 +332,17 @@ export const XFooter = styled.section`
     }
   }
   ul.socialLinks li a {
-    border: 1px solid #2a2f3d;
+    border: 2px solid #2a2f3d;
     padding: 10px;
+    border-radius: 50px;
     svg {
       color: #fff;
-      width: 20px;
-      height: 20px;
+      width: 15px;
+      height: 15px;
     }
     &:hover {
       background: #fff;
+      border: 2px solid #fff;
       transition: background 0.5s;
       svg {
         color: #2a2f3d;
@@ -440,6 +435,20 @@ export const XFooter2 = styled.section`
   ul.termsLinks li a {
     font-weight: 400;
     font-size: 14px;
+    line-height: 26px;
+    color: #ffffff;
+  }
+  /*****************/
+  ul.footerLinks {
+    margin: 0px;
+  }
+  ul.footerLinks li {
+    display: inline;
+    margin-right: 24px;
+  }
+  ul.footerLinks li a {
+    font-weight: 400;
+    font-size: 16px;
     line-height: 26px;
     color: #ffffff;
   }

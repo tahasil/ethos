@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header3 from "../../component/header/header3";
-import Footer2 from "../../component/footer/footer2";
+import Footer3 from "../../component/footer/footer3";
 import { Row, Col, Space } from "antd";
 import {
   Wrapper,
@@ -119,12 +119,12 @@ export default function Home() {
                 lg={{ span: 12, order: 2 }}
                 className="text-center my-sm-4"
               >
-                {/* <img
+                <img
                   className="img-fluid m-auto"
                   src="/images/image-11.png"
                   alt=""
-                /> */}
-                <ReactPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" />
+                />
+                {/* <ReactPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" /> */}
               </Col>
             </Row>
             <Row gutter={[15, 15]} className="mt-5">
@@ -369,7 +369,7 @@ export default function Home() {
           </Row>
         </Wrapper>
       </FreeSample>
-      <Footer2 />
+      <Footer3 />
     </>
   );
 }
