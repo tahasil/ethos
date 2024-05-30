@@ -21,8 +21,14 @@ import {
   XTitle3,
   XCardTrsap,
   FreeSample,
+  XAIInnovators,
 } from "../../styles/GlobalStyle3";
 import { LeftOutlined } from "@ant-design/icons";
+import Lottie from "lottie-react";
+import icon1 from "../../../public/aethos_icons/watering-can.json";
+import icon2 from "../../../public/aethos_icons/sun.json";
+import icon3 from "../../../public/aethos_icons/planting.json";
+import ReactPlayer from "react-player/youtube";
 //import AnimatedCursor from "../../component/cursor1.js";
 
 export default function Home() {
@@ -113,17 +119,26 @@ export default function Home() {
                 lg={{ span: 12, order: 2 }}
                 className="text-center my-sm-4"
               >
-                <img
+                {/* <img
                   className="img-fluid m-auto"
                   src="/images/image-11.png"
                   alt=""
-                />
+                /> */}
+                <ReactPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" />
               </Col>
             </Row>
             <Row gutter={[15, 15]} className="mt-5">
               <Col xs={24} sm={24} lg={8}>
                 <XCardTrsap className="text-center">
-                  <img className="m-auto mb-4" src="/images/icon-1.svg" />
+                  {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
+
+                  <Lottie
+                    style={{ width: "100px" }}
+                    className="m-auto"
+                    animationData={icon1}
+                    loop={true}
+                  />
+
                   <h3 className="my-3">Service Mentality</h3>
                   <p>
                     We ask our members to contribute 2 hours of their time each
@@ -137,7 +152,13 @@ export default function Home() {
               </Col>
               <Col xs={24} sm={24} lg={8}>
                 <XCardTrsap className="text-center">
-                  <img className="m-auto mb-4" src="/images/icon-1.svg" />
+                  {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
+                  <Lottie
+                    style={{ width: "100px" }}
+                    className="m-auto"
+                    animationData={icon2}
+                    loop={true}
+                  />
                   <h3 className="my-3">Neutrality</h3>
                   <p>
                     Æthos believes the most efficient community to grow in
@@ -153,7 +174,13 @@ export default function Home() {
               </Col>
               <Col xs={24} sm={24} lg={8}>
                 <XCardTrsap className="text-center">
-                  <img className="m-auto mb-4" src="/images/icon-1.svg" />
+                  {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
+                  <Lottie
+                    style={{ width: "100px" }}
+                    className="m-auto"
+                    animationData={icon3}
+                    loop={true}
+                  />
                   <h3 className="my-3">Responsible Impact</h3>
                   <p>
                     Æthos seeks founders who are pursuing missions with human
@@ -213,6 +240,15 @@ export default function Home() {
               />
             </Col>
           </Row>
+          <Row>
+            <Col xs={24}>
+              <img
+                className="img-fluid m-auto"
+                src="/images/animationLine.svg"
+                alt=""
+              />
+            </Col>
+          </Row>
           <Row gutter={[15, 15]} className="mt-5 align-items-center">
             <Col
               xs={{ span: 24, order: 2 }}
@@ -241,31 +277,38 @@ export default function Home() {
           </Row>
         </Wrapper>
       </div>
-      <Wrapper className="py-5">
-        <Row gutter={[15, 15]} className="align-items-center">
-          <Col
-            xs={24}
-            sm={24}
-            lg={{ span: 16, offset: 4 }}
-            className="text-center"
-          >
-            <XTitle2 className="mb-3">
-              Bringing resources closer to AI innovators
-            </XTitle2>
-            <XPara1>
-              Æthos will operate at two levels: the wider Æthos community
-              incorporating startups, corporates, investors, academics and
-              others, and a physical shared space for AI founders we call Aethos
-              Station. Within the station, founders can use the space as their
-              work environment, access the community and shared resources via
-              relationships with the ecosystem’s biggest contributors
-            </XPara1>
-          </Col>
-          <Col xs={24} sm={24} lg={24} className="text-center">
-            <h1 style={{ lineHeight: "400px", fontSize: "60px" }}>image</h1>
-          </Col>
-        </Row>
-      </Wrapper>
+      <XAIInnovators className="py-5">
+        <Wrapper>
+          <Row gutter={[15, 15]} className="align-items-center">
+            <Col
+              xs={24}
+              sm={24}
+              lg={{ span: 16, offset: 4 }}
+              className="text-center"
+            >
+              <XTitle2 className="mb-3">
+                Bringing resources closer to AI innovators
+              </XTitle2>
+              <XPara1>
+                Æthos will operate at two levels: the wider Æthos community
+                incorporating startups, corporates, investors, academics and
+                others, and a physical shared space for AI founders we call
+                Aethos Station. Within the station, founders can use the space
+                as their work environment, access the community and shared
+                resources via relationships with the ecosystem’s biggest
+                contributors
+              </XPara1>
+            </Col>
+            <Col xs={24} sm={24} lg={24} className="mt-4 text-center">
+              <img
+                className="img-fluid m-auto"
+                src="/images/image-14.svg"
+                alt=""
+              />
+            </Col>
+          </Row>
+        </Wrapper>
+      </XAIInnovators>
       <Wrapper className="py-5">
         <Row gutter={[15, 15]} className="align-items-center">
           <Col xs={24} sm={24} lg={12}>

@@ -444,3 +444,13 @@ export const XFooter2 = styled.section`
     color: #ffffff;
   }
 `;
+export const XAIInnovators = styled.section`
+  background: linear-gradient(
+    180deg,
+    rgba(58, 127, 208, 0.2) 0%,
+    rgba(0, 0, 0, 0) 52.5%,
+    rgba(58, 127, 208, 0.2) 100%
+  );
+  @media only screen and (max-width: 768.99px) {
+  }
+`;
