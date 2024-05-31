@@ -536,6 +536,9 @@ export const XButtonModal = styled(Button)`
   font-size: 14px;
   line-height: 24px;
   color: #ffffff;
+  span {
+    cursor: pointer !important;
+  }
   &:hover,
   &:focus {
     background: linear-gradient(104.79deg, #51b29c 0%, #3a7fd0 100%) !important;
