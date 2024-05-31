@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
-import { Button, Carousel, Card, Input, Collapse } from "antd";
+import { Button, Card, Input, Modal } from "antd";
 export const Theme = {
   // colors: {
   //   white: "#fff",
@@ -461,5 +461,84 @@ export const XAIInnovators = styled.section`
     rgba(58, 127, 208, 0.2) 100%
   );
   @media only screen and (max-width: 768.99px) {
+  }
+`;
+export const XContactModal = styled(Modal)`
+  .ant-modal-content {
+    background: #010302;
+    border-radius: 20px;
+    z-index: 999999;
+    cursor: default !important;
+    padding: 45px;
+    @media only screen and (max-width: 768.99px) {
+      padding: 20px;
+    }
+  }
+  h1 {
+    cursor: default !important;
+    margin: 0px;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  p {
+    cursor: default !important;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+  }
+  .ant-modal-content button {
+    cursor: pointer !important;
+  }
+  svg {
+    cursor: pointer !important;
+    color: #fff;
+  }
+`;
+export const XInputModal = styled(Input)`
+  cursor: auto !important;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: #fff;
+  &::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.2) !important;
+  }
+  &:placeholder {
+    color: rgba(255, 255, 255, 0.2) !important;
+  }
+  :placeholder {
+    color: rgba(255, 255, 255, 0.2) !important;
+  }
+  ::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.2) !important;
+  }
+  &:hover,
+  &:focus {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+`;
+export const XButtonModal = styled(Button)`
+  width: 100%;
+  height: auto;
+  cursor: pointer !important;
+  padding: 8px 15px;
+  border: none;
+  background: linear-gradient(104.79deg, #51b29c 0%, #3a7fd0 100%);
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+  &:hover,
+  &:focus {
+    background: linear-gradient(104.79deg, #51b29c 0%, #3a7fd0 100%) !important;
+    color: #ffffff !important;
   }
 `;

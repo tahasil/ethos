@@ -20,6 +20,7 @@ export default function myApp({ Component, pageprops }) {
         hasBlendMode={true}
         outerStyle={{
           mixBlendMode: "exclusion",
+          zIndex: "999",
         }}
         innerStyle={{
           backgroundColor: "#FFFFFF",

@@ -47,6 +47,11 @@ button {
   background: transparent;
   padding: 0px;
 }
+.mobileAlign div {
+  @media only screen and (max-width: 991.99px) {
+    align-items: baseline !important;
+  }
+}
 .navbar {
   color: var(--white);
   @media only screen and (max-width: 991.99px) {
@@ -109,6 +114,7 @@ button.headerBtn {
   border-radius: 50%;
   pointer-events: none;
   transition: opacity 0.05s ease-in-out, transform 0.1s ease-in-out;
+  z-index: 999999 !important;
 }
 
 .cursor-inner {
@@ -132,3 +138,7 @@ button.headerBtn {
 .cursor-outer.active {
   transform: translate3d(-50%, -50%, 0) scale(1.4);
 }
+
+/* .ant-modal-wrap {
+  z-index: 998 !important;
+} */

@@ -22,6 +22,9 @@ import {
   XCardTrsap,
   FreeSample,
   XAIInnovators,
+  XContactModal,
+  XInputModal,
+  XButtonModal,
 } from "../styles/GlobalStyle3";
 import { LeftOutlined } from "@ant-design/icons";
 import Lottie from "lottie-react";
@@ -32,6 +35,7 @@ import ReactPlayer from "react-player/youtube";
 //import AnimatedCursor from "../../component/cursor1.js";
 
 export default function Home() {
+  const [contactUs, setContactUs] = useState(false);
   return (
     <>
       <div className="heroFocus">
@@ -232,7 +236,7 @@ export default function Home() {
                 </li>
               </ul>
             </Col>
-            <Col xs={24} sm={24} lg={12}>
+            <Col xs={24} sm={24} lg={12} className="mb-5 mb-lg-0">
               <img
                 className="img-fluid m-auto"
                 src="/images/image-12.svg"
@@ -241,7 +245,11 @@ export default function Home() {
             </Col>
           </Row>
           <Row>
-            <Col xs={24}>
+            <Col
+              xs={{ span: 10, offset: 7 }}
+              sm={{ span: 10, offset: 7 }}
+              lg={{ span: 12 }}
+            >
               <img
                 className="img-fluid m-auto"
                 src="/images/animationLine.svg"
@@ -364,7 +372,32 @@ export default function Home() {
               </div>
             </Col>
             <Col xs={24} sm={24} lg={24} className="mt-3 text-center">
-              <XButton>Contact Us</XButton>
+              <XButton onClick={() => setContactUs(true)}>Contact Us</XButton>
+              <XContactModal
+                title={false}
+                centered
+                open={contactUs}
+                onOk={() => setContactUs(false)}
+                onCancel={() => setContactUs(false)}
+                footer={false}
+              >
+                <Row className="mb-4">
+                  <Col xs={24} className="text-center">
+                    <h1>Contact Us</h1>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={24} className="text-center">
+                    <XInputModal size="large" placeholder="Name" />
+                  </Col>
+                  <Col xs={24} className="my-4 text-center">
+                    <XInputModal size="large" placeholder="Email address" />
+                  </Col>
+                  <Col xs={24}>
+                    <XButtonModal size="large">Submit</XButtonModal>
+                  </Col>
+                </Row>
+              </XContactModal>
             </Col>
           </Row>
         </Wrapper>

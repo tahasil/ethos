@@ -3,12 +3,19 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { Wrapper, XButton } from "../../styles/GlobalStyle3";
+import {
+  Wrapper,
+  XButton,
+  XContactModal,
+  XInputModal,
+  XButtonModal,
+} from "../../styles/GlobalStyle3";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 import { Row, Col } from "antd";
 export default function Home() {
+  const [joinUs, setJoinUs] = useState(false);
   return (
     <div className="navbarBg">
       <Wrapper>
@@ -28,17 +35,52 @@ export default function Home() {
               </Offcanvas.Title>
             </Offcanvas.Header>
 
-            <Offcanvas.Body>
+            <Offcanvas.Body className="mobileAlign">
               <Nav className="justify-content-end flex-grow-1 align-items-center">
                 <Nav.Link href="/story">Story</Nav.Link>
                 <Nav.Link href="/community">Community</Nav.Link>
                 <Nav.Link href="/events">Events</Nav.Link>
-                <XButton className="headerBtn">Join Us</XButton>
+                <XButton className="headerBtn" onClick={() => setJoinUs(true)}>
+                  Join Us
+                </XButton>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Navbar>
       </Wrapper>
+      <XContactModal
+        title={false}
+        centered
+        open={joinUs}
+        onOk={() => setJoinUs(false)}
+        onCancel={() => setJoinUs(false)}
+        footer={false}
+      >
+        <Row>
+          <Col xs={24} className="text-center">
+            <h1>Join Us</h1>
+          </Col>
+          <Col
+            xs={24}
+            sm={{ span: 16, offset: 4 }}
+            lg={{ span: 16, offset: 4 }}
+            className="text-center mt-2 mb-4"
+          >
+            <p>Join us to be a part of an innovative and dynamic community.</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={24} className="text-center">
+            <XInputModal size="large" placeholder="Name" />
+          </Col>
+          <Col xs={24} className="my-4 text-center">
+            <XInputModal size="large" placeholder="Email address" />
+          </Col>
+          <Col xs={24}>
+            <XButtonModal size="large">Submit</XButtonModal>
+          </Col>
+        </Row>
+      </XContactModal>
     </div>
   );
 }
