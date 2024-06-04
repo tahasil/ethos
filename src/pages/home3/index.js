@@ -29,9 +29,9 @@ export default function Home() {
       label: "General Public",
       children: (
         <p>
-          Learn about Project Æthos’ mission and vision. If they are one of the
+          Learn about Project Æthos` mission and vision. If they are one of the
           following stakeholders, it should show them how they can get involved.
-          If they are not involved in any of these groups and don’t know much
+          If they are not involved in any of these groups and don`t know much
           about artificial intelligence, they should be informed by the website
           of the technological possibilities and risks.
         </p>
@@ -43,9 +43,9 @@ export default function Home() {
       label: "AI Entrepreneurs",
       children: (
         <p>
-          Learn about Project Æthos’ mission and vision. If they are one of the
+          Learn about Project Æthos` mission and vision. If they are one of the
           following stakeholders, it should show them how they can get involved.
-          If they are not involved in any of these groups and don’t know much
+          If they are not involved in any of these groups and don`t know much
           about artificial intelligence, they should be informed by the website
           of the technological possibilities and risks.
         </p>
@@ -57,9 +57,9 @@ export default function Home() {
       label: "AI Foundational Companies",
       children: (
         <p>
-          Learn about Project Æthos’ mission and vision. If they are one of the
+          Learn about Project Æthos` mission and vision. If they are one of the
           following stakeholders, it should show them how they can get involved.
-          If they are not involved in any of these groups and don’t know much
+          If they are not involved in any of these groups and don`t know much
           about artificial intelligence, they should be informed by the website
           of the technological possibilities and risks.
         </p>
@@ -72,7 +72,7 @@ export default function Home() {
       children: (
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          industry. Lorem Ipsum has been the industry`s standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book. It has survived not only
           five centuries, but also the leap into electronic typesetting,
@@ -88,7 +88,7 @@ export default function Home() {
       children: (
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          industry. Lorem Ipsum has been the industry`s standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book. It has survived not only
           five centuries, but also the leap into electronic typesetting,
@@ -104,7 +104,7 @@ export default function Home() {
       children: (
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          industry. Lorem Ipsum has been the industry`s standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book. It has survived not only
           five centuries, but also the leap into electronic typesetting,
@@ -120,7 +120,7 @@ export default function Home() {
       children: (
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          industry. Lorem Ipsum has been the industry`s standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book. It has survived not only
           five centuries, but also the leap into electronic typesetting,
@@ -166,10 +166,10 @@ export default function Home() {
               At Project <span>Æthos</span>
             </Title>
             <p className="para1">
-              Æthos’ is the character of shared beliefs held by a community.  We
+              Æthos is the character of shared beliefs held by a community. We
               are creating a community where entrepreneurs share values,
-              principles, and single space while building 'AI-first" companies
-              that will reshape the world for generations to come."  We call
+              principles, and single space while building AI-first companies
+              that will reshape the world for generations to come. We call
               this community Project Æthos.
             </p>
 
@@ -321,7 +321,7 @@ export default function Home() {
           <Col xs={24} sm={24} lg={16}>
             <h1 className="subscribeHead">Begin Your Journey With Æthos</h1>
             <p className="para2 my-4">
-              Subscribe to the Flow Research Collective’s newsletter
+              Subscribe to the Flow Research Collective`s newsletter
             </p>
             <Row>
               <Col xs={24} sm={24} lg={12}>
