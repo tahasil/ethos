@@ -6,10 +6,15 @@ import "../app/master3.css";
 
 //import AnimatedCursor from "../component/cursor1";
 import AnimatedCursor from "react-animated-cursor";
+import Head from "next/head";
 
 export default function myApp({ Component, pageprops }) {
   return (
     <div className="App">
+      <Head>
+        <title>Aethos</title>
+        <link rel="icon" href="/images/logo2.svg" />
+      </Head>
       <AnimatedCursor
         color="58,127,208"
         innerSize={8}

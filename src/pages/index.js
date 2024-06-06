@@ -1,22 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Header3 from "../component/header/header3";
 import Footer3 from "../component/footer/footer3";
-import { Row, Col, Space } from "antd";
+import { Row, Col, Form, Input, Button, Modal, notification } from "antd";
 import {
   Wrapper,
   Hero,
-  XInputHero,
-  XHeroButton,
   XBecomeMember,
-  XTags,
-  XTitle,
   XPara1,
-  XPara2,
-  XPara3,
-  XPara4,
   XButton,
   XBGImg,
-  TitleSub,
   XTitle2,
   XTitle3,
   XCardTrsap,
@@ -31,15 +23,51 @@ import Lottie from "lottie-react";
 import icon1 from "../../public/aethos_icons/watering-can.json";
 import icon2 from "../../public/aethos_icons/sun.json";
 import icon3 from "../../public/aethos_icons/planting.json";
-import ReactPlayer from "react-player/youtube";
 //import AnimatedCursor from "../../component/cursor1.js";
 
 export default function Home() {
-  const [contactUs, setContactUs] = useState(false);
+  const [form] = Form.useForm();
+  const [contactUs, setContactUs] = useState([false, ""]);
+
+  const handleSubmit = async (values) => {
+    try {
+      const response = await fetch('https://api.hubspot.com/contacts/v1/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        notification.success({
+          message: 'Success',
+          description: 'Your message has been sent successfully.',
+        });
+        form.resetFields();
+        setContactUs([false, ""]);
+      } else {
+        throw new Error('Error submitting the form');
+      }
+    } catch (error) {
+      notification.error({
+        message: 'Error',
+        description: 'There was an error submitting the form. Please try again.',
+      });
+      form.resetFields();
+      setContactUs([false, ""]);
+    }
+  };
+
+  const handleCancel = () => {
+    form.resetFields();
+    setContactUs([false, ""]);
+  };
+
   return (
     <>
       <div className="heroFocus">
-        <Header3 />
+        <Header3 openModal={() => setContactUs([true, "join"])} />
         <Hero>
           <Wrapper>
             <div
@@ -354,49 +382,78 @@ export default function Home() {
             <Col xs={24} sm={24} lg={12}>
               <div className="cardWrap">
                 <p>
-                  If you’re building with AI in Boston, Berlin, or Tokyo and are
-                  looking to find your home, give us a shout! We’d love to get
-                  to know you and see whether the Æthos community would be right
-                  for you.
+                If you’re building with AI in Boston, Berlin, or Tokyo and are looking to find your home, give us a shout! We’d love to get to know you and see whether the Æthos community would be right for you.
                 </p>
               </div>
             </Col>
             <Col xs={24} sm={24} lg={12}>
               <div className="cardWrap">
                 <p>
-                  If you’re building with AI in Boston, Berlin, or Tokyo and are
-                  looking to find your home, give us a shout! We’d love to get
-                  to know you and see whether the Æthos community would be right
-                  for you.
+                If you work in AI ethics, represent a corporation, an investor, or a service provider or any other entity on our stakeholder map with resources to bring to founders, tell us a little about yourself! We aspire to be a conduit for your tools to reach the front line of development.
                 </p>
               </div>
             </Col>
             <Col xs={24} sm={24} lg={24} className="mt-3 text-center">
-              <XButton onClick={() => setContactUs(true)}>Contact Us</XButton>
+              <XButton onClick={() => setContactUs([true, "contact"])}>Contact Us</XButton>
               <XContactModal
                 title={false}
                 centered
-                open={contactUs}
-                onOk={() => setContactUs(false)}
-                onCancel={() => setContactUs(false)}
+                open={contactUs[0]}
+                onCancel={handleCancel}
                 footer={false}
               >
-                <Row className="mb-4">
-                  <Col xs={24} className="text-center">
-                    <h1>Contact Us</h1>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col xs={24} className="text-center">
-                    <XInputModal size="large" placeholder="Name" />
-                  </Col>
-                  <Col xs={24} className="my-4 text-center">
-                    <XInputModal size="large" placeholder="Email address" />
-                  </Col>
-                  <Col xs={24}>
-                    <XButtonModal size="large">Submit</XButtonModal>
-                  </Col>
-                </Row>
+                {contactUs[1] === "contact" && (
+                  <Row className="mb-4">
+                    <Col xs={24} className="text-center">
+                      <h1>Contact Us</h1>
+                    </Col>
+                  </Row>
+                )}
+                {contactUs[1] === "join" && (
+                  <Row>
+                    <Col xs={24} className="text-center">
+                      <h1>Join Us</h1>
+                    </Col>
+                    <Col
+                      xs={24}
+                      sm={{ span: 16, offset: 4 }}
+                      lg={{ span: 16, offset: 4 }}
+                      className="text-center mt-2 mb-4"
+                    >
+                      <p>Join us to be a part of an innovative and dynamic community.</p>
+                    </Col>
+                  </Row>
+                )}
+                <Form
+                  form={form}
+                  layout="vertical"
+                  onFinish={handleSubmit}
+                >
+                  <Row>
+                    <Col xs={24} className="text-center">
+                      <Form.Item
+                        name="name"
+                        rules={[{ required: true, message: 'Please enter your name' }]}
+                      >
+                        <XInputModal size="large" placeholder="Name" />
+                      </Form.Item>
+                    </Col>
+                    <Col xs={24} className="my-4 text-center">
+                      <Form.Item
+                        name="email"
+                        rules={[
+                          { required: true, message: 'Please enter your email' },
+                          { type: 'email', message: 'Please enter a valid email' }
+                        ]}
+                      >
+                        <XInputModal size="large" placeholder="Email address" />
+                      </Form.Item>
+                    </Col>
+                    <Col xs={24}>
+                      <XButtonModal size="large" type="primary" htmlType="submit">Submit</XButtonModal>
+                    </Col>
+                  </Row>
+                </Form>
               </XContactModal>
             </Col>
           </Row>

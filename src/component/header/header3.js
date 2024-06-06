@@ -1,21 +1,14 @@
 import React, { useState } from "react";
-import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import {
   Wrapper,
   XButton,
-  XContactModal,
-  XInputModal,
-  XButtonModal,
 } from "../../styles/GlobalStyle3";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 
-import { Row, Col } from "antd";
-export default function Home() {
-  const [joinUs, setJoinUs] = useState(false);
+export default function Home({ openModal }) {
+
   return (
     <div className="navbarBg">
       <Wrapper>
@@ -40,7 +33,7 @@ export default function Home() {
                 <Nav.Link href="/">Story</Nav.Link>
                 <Nav.Link href="/">Community</Nav.Link>
                 <Nav.Link href="/">Events</Nav.Link>
-                <XButton className="headerBtn" onClick={() => setJoinUs(true)}>
+                <XButton className="headerBtn" onClick={openModal}>
                   Join Us
                 </XButton>
               </Nav>
@@ -48,7 +41,7 @@ export default function Home() {
           </Navbar.Offcanvas>
         </Navbar>
       </Wrapper>
-      <XContactModal
+      {/* <XContactModal
         title={false}
         centered
         open={joinUs}
@@ -80,7 +73,7 @@ export default function Home() {
             <XButtonModal size="large">Submit</XButtonModal>
           </Col>
         </Row>
-      </XContactModal>
+      </XContactModal> */}
     </div>
   );
 }

@@ -519,9 +519,11 @@ export const XInputModal = styled(Input)`
     color: rgba(255, 255, 255, 0.2) !important;
   }
   &:hover,
-  &:focus {
-    background: transparent;
-    border-color: rgba(255, 255, 255, 0.5);
+  &:focus,
+  &:focus-within,
+  &:not(.ant-input-disabled){
+    background: transparent !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
   }
 `;
 export const XButtonModal = styled(Button)`
