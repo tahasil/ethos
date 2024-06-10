@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Wrapper, XButton } from "../../styles/GlobalStyle3";
 
-export default function Home({ openModal }) {
+export default function Header({ onJoinUsClick }) {
   return (
     <div className="navbarBg">
       <Wrapper>
@@ -29,7 +29,7 @@ export default function Home({ openModal }) {
                 <Nav.Link href="/">Story</Nav.Link>
                 <Nav.Link href="/community">Community</Nav.Link>
                 <Nav.Link href="/">Events</Nav.Link>
-                <XButton className="headerBtn" onClick={openModal}>
+                <XButton className="headerBtn" onClick={onJoinUsClick}>
                   Join Us
                 </XButton>
               </Nav>

@@ -28,10 +28,20 @@ import icon3 from "../../public/aethos_icons/planting.json";
 import Joinus from "../component/joinus/index";
 
 export default function Home() {
+  const [contactUs, setContactUs] = useState([false, ""]);
+
+  const handleModalOpen = (content) => {
+    setContactUs([true, content]);
+  };
+
+  const handleCancel = () => {
+    setContactUs([false, ""]);
+  };
+
   return (
     <>
       <div className="heroFocus">
-        <Header3 />
+        <Header3 onJoinUsClick={() => handleModalOpen("join")}/>
         <Hero>
           <Wrapper>
             <div
@@ -337,7 +347,11 @@ export default function Home() {
         </Row>
       </Wrapper>
 
-      <Joinus />
+      <Joinus
+        contactUs={contactUs}
+        handleModalOpen={handleModalOpen}
+        handleCancel={handleCancel}
+      />
       {/* <FreeSample className="py-5">
         <Wrapper>
           <Row gutter={[15, 15]}>

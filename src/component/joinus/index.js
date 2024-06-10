@@ -10,9 +10,8 @@ import {
   XButtonModal,
 } from "../../styles/GlobalStyle3";
 
-export default function Home({ openModal }) {
+export default function JoinUs({ contactUs, handleModalOpen, handleCancel }) {
   const [form] = Form.useForm();
-  const [contactUs, setContactUs] = useState([false, ""]);
 
   const handleSubmit = async (values) => {
     try {
@@ -48,14 +47,14 @@ export default function Home({ openModal }) {
     }
   };
 
-  const handleModalOpen = (contact) => {
-    setContactUs([true, contact]);
-  };
+  // const handleModalOpen = (contact) => {
+  //   setContactUs([true, contact]);
+  // };
 
-  const handleCancel = () => {
-    form.resetFields();
-    setContactUs([false, ""]);
-  };
+  // const handleCancel = () => {
+  //   form.resetFields();
+  //   setContactUs([false, ""]);
+  // };
 
   return (
     <FreeSample className="py-5">
