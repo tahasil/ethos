@@ -1,13 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 import { Button, Carousel, Card, Input, Collapse } from "antd";
-export const Theme = {
-  // colors: {
-  //   white: "#fff",
-  //   fontPoppins: `'Poppins', sans-serif`,
-  // },
-  // media: { mobile: "768px", tab: "998px" },
-};
+
 export const Wrapper = styled.section`
   position: relative;
   width: 90% !important;

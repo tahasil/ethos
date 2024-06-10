@@ -2,13 +2,9 @@ import React, { useState } from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import {
-  Wrapper,
-  XButton,
-} from "../../styles/GlobalStyle3";
+import { Wrapper, XButton } from "../../styles/GlobalStyle3";
 
 export default function Home({ openModal }) {
-
   return (
     <div className="navbarBg">
       <Wrapper>
@@ -31,7 +27,7 @@ export default function Home({ openModal }) {
             <Offcanvas.Body className="mobileAlign">
               <Nav className="justify-content-end flex-grow-1 align-items-center">
                 <Nav.Link href="/">Story</Nav.Link>
-                <Nav.Link href="/">Community</Nav.Link>
+                <Nav.Link href="/community">Community</Nav.Link>
                 <Nav.Link href="/">Events</Nav.Link>
                 <XButton className="headerBtn" onClick={openModal}>
                   Join Us

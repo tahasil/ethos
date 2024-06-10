@@ -1,13 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 import { Button, Card, Input, Modal } from "antd";
-export const Theme = {
-  // colors: {
-  //   white: "#fff",
-  //   fontPoppins: `'Poppins', sans-serif`,
-  // },
-  // media: { mobile: "768px", tab: "998px" },
-};
 export const Wrapper = styled.section`
   position: relative;
   width: 90% !important;
@@ -521,7 +514,7 @@ export const XInputModal = styled(Input)`
   &:hover,
   &:focus,
   &:focus-within,
-  &:not(.ant-input-disabled){
+  &:not(.ant-input-disabled) {
     background: transparent !important;
     border-color: rgba(255, 255, 255, 0.5) !important;
   }

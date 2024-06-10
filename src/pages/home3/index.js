@@ -169,8 +169,8 @@ export default function Home() {
               Æthos is the character of shared beliefs held by a community. We
               are creating a community where entrepreneurs share values,
               principles, and single space while building AI-first companies
-              that will reshape the world for generations to come. We call
-              this community Project Æthos.
+              that will reshape the world for generations to come. We call this
+              community Project Æthos.
             </p>
 
             <Row className="my-2">
