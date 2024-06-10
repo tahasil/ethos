@@ -20,10 +20,20 @@ import {
 } from "./indexStyle";
 import Joinus from "../../component/joinus/index";
 export default function Home() {
+  const [contactUs, setContactUs] = useState([false, ""]);
+
+  const handleModalOpen = (content) => {
+    setContactUs([true, content]);
+  };
+
+  const handleCancel = () => {
+    setContactUs([false, ""]);
+  };
+
   return (
     <>
       <HeroCommunity>
-        <Header3 openModal={() => setContactUs([true, "join"])} />
+        <Header3 onJoinUsClick={() => handleModalOpen("join")} />
         <Wrapper>
           <Row>
             <Col
@@ -56,7 +66,7 @@ export default function Home() {
           <Row>
             <Col xs={24}>
               <TitleSub>Community policies and values</TitleSub>
-              <Title className="my-3">Lorem ipsum dolor sit amet</Title>
+              <Title className="my-1 my-sm-3">Lorem ipsum dolor sit amet</Title>
               <Para1>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -116,7 +126,7 @@ export default function Home() {
         <Wrapper>
           <Row>
             <Col xs={24}>
-              <Title className="mb-3">Lorem ipsum dolor sit amet</Title>
+              <Title className="mb-1 mb-sm-3">Lorem ipsum dolor sit amet</Title>
               <Para1>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -124,7 +134,7 @@ export default function Home() {
             </Col>
           </Row>
           <Row gutter={[15, 15]} className="mt-5">
-            <Col xs={24} sm={24} md={12} lg={12}>
+            <Col xs={24} sm={24} md={24} lg={12}>
               <XMission>
                 <img className="w-100" src="/images/image-1.png" alt="" />
                 <div className="missionDataWrap">
@@ -138,7 +148,7 @@ export default function Home() {
                 </div>
               </XMission>
             </Col>
-            <Col xs={24} sm={12} md={6} lg={6}>
+            <Col xs={24} sm={12} md={12} lg={6}>
               <XMission>
                 <img className="w-100" src="/images/image-2.png" alt="" />
                 <div className="missionDataWrap">
@@ -150,7 +160,7 @@ export default function Home() {
                 </div>
               </XMission>
             </Col>
-            <Col xs={24} sm={12} md={6} lg={6}>
+            <Col xs={24} sm={12} md={12} lg={6}>
               <XMission>
                 <img className="w-100" src="/images/image-3.png" alt="" />
                 <div className="missionDataWrap">
@@ -172,7 +182,9 @@ export default function Home() {
             <Row gutter={[15, 15]} className="align-items-center">
               <Col xs={24} sm={24} lg={16}>
                 <TitleSub>Map of stakeholders</TitleSub>
-                <Title className="mt-3">Lorem ipsum dolor sit amet</Title>
+                <Title className="mt-1 mt-sm-3">
+                  Lorem ipsum dolor sit amet
+                </Title>
               </Col>
               <Col xs={24} sm={24} lg={8}>
                 <Para1>
@@ -197,7 +209,7 @@ export default function Home() {
                 <TitleSub>THE STATION</TitleSub>
                 <Title className="mt-3">Lorem ipsum dolor sit amet</Title>
               </Col>
-              <Col xs={24} sm={12} lg={6}>
+              <Col xs={24} sm={24} lg={6}>
                 <img
                   className="img-fluid w-100"
                   src="/images/image-17.png"
@@ -213,14 +225,14 @@ export default function Home() {
                   </p>
                 </StationCard>
               </Col>
-              <Col xs={24} sm={12} lg={12}>
+              <Col xs={24} sm={24} lg={12}>
                 <img
                   className="img-fluid w-100"
                   src="/images/image-18.png"
                   alt=""
                 />
               </Col>
-              <Col xs={24} sm={12} lg={6}>
+              <Col xs={24} sm={24} lg={6}>
                 <img
                   className="img-fluid w-100"
                   src="/images/image-19.png"
@@ -228,28 +240,28 @@ export default function Home() {
                 />
               </Col>
 
-              <Col xs={24} sm={12} lg={6}>
+              <Col xs={12} sm={12} lg={6}>
                 <img
                   className="img-fluid w-100"
                   src="/images/image-20.png"
                   alt=""
                 />
               </Col>
-              <Col xs={24} sm={12} lg={6}>
+              <Col xs={12} sm={12} lg={6}>
                 <img
                   className="img-fluid w-100"
                   src="/images/image-21.png"
                   alt=""
                 />
               </Col>
-              <Col xs={24} sm={12} lg={6}>
+              <Col xs={12} sm={12} lg={6}>
                 <img
                   className="img-fluid w-100"
                   src="/images/image-22.png"
                   alt=""
                 />
               </Col>
-              <Col xs={24} sm={12} lg={6}>
+              <Col xs={12} sm={12} lg={6}>
                 <XPhotoButton icon={<RightOutlined />} iconPosition="right">
                   <span>View All Photos</span>
                 </XPhotoButton>
@@ -283,7 +295,11 @@ export default function Home() {
         </Row>
       </Wrapper>
 
-      <Joinus />
+      <Joinus
+        contactUs={contactUs}
+        handleModalOpen={handleModalOpen}
+        handleCancel={handleCancel}
+      />
       <Footer3 />
     </>
   );

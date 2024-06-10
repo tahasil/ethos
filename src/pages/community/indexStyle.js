@@ -1,23 +1,25 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 import { Button, Card, Input, Modal } from "antd";
-export const Wrapper = styled.section`
-  position: relative;
-  width: 90% !important;
-  margin: 0px auto;
-  @media only screen and (max-width: 991.99px) {
-    width: 95% !important;
-  }
-`;
 export const HeroCommunity = styled.section`
   background: #000 url("/images/hero-community.svg") no-repeat top center;
   background-size: 100% 150%;
+  @media only screen and (max-width: 576.99px) {
+    background-size: 100% 80%;
+  }
   h1 {
     margin: 0px;
     font-weight: 800;
     font-size: 48px;
     line-height: 55px;
     color: #ffffff;
+    @media only screen and (max-width: 768.99px) {
+      font-size: 30px;
+      line-height: 37px;
+    }
+    @media only screen and (max-width: 575.99px) {
+      padding: 30px 0px;
+    }
   }
   p {
     margin: 0px;
@@ -26,6 +28,10 @@ export const HeroCommunity = styled.section`
     line-height: 36px;
     text-align: center;
     color: #ffffff;
+    @media only screen and (max-width: 768.99px) {
+      font-size: 18px;
+      line-height: 34px;
+    }
   }
   @media only screen and (max-width: 991.99px) {
   }
@@ -37,9 +43,9 @@ export const TitleSub = styled.h2`
   line-height: 30px;
   text-transform: uppercase;
   color: #ffffff;
-  @media only screen and (max-width: 991.99px) {
+  @media only screen and (max-width: 768.99px) {
     font-size: 16px;
-    line-height: 30px;
+    line-height: 20px;
   }
   &:after {
     content: "";
@@ -98,6 +104,9 @@ export const CardHover = styled.section`
   background: #161825;
   padding: 170px 30px 50px 30px;
   transition: 0s background;
+  @media only screen and (max-width: 768.99px) {
+    padding: 50px 30px 50px 30px;
+  }
   span {
     position: absolute;
     top: 20px;
@@ -231,6 +240,14 @@ export const XPhotoButton = styled(Button)`
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    @media only screen and (max-width: 768.99px) {
+      font-size: 18px;
+      line-height: 46px;
+    }
+    @media only screen and (max-width: 575.99px) {
+      font-size: 14px;
+      line-height: 36px;
+    }
   }
   &:hover {
     background: #161825 !important;
@@ -244,9 +261,11 @@ export const LargePara = styled.p`
   line-height: 48px;
   text-align: center;
   color: #7b7b7b;
+  @media only screen and (max-width: 768.99px) {
+    font-size: 24px;
+    line-height: 34px;
+  }
   span {
     color: #fff;
-  }
-  @media only screen and (max-width: 991.99px) {
   }
 `;
