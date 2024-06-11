@@ -14,11 +14,10 @@ import {
   CardFull,
   XMission,
   TreeCard,
-  StationCard,
-  XPhotoButton,
-  LargePara,
 } from "./indexStyle";
 import Joinus from "../../component/joinus/index";
+import Gallery from "../../component/gallery/index";
+import Connect from "../../component/connect/index";
 export default function Home() {
   const [contactUs, setContactUs] = useState([false, ""]);
 
@@ -203,98 +202,10 @@ export default function Home() {
               </Col>
             </Row>
           </Wrapper>
-          <Wrapper>
-            <Row gutter={[15, 15]}>
-              <Col xs={24} className="mb-5">
-                <TitleSub>THE STATION</TitleSub>
-                <Title className="mt-3">Lorem ipsum dolor sit amet</Title>
-              </Col>
-              <Col xs={24} sm={24} lg={6}>
-                <img
-                  className="img-fluid w-100"
-                  src="/images/image-17.png"
-                  alt=""
-                />
-                <StationCard>
-                  <h6 className="my-3">Coworking</h6>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                </StationCard>
-              </Col>
-              <Col xs={24} sm={24} lg={12}>
-                <img
-                  className="img-fluid w-100"
-                  src="/images/image-18.png"
-                  alt=""
-                />
-              </Col>
-              <Col xs={24} sm={24} lg={6}>
-                <img
-                  className="img-fluid w-100"
-                  src="/images/image-19.png"
-                  alt=""
-                />
-              </Col>
-
-              <Col xs={12} sm={12} lg={6}>
-                <img
-                  className="img-fluid w-100"
-                  src="/images/image-20.png"
-                  alt=""
-                />
-              </Col>
-              <Col xs={12} sm={12} lg={6}>
-                <img
-                  className="img-fluid w-100"
-                  src="/images/image-21.png"
-                  alt=""
-                />
-              </Col>
-              <Col xs={12} sm={12} lg={6}>
-                <img
-                  className="img-fluid w-100"
-                  src="/images/image-22.png"
-                  alt=""
-                />
-              </Col>
-              <Col xs={12} sm={12} lg={6}>
-                <XPhotoButton icon={<RightOutlined />} iconPosition="right">
-                  <span>View All Photos</span>
-                </XPhotoButton>
-              </Col>
-            </Row>
-          </Wrapper>
+          <Gallery />
         </TreeCard>
       </div>
-      <Wrapper className="pb-5">
-        <Row>
-          <Col
-            xs={24}
-            sm={24}
-            lg={{ span: 20, offset: 2 }}
-            className="text-center"
-          >
-            <LargePara>
-              <span>Lorem ipsum dolor sit amet,</span> consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.
-            </LargePara>
-          </Col>
-          <Col xs={24} className="mt-5">
-            <img
-              className="img-fluid w-100"
-              src="/images/image-23.png"
-              alt=""
-            />
-          </Col>
-        </Row>
-      </Wrapper>
-
+      <Connect />
       <Joinus
         contactUs={contactUs}
         handleModalOpen={handleModalOpen}

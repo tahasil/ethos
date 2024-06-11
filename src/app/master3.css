@@ -143,6 +143,13 @@ button.headerBtn {
   position: relative;
   width: 100%;
   height: 100%;
-  background: url("/images//tree-bg.svg") no-repeat center right;
+  background: url("/images/tree-bg.svg") no-repeat center right;
   background-size: 45% 60%;
+}
+.storySub {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url("/images/sub-hero.svg") no-repeat center left;
+  background-size: 40% 150%;
 }
