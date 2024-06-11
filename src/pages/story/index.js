@@ -96,42 +96,51 @@ export default function Header({ onJoinUsClick }) {
                 <h1>Quis enim lobortis scelerisque fermentum dui</h1>
               </Col>
             </Row>
-            <Row gutter={[100, 15]} className="mt-5">
+            <Row gutter={[15, 15]} className="mt-5">
               <Col xs={24} sm={24} lg={8} className="text-center">
-                <img
-                  className="img-fluid m-auto mb-5"
-                  src="/images/icon-5.svg"
-                  alt=""
-                />
-                <h3 className="mb-3">Lorem ipsum dolor</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
+                <div className="cardWrapper">
+                  <img
+                    className="img-fluid m-auto mb-5"
+                    src="/images/icon-5.svg"
+                    alt=""
+                  />
+                  <h3 className="mb-3">Lorem ipsum dolor</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
               </Col>
               <Col xs={24} sm={24} lg={8} className="text-center">
-                <img
-                  className="img-fluid m-auto mb-5"
-                  src="/images/icon-5.svg"
-                  alt=""
-                />
-                <h3 className="mb-3">Lorem ipsum dolor</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
+                <div className="cardWrapper">
+                  <img
+                    className="img-fluid m-auto mb-5"
+                    src="/images/icon-5.svg"
+                    alt=""
+                  />
+                  <h3 className="mb-3">Lorem ipsum dolor</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
               </Col>
               <Col xs={24} sm={24} lg={8} className="text-center">
-                <img
-                  className="img-fluid m-auto mb-5"
-                  src="/images/icon-5.svg"
-                  alt=""
-                />
-                <h3 className="mb-3">Lorem ipsum dolor</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
+                <div className="cardWrapper">
+                  <img
+                    className="img-fluid m-auto mb-5"
+                    src="/images/icon-5.svg"
+                    alt=""
+                  />
+                  <h3 className="mb-3">Lorem ipsum dolor</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
               </Col>
             </Row>
           </Wrapper>

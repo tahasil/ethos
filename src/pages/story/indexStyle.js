@@ -11,7 +11,7 @@ export const HeroStory = styled.section`
   background: #000 url("/images/story-bg.svg") no-repeat top center;
   background-size: 100% 107%;
   @media only screen and (max-width: 576.99px) {
-    background-size: 80% 80%;
+    background-size: 130% 160%;
   }
   h1 {
     margin: 0px;
@@ -24,7 +24,7 @@ export const HeroStory = styled.section`
       line-height: 37px;
     }
     @media only screen and (max-width: 575.99px) {
-      padding: 30px 0px;
+      padding: 15px 0px;
     }
   }
   p {
@@ -105,6 +105,10 @@ export const FullCards = styled.section`
     text-align: center;
     letter-spacing: -0.02em;
     color: #ffffff;
+    @media only screen and (max-width: 768.99px) {
+      font-size: 30px;
+      line-height: 40px;
+    }
   }
   h3 {
     margin: 0px;
@@ -113,6 +117,10 @@ export const FullCards = styled.section`
     line-height: 32px;
     text-align: center;
     color: #ffffff;
+    @media only screen and (max-width: 768.99px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
   p {
     margin: 0px;
@@ -122,6 +130,14 @@ export const FullCards = styled.section`
     color: #ffffff;
     mix-blend-mode: normal;
     opacity: 0.7;
+  }
+  .cardWrapper {
+    width: 100%;
+    position: relative;
+    padding: 30px;
+    @media only screen and (max-width: 768.99px) {
+      padding: 30px 0px;
+    }
   }
 `;
 export const SubSection = styled.section`
@@ -138,6 +154,10 @@ export const SubSection = styled.section`
     line-height: 50px;
     letter-spacing: -0.02em;
     color: #ffffff;
+    @media only screen and (max-width: 768.99px) {
+      font-size: 30px;
+      line-height: 40px;
+    }
   }
   .cardBg {
     background: #161825;
