@@ -275,3 +275,7 @@ export const LargePara = styled.p`
     color: #fff;
   }
 `;
+
+const CommunityStyle = () => {};
+
+export default CommunityStyle;

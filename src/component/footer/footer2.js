@@ -11,6 +11,7 @@ import {
   FacebookOutlined,
   LinkedinOutlined,
 } from "@ant-design/icons";
+import Link from "next/link";
 export default function Home() {
   return (
     <XFooter2 className="py-5">
@@ -32,13 +33,13 @@ export default function Home() {
             <h4>Company</h4>
             <ul className="footerLinks">
               <li>
-                <a href="/story">Story</a>
+                <Link href="/story">Story</Link>
               </li>
               <li>
-                <a href="/community">Community</a>
+                <Link href="/community">Community</Link>
               </li>
               <li>
-                <a href="/events">Events</a>
+                <Link href="/events">Events</Link>
               </li>
             </ul>
           </Col>
@@ -46,35 +47,35 @@ export default function Home() {
             <h4>Resources</h4>
             <ul className="footerLinks">
               <li>
-                <a href="#">Lorem Ipsum</a>
+                <Link href="#">Lorem Ipsum</Link>
               </li>
               <li>
-                <a href="#">Lorem Ipsum</a>
+                <Link href="#">Lorem Ipsum</Link>
               </li>
               <li>
-                <a href="#">Lorem Ipsum</a>
+                <Link href="#">Lorem Ipsum</Link>
               </li>
               <li>
-                <a href="#">Lorem Ipsum</a>
+                <Link href="#">Lorem Ipsum</Link>
               </li>
             </ul>
           </Col>
           <Col xs={24} sm={8} md={8} lg={5} className="text-lg-end">
             <ul className="socialLinks">
               <li>
-                <a href="#">
+                <Link href="#">
                   <XOutlined />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link href="#">
                   <FacebookOutlined />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link href="#">
                   <LinkedinOutlined />
-                </a>
+                </Link>
               </li>
             </ul>
           </Col>
@@ -83,10 +84,10 @@ export default function Home() {
           <Col xs={24}>
             <ul className="termsLinks">
               <li>
-                <a href="#">Terms of Service</a>
+                <Link href="#">Terms of Service</Link>
               </li>
               <li>
-                <a href="#">Privacy Policy</a>
+                <Link href="#">Privacy Policy</Link>
               </li>
             </ul>
           </Col>

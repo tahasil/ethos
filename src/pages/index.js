@@ -27,27 +27,7 @@ import Tree from "../../public/jsons/tree.json";
 import Infographic from "../../public/jsons/arrow_infographic.json";
 
 import Joinus from "../component/joinus/index";
-import {
-  Zoom,
-  Bounce,
-  Flip,
-  Rotate,
-  Roll,
-  LightSpeed,
-  Fade,
-  Flash,
-  Jello,
-  Pulse,
-  RubberBand,
-  Shake,
-  Swing,
-  Tada,
-  Wobble,
-  HeadShake,
-  Pop,
-  Spin,
-  Jump,
-} from "react-swift-reveal";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export default function Home() {
   const [contactUs, setContactUs] = useState([false, ""]);
@@ -153,17 +133,15 @@ export default function Home() {
                 lg={{ span: 12, order: 2 }}
                 className="text-center my-sm-4"
               >
-                <Rotate>
-                  <img
-                    className="img-fluid m-auto"
-                    src="/images/image-11.png"
-                    alt=""
-                  />
-                </Rotate>
+                <img
+                  className="img-fluid m-auto"
+                  src="/images/image-11.png"
+                  alt=""
+                />
                 {/* <ReactPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" /> */}
               </Col>
             </Row>
-            <Bounce>
+            <ScrollAnimation animateIn="fadeIn">
               <Row gutter={[15, 15]} className="mt-5">
                 <Col xs={24} sm={24} lg={8}>
                   <XCardTrsap className="text-center">
@@ -232,7 +210,7 @@ export default function Home() {
                   </XCardTrsap>
                 </Col>
               </Row>
-            </Bounce>
+            </ScrollAnimation>
           </Wrapper>
         </XBGImg>
       </div>
@@ -271,13 +249,11 @@ export default function Home() {
               </ul>
             </Col>
             <Col xs={24} sm={24} lg={12} className="mb-5 mb-lg-0">
-              <Rotate>
-                <img
-                  className="img-fluid m-auto"
-                  src="/images/image-12.svg"
-                  alt=""
-                />
-              </Rotate>
+              <img
+                className="img-fluid m-auto"
+                src="/images/image-12.svg"
+                alt=""
+              />
             </Col>
           </Row>
           <Row>
@@ -286,13 +262,11 @@ export default function Home() {
               sm={{ span: 10, offset: 7 }}
               lg={{ span: 12 }}
             >
-              <Rotate>
-                <img
-                  className="img-fluid m-auto"
-                  src="/images/animationLine.svg"
-                  alt=""
-                />
-              </Rotate>
+              <img
+                className="img-fluid m-auto"
+                src="/images/animationLine.svg"
+                alt=""
+              />
             </Col>
           </Row>
           <Row gutter={[15, 15]} className="mt-5 align-items-center">
@@ -301,13 +275,11 @@ export default function Home() {
               sm={{ span: 24, order: 2 }}
               lg={{ span: 12, order: 1 }}
             >
-              <Rotate>
-                <img
-                  className="img-fluid m-auto"
-                  src="/images/image-13.svg"
-                  alt=""
-                />
-              </Rotate>
+              <img
+                className="img-fluid m-auto"
+                src="/images/image-13.svg"
+                alt=""
+              />
             </Col>
             <Col
               xs={{ span: 24, order: 1 }}
@@ -353,13 +325,11 @@ export default function Home() {
                 src="/images/image-14.svg"
                 alt=""
               /> */}
-              <Shake>
-                <Lottie
-                  className="infographic m-auto"
-                  animationData={Infographic}
-                  loop={true}
-                />
-              </Shake>
+              <Lottie
+                className="infographic m-auto"
+                animationData={Infographic}
+                loop={true}
+              />
             </Col>
           </Row>
         </Wrapper>
@@ -383,13 +353,11 @@ export default function Home() {
             </XPara1>
           </Col>
           <Col xs={24} sm={24} lg={12} className="text-center my-4 my-md-0">
-            <Rotate>
-              <img
-                className="img-fluid m-auto"
-                src="/images/image-13.png"
-                alt=""
-              />
-            </Rotate>
+            <img
+              className="img-fluid m-auto"
+              src="/images/image-13.png"
+              alt=""
+            />
           </Col>
         </Row>
       </Wrapper>
