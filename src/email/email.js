@@ -23,8 +23,8 @@ exports.sendEmail = async (name, email,source) => {
 
         let mailOptions = {
             from: "codeninjas@aiolos.solutions",
-            to: "danish.k@aiolos.cloud,sam@rohi.com,sam@aethos.org",
-            // to: "danish.k@aiolos.cloud,askari@aiolos.solutions",
+            // to: "danish.k@aiolos.cloud,sam@rohi.com,sam@aethos.org",
+            to: "danish.k@aiolos.cloud,askari@aiolos.solutions",
             subject: subject,
             text: `\nName: ${name}\nEmail: ${email}`,
         };
