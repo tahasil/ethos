@@ -27,6 +27,27 @@ import Tree from "../../public/jsons/tree.json";
 import Infographic from "../../public/jsons/arrow_infographic.json";
 
 import Joinus from "../component/joinus/index";
+import {
+  Zoom,
+  Bounce,
+  Flip,
+  Rotate,
+  Roll,
+  LightSpeed,
+  Fade,
+  Flash,
+  Jello,
+  Pulse,
+  RubberBand,
+  Shake,
+  Swing,
+  Tada,
+  Wobble,
+  HeadShake,
+  Pop,
+  Spin,
+  Jump,
+} from "react-swift-reveal";
 
 export default function Home() {
   const [contactUs, setContactUs] = useState([false, ""]);
@@ -100,6 +121,7 @@ export default function Home() {
               <Col xs={24}>
                 <XTitle2>Our Mission</XTitle2>
               </Col>
+
               <Col
                 xs={{ span: 24, order: 2 }}
                 sm={{ span: 24, order: 2 }}
@@ -131,82 +153,86 @@ export default function Home() {
                 lg={{ span: 12, order: 2 }}
                 className="text-center my-sm-4"
               >
-                <img
-                  className="img-fluid m-auto"
-                  src="/images/image-11.png"
-                  alt=""
-                />
+                <Rotate>
+                  <img
+                    className="img-fluid m-auto"
+                    src="/images/image-11.png"
+                    alt=""
+                  />
+                </Rotate>
                 {/* <ReactPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" /> */}
               </Col>
             </Row>
-            <Row gutter={[15, 15]} className="mt-5">
-              <Col xs={24} sm={24} lg={8}>
-                <XCardTrsap className="text-center">
-                  {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
+            <Bounce>
+              <Row gutter={[15, 15]} className="mt-5">
+                <Col xs={24} sm={24} lg={8}>
+                  <XCardTrsap className="text-center">
+                    {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
 
-                  <Lottie
-                    style={{ width: "100px" }}
-                    className="m-auto"
-                    animationData={icon1}
-                    loop={true}
-                  />
+                    <Lottie
+                      style={{ width: "100px" }}
+                      className="m-auto"
+                      animationData={icon1}
+                      loop={true}
+                    />
 
-                  <h3 className="my-3">Service Mentality</h3>
-                  <p>
-                    We ask our members to contribute 2 hours of their time each
-                    month to helping others. We prioritize honesty and trust
-                    among innovators who are inventing the future, ideals that
-                    can only be set in motion by consistently providing helpful
-                    resources. The Æthos community takes on leadership through
-                    service.
-                  </p>
-                </XCardTrsap>
-              </Col>
-              <Col xs={24} sm={24} lg={8}>
-                <XCardTrsap className="text-center">
-                  {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
-                  <Lottie
-                    style={{ width: "100px" }}
-                    className="m-auto"
-                    animationData={icon2}
-                    loop={true}
-                  />
-                  <h3 className="my-3">Neutrality</h3>
-                  <p>
-                    Æthos believes the most efficient community to grow in
-                    contains deep domain knowledge from diverse fields alongside
-                    technical expertise in AI. From energy to medicine, from
-                    music to agriculture, Æthos sees AI being horizontally
-                    applied with shared pain points arising left and right.
-                    What’s more, our mission and structure allow us to partner
-                    with otherwise competitive interests from across the
-                    innovation ecosystem.
-                  </p>
-                </XCardTrsap>
-              </Col>
-              <Col xs={24} sm={24} lg={8}>
-                <XCardTrsap className="text-center">
-                  {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
-                  <Lottie
-                    style={{ width: "100px" }}
-                    className="m-auto"
-                    animationData={icon3}
-                    loop={true}
-                  />
-                  <h3 className="my-3">Responsible Impact</h3>
-                  <p>
-                    Æthos seeks founders who are pursuing missions with human
-                    stakeholders and an intent to drive AI forward while
-                    safeguarding for the downstream impacts of their technology.
-                    By concentrating for founders the resources they need to win
-                    in an environment characterized by belonging and mutual
-                    respect, we believe their approach to technology will
-                    increasingly reflect a shared responsibility towards
-                    humanity.
-                  </p>
-                </XCardTrsap>
-              </Col>
-            </Row>
+                    <h3 className="my-3">Service Mentality</h3>
+                    <p>
+                      We ask our members to contribute 2 hours of their time
+                      each month to helping others. We prioritize honesty and
+                      trust among innovators who are inventing the future,
+                      ideals that can only be set in motion by consistently
+                      providing helpful resources. The Æthos community takes on
+                      leadership through service.
+                    </p>
+                  </XCardTrsap>
+                </Col>
+                <Col xs={24} sm={24} lg={8}>
+                  <XCardTrsap className="text-center">
+                    {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
+                    <Lottie
+                      style={{ width: "100px" }}
+                      className="m-auto"
+                      animationData={icon2}
+                      loop={true}
+                    />
+                    <h3 className="my-3">Neutrality</h3>
+                    <p>
+                      Æthos believes the most efficient community to grow in
+                      contains deep domain knowledge from diverse fields
+                      alongside technical expertise in AI. From energy to
+                      medicine, from music to agriculture, Æthos sees AI being
+                      horizontally applied with shared pain points arising left
+                      and right. What’s more, our mission and structure allow us
+                      to partner with otherwise competitive interests from
+                      across the innovation ecosystem.
+                    </p>
+                  </XCardTrsap>
+                </Col>
+                <Col xs={24} sm={24} lg={8}>
+                  <XCardTrsap className="text-center">
+                    {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
+                    <Lottie
+                      style={{ width: "100px" }}
+                      className="m-auto"
+                      animationData={icon3}
+                      loop={true}
+                    />
+                    <h3 className="my-3">Responsible Impact</h3>
+                    <p>
+                      Æthos seeks founders who are pursuing missions with human
+                      stakeholders and an intent to drive AI forward while
+                      safeguarding for the downstream impacts of their
+                      technology. By concentrating for founders the resources
+                      they need to win in an environment characterized by
+                      belonging and mutual respect, we believe their approach to
+                      technology will increasingly reflect a shared
+                      responsibility towards humanity.
+                    </p>
+                  </XCardTrsap>
+                </Col>
+              </Row>
+            </Bounce>
           </Wrapper>
         </XBGImg>
       </div>
@@ -245,11 +271,13 @@ export default function Home() {
               </ul>
             </Col>
             <Col xs={24} sm={24} lg={12} className="mb-5 mb-lg-0">
-              <img
-                className="img-fluid m-auto"
-                src="/images/image-12.svg"
-                alt=""
-              />
+              <Rotate>
+                <img
+                  className="img-fluid m-auto"
+                  src="/images/image-12.svg"
+                  alt=""
+                />
+              </Rotate>
             </Col>
           </Row>
           <Row>
@@ -258,11 +286,13 @@ export default function Home() {
               sm={{ span: 10, offset: 7 }}
               lg={{ span: 12 }}
             >
-              <img
-                className="img-fluid m-auto"
-                src="/images/animationLine.svg"
-                alt=""
-              />
+              <Rotate>
+                <img
+                  className="img-fluid m-auto"
+                  src="/images/animationLine.svg"
+                  alt=""
+                />
+              </Rotate>
             </Col>
           </Row>
           <Row gutter={[15, 15]} className="mt-5 align-items-center">
@@ -271,11 +301,13 @@ export default function Home() {
               sm={{ span: 24, order: 2 }}
               lg={{ span: 12, order: 1 }}
             >
-              <img
-                className="img-fluid m-auto"
-                src="/images/image-13.svg"
-                alt=""
-              />
+              <Rotate>
+                <img
+                  className="img-fluid m-auto"
+                  src="/images/image-13.svg"
+                  alt=""
+                />
+              </Rotate>
             </Col>
             <Col
               xs={{ span: 24, order: 1 }}
@@ -321,11 +353,13 @@ export default function Home() {
                 src="/images/image-14.svg"
                 alt=""
               /> */}
-              <Lottie
-                className="infographic m-auto"
-                animationData={Infographic}
-                loop={true}
-              />
+              <Shake>
+                <Lottie
+                  className="infographic m-auto"
+                  animationData={Infographic}
+                  loop={true}
+                />
+              </Shake>
             </Col>
           </Row>
         </Wrapper>
@@ -349,11 +383,13 @@ export default function Home() {
             </XPara1>
           </Col>
           <Col xs={24} sm={24} lg={12} className="text-center my-4 my-md-0">
-            <img
-              className="img-fluid m-auto"
-              src="/images/image-13.png"
-              alt=""
-            />
+            <Rotate>
+              <img
+                className="img-fluid m-auto"
+                src="/images/image-13.png"
+                alt=""
+              />
+            </Rotate>
           </Col>
         </Row>
       </Wrapper>
