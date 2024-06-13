@@ -11,6 +11,7 @@
   "dependencies": {
     "@lottiefiles/lottie-player": "^2.0.4",
     "@lottiefiles/react-lottie-player": "^3.5.4",
+    "@next/swc-win32-x64-msvc": "^14.2.4",
     "antd": "^5.17.3",
     "babel-plugin-styled-components": "^2.1.4",
     "bootstrap": "^5.3.3",
@@ -19,6 +20,8 @@
     "expo-status-bar": "^1.12.1",
     "lottie-react": "^2.4.0",
     "next": "14.2.3",
+    "next-connect": "^0.13.0",
+    "nodemailer": "^6.9.13",
     "omit": "^1.0.1",
     "omit.js": "^2.0.2",
     "react": "^18",
