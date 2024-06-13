@@ -14,49 +14,44 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 export default function JoinUs({ contactUs, handleModalOpen, handleCancel }) {
   const [form] = Form.useForm();
+  const [buttonLoading, setButtonLoading] = useState(false)
 
   const handleSubmit = async (values) => {
     try {
-      const response = await fetch(
-        "https://api.hubspot.com/contacts/v1/contact",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(values),
-        }
-      );
-
+      setButtonLoading(true)
+      const source = contactUs[1];
+      const response = await fetch('/api/v1/join-us', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...values, source }),
+      });
+  
       if (response.ok) {
+        setButtonLoading(false)
+        const data = await response.json();
         notification.success({
-          message: "Success",
-          description: "Your message has been sent successfully.",
+          message: 'Success',
+          description: data.message,
         });
         form.resetFields();
-        setContactUs([false, ""]);
+        handleCancel();
       } else {
-        throw new Error("Error submitting the form");
+        setButtonLoading(false)
+        throw new Error('Error submitting the form');
       }
     } catch (error) {
+      setButtonLoading(false)
+      console.error('Error submitting form:', error);
       notification.error({
-        message: "Error",
-        description:
-          "There was an error submitting the form. Please try again.",
+        message: 'Error',
+        description: 'There was an error submitting the form. Please try again.',
       });
       form.resetFields();
-      setContactUs([false, ""]);
+      handleCancel();
     }
   };
-
-  // const handleModalOpen = (contact) => {
-  //   setContactUs([true, contact]);
-  // };
-
-  // const handleCancel = () => {
-  //   form.resetFields();
-  //   setContactUs([false, ""]);
-  // };
 
   return (
     <>
@@ -96,7 +91,7 @@ export default function JoinUs({ contactUs, handleModalOpen, handleCancel }) {
                   title={false}
                   centered
                   open={contactUs[0]}
-                  onCancel={handleCancel}
+                  onCancel={() => {handleCancel(),form.resetFields()}}
                   footer={false}
                 >
                   {contactUs[1] === "contact" && (
@@ -161,7 +156,8 @@ export default function JoinUs({ contactUs, handleModalOpen, handleCancel }) {
                       </Col>
                       <Col xs={24}>
                         <XButtonModal
-                          size="large"
+                          loading={buttonLoading}
+                        size="large"
                           type="primary"
                           htmlType="submit"
                         >
