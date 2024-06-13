@@ -20,10 +20,11 @@ import {
 } from "../styles/GlobalStyle3";
 import { LeftOutlined } from "@ant-design/icons";
 import Lottie from "lottie-react";
-import icon1 from "../../public/aethos_icons/watering-can.json";
-import icon2 from "../../public/aethos_icons/sun.json";
-import icon3 from "../../public/aethos_icons/planting.json";
-//import AnimatedCursor from "../../component/cursor1.js";
+import icon1 from "../../public/jsons/watering-can.json";
+import icon2 from "../../public/jsons/sun.json";
+import icon3 from "../../public/jsons/planting.json";
+import Tree from "../../public/jsons/tree.json";
+import Infographic from "../../public/jsons/arrow_infographic.json";
 
 import Joinus from "../component/joinus/index";
 
@@ -41,7 +42,7 @@ export default function Home() {
   return (
     <>
       <div className="heroFocus">
-        <Header3 onJoinUsClick={() => handleModalOpen("join")}/>
+        <Header3 onJoinUsClick={() => handleModalOpen("join")} />
         <Hero>
           <Wrapper>
             <div
@@ -61,10 +62,15 @@ export default function Home() {
                 <h1>Global Communities for Advancing AI</h1>
               </Col>
               <Col className="mt-5" xs={24}>
-                <img
+                {/* <img
                   className="img-fluid m-auto"
                   src="/images/hero-3.svg"
                   alt=""
+                /> */}
+                <Lottie
+                  className="treeAnimation m-auto"
+                  animationData={Tree}
+                  loop={true}
                 />
               </Col>
             </Row>
@@ -310,10 +316,15 @@ export default function Home() {
               </XPara1>
             </Col>
             <Col xs={24} sm={24} lg={24} className="mt-4 text-center">
-              <img
+              {/* <img
                 className="img-fluid m-auto"
                 src="/images/image-14.svg"
                 alt=""
+              /> */}
+              <Lottie
+                className="infographic m-auto"
+                animationData={Infographic}
+                loop={true}
               />
             </Col>
           </Row>

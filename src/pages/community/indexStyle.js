@@ -197,7 +197,13 @@ export const XMission = styled.section`
 `;
 export const TreeCard = styled.section`
   width: 100%;
-  @media only screen and (max-width: 991.99px) {
+  .treeCiruleAnimtn {
+    width: 50%;
+  }
+  @media only screen and (max-width: 768.99px) {
+    .treeCiruleAnimtn {
+      width: 100%;
+    }
   }
 `;
 export const StationCard = styled.section`
