@@ -17,6 +17,7 @@
     "container": "^0.0.2",
     "expo-font": "^12.0.5",
     "expo-status-bar": "^1.12.1",
+    "gsap": "^3.12.5",
     "lottie-react": "^2.4.0",
     "next": "14.2.3",
     "omit": "^1.0.1",
