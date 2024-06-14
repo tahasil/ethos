@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Button, Card, Input, Modal } from "antd";
 export const Wrapper = styled.section`
   position: relative;
-  width: 90% !important;
+  width: 80% !important;
   margin: 0px auto;
   @media only screen and (max-width: 991.99px) {
     width: 95% !important;
