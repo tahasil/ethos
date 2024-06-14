@@ -20,12 +20,14 @@ import {
 } from "../styles/GlobalStyle3";
 import { LeftOutlined } from "@ant-design/icons";
 import Lottie from "lottie-react";
-import icon1 from "../../public/aethos_icons/watering-can.json";
-import icon2 from "../../public/aethos_icons/sun.json";
-import icon3 from "../../public/aethos_icons/planting.json";
-//import AnimatedCursor from "../../component/cursor1.js";
+import icon1 from "../../public/jsons/watering-can.json";
+import icon2 from "../../public/jsons/sun.json";
+import icon3 from "../../public/jsons/planting.json";
+import Tree from "../../public/jsons/tree.json";
+import Infographic from "../../public/jsons/arrow_infographic.json";
 
 import Joinus from "../component/joinus/index";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export default function Home() {
   const [contactUs, setContactUs] = useState([false, ""]);
@@ -41,7 +43,7 @@ export default function Home() {
   return (
     <>
       <div className="heroFocus">
-        <Header3 onJoinUsClick={() => handleModalOpen("join")}/>
+        <Header3 onJoinUsClick={() => handleModalOpen("join")} />
         <Hero>
           <Wrapper>
             <div
@@ -61,10 +63,15 @@ export default function Home() {
                 <h1>Global Communities for Advancing AI</h1>
               </Col>
               <Col className="mt-5" xs={24}>
-                <img
+                {/* <img
                   className="img-fluid m-auto"
                   src="/images/hero-3.svg"
                   alt=""
+                /> */}
+                <Lottie
+                  className="treeAnimation m-auto"
+                  animationData={Tree}
+                  loop={true}
                 />
               </Col>
             </Row>
@@ -94,6 +101,7 @@ export default function Home() {
               <Col xs={24}>
                 <XTitle2>Our Mission</XTitle2>
               </Col>
+
               <Col
                 xs={{ span: 24, order: 2 }}
                 sm={{ span: 24, order: 2 }}
@@ -133,74 +141,76 @@ export default function Home() {
                 {/* <ReactPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" /> */}
               </Col>
             </Row>
-            <Row gutter={[15, 15]} className="mt-5">
-              <Col xs={24} sm={24} lg={8}>
-                <XCardTrsap className="text-center">
-                  {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
+            <ScrollAnimation animateIn="fadeIn">
+              <Row gutter={[15, 15]} className="mt-5">
+                <Col xs={24} sm={24} lg={8}>
+                  <XCardTrsap className="text-center">
+                    {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
 
-                  <Lottie
-                    style={{ width: "100px" }}
-                    className="m-auto"
-                    animationData={icon1}
-                    loop={true}
-                  />
+                    <Lottie
+                      style={{ width: "100px" }}
+                      className="m-auto"
+                      animationData={icon1}
+                      loop={true}
+                    />
 
-                  <h3 className="my-3">Service Mentality</h3>
-                  <p>
-                    We ask our members to contribute 2 hours of their time each
-                    month to helping others. We prioritize honesty and trust
-                    among innovators who are inventing the future, ideals that
-                    can only be set in motion by consistently providing helpful
-                    resources. The Æthos community takes on leadership through
-                    service.
-                  </p>
-                </XCardTrsap>
-              </Col>
-              <Col xs={24} sm={24} lg={8}>
-                <XCardTrsap className="text-center">
-                  {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
-                  <Lottie
-                    style={{ width: "100px" }}
-                    className="m-auto"
-                    animationData={icon2}
-                    loop={true}
-                  />
-                  <h3 className="my-3">Neutrality</h3>
-                  <p>
-                    Æthos believes the most efficient community to grow in
-                    contains deep domain knowledge from diverse fields alongside
-                    technical expertise in AI. From energy to medicine, from
-                    music to agriculture, Æthos sees AI being horizontally
-                    applied with shared pain points arising left and right.
-                    What’s more, our mission and structure allow us to partner
-                    with otherwise competitive interests from across the
-                    innovation ecosystem.
-                  </p>
-                </XCardTrsap>
-              </Col>
-              <Col xs={24} sm={24} lg={8}>
-                <XCardTrsap className="text-center">
-                  {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
-                  <Lottie
-                    style={{ width: "100px" }}
-                    className="m-auto"
-                    animationData={icon3}
-                    loop={true}
-                  />
-                  <h3 className="my-3">Responsible Impact</h3>
-                  <p>
-                    Æthos seeks founders who are pursuing missions with human
-                    stakeholders and an intent to drive AI forward while
-                    safeguarding for the downstream impacts of their technology.
-                    By concentrating for founders the resources they need to win
-                    in an environment characterized by belonging and mutual
-                    respect, we believe their approach to technology will
-                    increasingly reflect a shared responsibility towards
-                    humanity.
-                  </p>
-                </XCardTrsap>
-              </Col>
-            </Row>
+                    <h3 className="my-3">Service Mentality</h3>
+                    <p>
+                      We ask our members to contribute 2 hours of their time
+                      each month to helping others. We prioritize honesty and
+                      trust among innovators who are inventing the future,
+                      ideals that can only be set in motion by consistently
+                      providing helpful resources. The Æthos community takes on
+                      leadership through service.
+                    </p>
+                  </XCardTrsap>
+                </Col>
+                <Col xs={24} sm={24} lg={8}>
+                  <XCardTrsap className="text-center">
+                    {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
+                    <Lottie
+                      style={{ width: "100px" }}
+                      className="m-auto"
+                      animationData={icon2}
+                      loop={true}
+                    />
+                    <h3 className="my-3">Neutrality</h3>
+                    <p>
+                      Æthos believes the most efficient community to grow in
+                      contains deep domain knowledge from diverse fields
+                      alongside technical expertise in AI. From energy to
+                      medicine, from music to agriculture, Æthos sees AI being
+                      horizontally applied with shared pain points arising left
+                      and right. What’s more, our mission and structure allow us
+                      to partner with otherwise competitive interests from
+                      across the innovation ecosystem.
+                    </p>
+                  </XCardTrsap>
+                </Col>
+                <Col xs={24} sm={24} lg={8}>
+                  <XCardTrsap className="text-center">
+                    {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
+                    <Lottie
+                      style={{ width: "100px" }}
+                      className="m-auto"
+                      animationData={icon3}
+                      loop={true}
+                    />
+                    <h3 className="my-3">Responsible Impact</h3>
+                    <p>
+                      Æthos seeks founders who are pursuing missions with human
+                      stakeholders and an intent to drive AI forward while
+                      safeguarding for the downstream impacts of their
+                      technology. By concentrating for founders the resources
+                      they need to win in an environment characterized by
+                      belonging and mutual respect, we believe their approach to
+                      technology will increasingly reflect a shared
+                      responsibility towards humanity.
+                    </p>
+                  </XCardTrsap>
+                </Col>
+              </Row>
+            </ScrollAnimation>
           </Wrapper>
         </XBGImg>
       </div>
@@ -310,10 +320,15 @@ export default function Home() {
               </XPara1>
             </Col>
             <Col xs={24} sm={24} lg={24} className="mt-4 text-center">
-              <img
+              {/* <img
                 className="img-fluid m-auto"
                 src="/images/image-14.svg"
                 alt=""
+              /> */}
+              <Lottie
+                className="infographic m-auto"
+                animationData={Infographic}
+                loop={true}
               />
             </Col>
           </Row>

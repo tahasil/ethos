@@ -39,6 +39,12 @@ export const Hero = styled.section`
   padding: 4% 0% 4% 0%;
   width: 100%;
   position: relative;
+  .treeAnimation {
+    width: 80%;
+    @media only screen and (max-width: 768.99px) {
+      width: 100%;
+    }
+  }
   h1 {
     margin: 0px;
     font-weight: 800;
@@ -453,7 +459,13 @@ export const XAIInnovators = styled.section`
     rgba(0, 0, 0, 0) 52.5%,
     rgba(58, 127, 208, 0.2) 100%
   );
+  .infographic {
+    width: 50%;
+  }
   @media only screen and (max-width: 768.99px) {
+    .infographic {
+      width: 100%;
+    }
   }
 `;
 export const XContactModal = styled(Modal)`

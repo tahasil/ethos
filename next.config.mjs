@@ -10,6 +10,7 @@ const nextConfig = {
     "rc-tooltip",
     "styled-components",
   ],
+  //pageExtensions: ["page.tsx", "page.ts", "page.jsx", "page.js"],
 };
 
 export default nextConfig;

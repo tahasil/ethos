@@ -18,6 +18,9 @@ import {
 import Joinus from "../../component/joinus/index";
 import Gallery from "../../component/gallery/index";
 import Connect from "../../component/connect/index";
+import Lottie from "lottie-react";
+import TreeStory from "../../../public/jsons/community.json";
+
 export default function Home() {
   const [contactUs, setContactUs] = useState([false, ""]);
 
@@ -194,10 +197,16 @@ export default function Home() {
             </Row>
             <Row>
               <Col xs={24}>
-                <img
-                  className="img-fluid w-100"
+                {/* <img
+                  className="img-fluid m-auto"
                   src="/images/image-16.svg"
                   alt=""
+                /> */}
+
+                <Lottie
+                  className="treeCiruleAnimtn m-auto"
+                  animationData={TreeStory}
+                  loop={true}
                 />
               </Col>
             </Row>

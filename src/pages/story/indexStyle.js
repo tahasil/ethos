@@ -168,3 +168,6 @@ export const SubSection = styled.section`
     color: #7b7b7b;
   }
 `;
+
+const StoryStyle = () => {};
+export default StoryStyle;
