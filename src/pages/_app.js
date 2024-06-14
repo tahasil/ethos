@@ -9,7 +9,7 @@ import AnimatedCursor from "react-animated-cursor";
 import Head from "next/head";
 import { Spin } from "antd";
 
-export default function myApp({ Component, pageprops }) {
+export default function MyApp({ Component, pageprops }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
