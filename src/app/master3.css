@@ -153,3 +153,6 @@ button.headerBtn {
   background: url("/images/sub-hero.svg") no-repeat center left;
   background-size: 40% 150%;
 } */
+.App {
+  overflow-x: hidden;
+}
