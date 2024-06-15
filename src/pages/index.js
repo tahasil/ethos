@@ -59,9 +59,9 @@ export default function Home() {
                 sm={{ span: 20, offset: 2 }}
                 lg={{ span: 16, offset: 4 }}
               >
-                <ScrollAnimation duration={1} animateIn="bounceInUp">
-                  <h1>Global Communities for Advancing AI</h1>
-                </ScrollAnimation>
+                {/* <ScrollAnimation duration={1} animateIn="bounceInUp"> */}
+                <h1>Global Communities for Advancing AI</h1>
+                {/* </ScrollAnimation>/ */}
               </Col>
               <Col className="mt-5" xs={24}>
                 {/* <img
@@ -72,7 +72,7 @@ export default function Home() {
                 <Lottie
                   className="treeAnimation m-auto"
                   animationData={Tree}
-                  loop={true}
+                  loop={false}
                 />
               </Col>
             </Row>
@@ -88,11 +88,11 @@ export default function Home() {
               lg={{ span: 16, offset: 4 }}
               className="text-center"
             >
-              <ScrollAnimation duration={2} animateIn="bounceInLeft">
-                <h2>
-                  Æthos = the character of shared beliefs held by a community
-                </h2>
-              </ScrollAnimation>
+              {/* <ScrollAnimation duration={2} animateIn="bounceInLeft"> */}
+              <h2>
+                Æthos = the character of shared beliefs held by a community
+              </h2>
+              {/* </ScrollAnimation> */}
             </Col>
           </Row>
         </Wrapper>
@@ -102,9 +102,9 @@ export default function Home() {
           <Wrapper>
             <Row gutter={[15, 15]} className="align-items-center">
               <Col xs={24}>
-                <ScrollAnimation duration={1} animateIn="bounceInUp">
-                  <XTitle2>Our Mission</XTitle2>
-                </ScrollAnimation>
+                {/* <ScrollAnimation duration={1} animateIn="bounceInUp"> */}
+                <XTitle2>Our Mission</XTitle2>
+                {/* </ScrollAnimation> */}
               </Col>
 
               <Col
@@ -112,27 +112,27 @@ export default function Home() {
                 sm={{ span: 24, order: 2 }}
                 lg={{ span: 12, order: 1 }}
               >
-                <ScrollAnimation duration={2} animateIn="bounceInUp">
-                  <p className="mb-4">
-                    <span>
-                      Æthos gathers leading innovators to invent the future of
-                      responsible artificial intelligence for humanity in a
-                      trusting, diverse community.
-                    </span>
-                  </p>
-                  <p className="mb-4">
-                    We are creating communities where roughly 100 leading
-                    entrepreneurs share values and resources in a single space
-                    while building “AI-first” companies that will reshape the
-                    world for generation to come.
-                  </p>
-                  <p>
-                    We do not seek profit and have no shareholders. We take no
-                    equity from our members. Æthos seeks to bring resources
-                    closer to founders and in return, we ask our members to
-                    uphold our values.
-                  </p>
-                </ScrollAnimation>
+                {/* <ScrollAnimation duration={2} animateIn="bounceInUp"> */}
+                <p className="mb-4">
+                  <span>
+                    Æthos gathers leading innovators to invent the future of
+                    responsible artificial intelligence for humanity in a
+                    trusting, diverse community.
+                  </span>
+                </p>
+                <p className="mb-4">
+                  We are creating communities where roughly 100 leading
+                  entrepreneurs share values and resources in a single space
+                  while building “AI-first” companies that will reshape the
+                  world for generation to come.
+                </p>
+                <p>
+                  We do not seek profit and have no shareholders. We take no
+                  equity from our members. Æthos seeks to bring resources closer
+                  to founders and in return, we ask our members to uphold our
+                  values.
+                </p>
+                {/* </ScrollAnimation> */}
               </Col>
               <Col
                 xs={{ span: 24, order: 1 }}
@@ -140,7 +140,11 @@ export default function Home() {
                 lg={{ span: 12, order: 2 }}
                 className="text-center my-sm-4"
               >
-                <ScrollAnimation duration={1} animateIn="flipInX">
+                <ScrollAnimation
+                  animateOnce={true}
+                  duration={1}
+                  animateIn="fadeIn"
+                >
                   <img
                     className="img-fluid m-auto"
                     src="/images/image-11.png"
@@ -151,76 +155,76 @@ export default function Home() {
               </Col>
             </Row>
 
-            <ScrollAnimation duration={1} animateIn="fadeInUp">
-              <Row gutter={[15, 15]} className="mt-5">
-                <Col xs={24} sm={24} lg={8}>
-                  <XCardTrsap className="text-center">
-                    {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
+            {/* <ScrollAnimation duration={1} animateIn="fadeInUp"> */}
+            <Row gutter={[15, 15]} className="mt-5">
+              <Col xs={24} sm={24} lg={8}>
+                <XCardTrsap className="text-center">
+                  {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
 
-                    <Lottie
-                      style={{ width: "100px" }}
-                      className="m-auto"
-                      animationData={icon1}
-                      loop={true}
-                    />
+                  <Lottie
+                    style={{ width: "100px" }}
+                    className="m-auto"
+                    animationData={icon1}
+                    loop={true}
+                  />
 
-                    <h3 className="my-3">Service Mentality</h3>
-                    <p>
-                      We ask our members to contribute 2 hours of their time
-                      each month to helping others. We prioritize honesty and
-                      trust among innovators who are inventing the future,
-                      ideals that can only be set in motion by consistently
-                      providing helpful resources. The Æthos community takes on
-                      leadership through service.
-                    </p>
-                  </XCardTrsap>
-                </Col>
-                <Col xs={24} sm={24} lg={8}>
-                  <XCardTrsap className="text-center">
-                    {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
-                    <Lottie
-                      style={{ width: "100px" }}
-                      className="m-auto"
-                      animationData={icon2}
-                      loop={true}
-                    />
-                    <h3 className="my-3">Neutrality</h3>
-                    <p>
-                      Æthos believes the most efficient community to grow in
-                      contains deep domain knowledge from diverse fields
-                      alongside technical expertise in AI. From energy to
-                      medicine, from music to agriculture, Æthos sees AI being
-                      horizontally applied with shared pain points arising left
-                      and right. What’s more, our mission and structure allow us
-                      to partner with otherwise competitive interests from
-                      across the innovation ecosystem.
-                    </p>
-                  </XCardTrsap>
-                </Col>
-                <Col xs={24} sm={24} lg={8}>
-                  <XCardTrsap className="text-center">
-                    {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
-                    <Lottie
-                      style={{ width: "100px" }}
-                      className="m-auto"
-                      animationData={icon3}
-                      loop={true}
-                    />
-                    <h3 className="my-3">Responsible Impact</h3>
-                    <p>
-                      Æthos seeks founders who are pursuing missions with human
-                      stakeholders and an intent to drive AI forward while
-                      safeguarding for the downstream impacts of their
-                      technology. By concentrating for founders the resources
-                      they need to win in an environment characterized by
-                      belonging and mutual respect, we believe their approach to
-                      technology will increasingly reflect a shared
-                      responsibility towards humanity.
-                    </p>
-                  </XCardTrsap>
-                </Col>
-              </Row>
-            </ScrollAnimation>
+                  <h3 className="my-3">Service Mentality</h3>
+                  <p>
+                    We ask our members to contribute 2 hours of their time each
+                    month to helping others. We prioritize honesty and trust
+                    among innovators who are inventing the future, ideals that
+                    can only be set in motion by consistently providing helpful
+                    resources. The Æthos community takes on leadership through
+                    service.
+                  </p>
+                </XCardTrsap>
+              </Col>
+              <Col xs={24} sm={24} lg={8}>
+                <XCardTrsap className="text-center">
+                  {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
+                  <Lottie
+                    style={{ width: "100px" }}
+                    className="m-auto"
+                    animationData={icon2}
+                    loop={true}
+                  />
+                  <h3 className="my-3">Neutrality</h3>
+                  <p>
+                    Æthos believes the most efficient community to grow in
+                    contains deep domain knowledge from diverse fields alongside
+                    technical expertise in AI. From energy to medicine, from
+                    music to agriculture, Æthos sees AI being horizontally
+                    applied with shared pain points arising left and right.
+                    What’s more, our mission and structure allow us to partner
+                    with otherwise competitive interests from across the
+                    innovation ecosystem.
+                  </p>
+                </XCardTrsap>
+              </Col>
+              <Col xs={24} sm={24} lg={8}>
+                <XCardTrsap className="text-center">
+                  {/* <img className="m-auto mb-4" src="/images/icon-1.svg" /> */}
+                  <Lottie
+                    style={{ width: "100px" }}
+                    className="m-auto"
+                    animationData={icon3}
+                    loop={true}
+                  />
+                  <h3 className="my-3">Responsible Impact</h3>
+                  <p>
+                    Æthos seeks founders who are pursuing missions with human
+                    stakeholders and an intent to drive AI forward while
+                    safeguarding for the downstream impacts of their technology.
+                    By concentrating for founders the resources they need to win
+                    in an environment characterized by belonging and mutual
+                    respect, we believe their approach to technology will
+                    increasingly reflect a shared responsibility towards
+                    humanity.
+                  </p>
+                </XCardTrsap>
+              </Col>
+            </Row>
+            {/* </ScrollAnimation> */}
           </Wrapper>
         </XBGImg>
       </div>
@@ -232,18 +236,18 @@ export default function Home() {
             lg={{ span: 16, offset: 4 }}
             className="text-center"
           >
-            <ScrollAnimation duration={1} animateIn="slideInLeft">
-              <XTitle2 className="mb-3">
-                Æthos takes on the innovation ecosystem’s challenges
-              </XTitle2>
-              <XPara1>
-                While we intend to go global with sites in Berlin and Tokyo
-                planned, for love of our city as our starting point, we
-                interviewed nearly 100 AI founders in and major stakeholders in
-                Boston’s innovation ecosystem to understand how we can
-                contribute. Here’s some of what we heard:
-              </XPara1>
-            </ScrollAnimation>
+            {/* <ScrollAnimation duration={1} animateIn="slideInLeft"> */}
+            <XTitle2 className="mb-3">
+              Æthos takes on the innovation ecosystem’s challenges
+            </XTitle2>
+            <XPara1>
+              While we intend to go global with sites in Berlin and Tokyo
+              planned, for love of our city as our starting point, we
+              interviewed nearly 100 AI founders in and major stakeholders in
+              Boston’s innovation ecosystem to understand how we can contribute.
+              Here’s some of what we heard:
+            </XPara1>
+            {/* </ScrollAnimation> */}
           </Col>
         </Row>
       </Wrapper>
@@ -251,19 +255,23 @@ export default function Home() {
         <Wrapper className="py-5">
           <Row gutter={[15, 15]} className="align-items-center">
             <Col xs={24} sm={24} lg={12}>
-              <ScrollAnimation duration={1} animateIn="fadeInUp">
-                <XTitle2 className="mb-4">Entrepreneurs’ Interests</XTitle2>
-                <ul className="list3">
-                  <li>Desire for a pre-selected support community of peers</li>
-                  <li>
-                    Consolidated access to resources to focus more on building
-                    and talking to customers
-                  </li>
-                </ul>
-              </ScrollAnimation>
+              {/* <ScrollAnimation duration={1} animateIn="fadeInUp"> */}
+              <XTitle2 className="mb-4">Entrepreneurs’ Interests</XTitle2>
+              <ul className="list3">
+                <li>Desire for a pre-selected support community of peers</li>
+                <li>
+                  Consolidated access to resources to focus more on building and
+                  talking to customers
+                </li>
+              </ul>
+              {/* </ScrollAnimation> */}
             </Col>
             <Col xs={24} sm={24} lg={12} className="mb-5 mb-lg-0">
-              <ScrollAnimation duration={1} animateIn="flipInY">
+              <ScrollAnimation
+                animateOnce={true}
+                duration={1}
+                animateIn="fadeIn"
+              >
                 <img
                   className="img-fluid m-auto"
                   src="/images/image-12.svg"
@@ -278,11 +286,17 @@ export default function Home() {
               sm={{ span: 10, offset: 7 }}
               lg={{ span: 12 }}
             >
-              <img
-                className="img-fluid m-auto"
-                src="/images/animationLine.svg"
-                alt=""
-              />
+              <ScrollAnimation
+                animateOnce={true}
+                duration={1}
+                animateIn="fadeIn"
+              >
+                <img
+                  className="img-fluid m-auto"
+                  src="/images/animationLine.svg"
+                  alt=""
+                />
+              </ScrollAnimation>
             </Col>
           </Row>
           <Row gutter={[15, 15]} className="mt-5 align-items-center">
@@ -291,7 +305,11 @@ export default function Home() {
               sm={{ span: 24, order: 2 }}
               lg={{ span: 12, order: 1 }}
             >
-              <ScrollAnimation duration={1} animateIn="flipInY">
+              <ScrollAnimation
+                animateOnce={true}
+                duration={1}
+                animateIn="fadeIn"
+              >
                 <img
                   className="img-fluid m-auto"
                   src="/images/image-13.svg"
@@ -304,7 +322,11 @@ export default function Home() {
               sm={{ span: 24, order: 1 }}
               lg={{ span: 12, order: 2 }}
             >
-              <ScrollAnimation duration={1} animateIn="fadeInUp">
+              <ScrollAnimation
+                animateOnce={true}
+                duration={1}
+                animateIn="fadeIn"
+              >
                 <XTitle2 className="mb-4">
                   Perception of Boston’s Innovation Ecosystem
                 </XTitle2>
@@ -326,20 +348,20 @@ export default function Home() {
               lg={{ span: 16, offset: 4 }}
               className="text-center"
             >
-              <ScrollAnimation duration={1} animateIn="fadeInUp">
-                <XTitle2 className="mb-3">
-                  Bringing resources closer to AI innovators
-                </XTitle2>
-                <XPara1>
-                  Æthos will operate at two levels: the wider Æthos community
-                  incorporating startups, corporates, investors, academics and
-                  others, and a physical shared space for AI founders we call
-                  Aethos Station. Within the station, founders can use the space
-                  as their work environment, access the community and shared
-                  resources via relationships with the ecosystem’s biggest
-                  contributors
-                </XPara1>
-              </ScrollAnimation>
+              {/* <ScrollAnimation duration={1} animateIn="fadeInUp"> */}
+              <XTitle2 className="mb-3">
+                Bringing resources closer to AI innovators
+              </XTitle2>
+              <XPara1>
+                Æthos will operate at two levels: the wider Æthos community
+                incorporating startups, corporates, investors, academics and
+                others, and a physical shared space for AI founders we call
+                Aethos Station. Within the station, founders can use the space
+                as their work environment, access the community and shared
+                resources via relationships with the ecosystem’s biggest
+                contributors
+              </XPara1>
+              {/* </ScrollAnimation> */}
             </Col>
             <Col xs={24} sm={24} lg={24} className="mt-4 text-center">
               {/* <img
@@ -347,11 +369,15 @@ export default function Home() {
                 src="/images/image-14.svg"
                 alt=""
               /> */}
-              <ScrollAnimation duration={2} animateIn="fadeIn">
+              <ScrollAnimation
+                animateOnce={true}
+                duration={1}
+                animateIn="fadeIn"
+              >
                 <Lottie
                   className="infographic m-auto"
                   animationData={Infographic}
-                  loop={true}
+                  loop={false}
                 />
               </ScrollAnimation>
             </Col>
@@ -361,25 +387,25 @@ export default function Home() {
       <Wrapper className="py-5">
         <Row gutter={[15, 15]} className="align-items-center">
           <Col xs={24} sm={24} lg={12}>
-            <ScrollAnimation duration={1} animateIn="fadeInUp">
-              <XTitle2 className="mb-4">Æthos Team</XTitle2>
-              <XPara1 className="mb-4">
-                The dream team draws on experience in applied machine learning,
-                national innovation policy, B2B SaaS, design, VR, philosophy,
-                music, finance, management, education, product development, and,
-                of course, entrepreneurship. Together we represent 6
-                nationalities!
-              </XPara1>
-              <XPara1>
-                We are a still mostly volunteer team of visionaries who enjoy
-                spending time together and imagining ways AI can be leveraged to
-                uplift humanity. Many of us have our own AI ventures and have
-                come together over our shared passion for building community.
-              </XPara1>
-            </ScrollAnimation>
+            {/* <ScrollAnimation duration={1} animateIn="fadeInUp"> */}
+            <XTitle2 className="mb-4">Æthos Team</XTitle2>
+            <XPara1 className="mb-4">
+              The dream team draws on experience in applied machine learning,
+              national innovation policy, B2B SaaS, design, VR, philosophy,
+              music, finance, management, education, product development, and,
+              of course, entrepreneurship. Together we represent 6
+              nationalities!
+            </XPara1>
+            <XPara1>
+              We are a still mostly volunteer team of visionaries who enjoy
+              spending time together and imagining ways AI can be leveraged to
+              uplift humanity. Many of us have our own AI ventures and have come
+              together over our shared passion for building community.
+            </XPara1>
+            {/* </ScrollAnimation> */}
           </Col>
           <Col xs={24} sm={24} lg={12} className="text-center my-4 my-md-0">
-            <ScrollAnimation duration={1} animateIn="flipInX">
+            <ScrollAnimation animateOnce={true} duration={1} animateIn="fadeIn">
               <img
                 className="img-fluid m-auto"
                 src="/images/image-13.png"

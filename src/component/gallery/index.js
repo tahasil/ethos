@@ -15,15 +15,15 @@ export default function Home() {
     <Wrapper>
       <Row gutter={[15, 15]}>
         <Col xs={24} className="mb-5">
-          <ScrollAnimation duration={1} animateIn="slideInLeft">
-            <TitleSub>THE STATION</TitleSub>
-          </ScrollAnimation>
-          <ScrollAnimation duration={2} animateIn="slideInLeft">
-            <Title className="mt-3">Lorem ipsum dolor sit amet</Title>
-          </ScrollAnimation>
+          {/* <ScrollAnimation duration={1} animateIn="slideInLeft"> */}
+          <TitleSub>THE STATION</TitleSub>
+          {/* </ScrollAnimation> */}
+          {/* <ScrollAnimation duration={2} animateIn="slideInLeft"> */}
+          <Title className="mt-3">Lorem ipsum dolor sit amet</Title>
+          {/* </ScrollAnimation> */}
         </Col>
         <Col xs={24} sm={24} lg={6}>
-          <ScrollAnimation duration={1} animateIn="flipInY">
+          <ScrollAnimation animateOnce={true} duration={1} animateIn="fadeIn">
             <img
               className="img-fluid w-100"
               src="/images/image-17.png"
@@ -41,7 +41,7 @@ export default function Home() {
           </ScrollAnimation>
         </Col>
         <Col xs={24} sm={24} lg={12}>
-          <ScrollAnimation duration={1} animateIn="flipInY">
+          <ScrollAnimation animateOnce={true} duration={1} animateIn="fadeIn">
             <img
               className="img-fluid w-100"
               src="/images/image-18.png"
@@ -50,7 +50,7 @@ export default function Home() {
           </ScrollAnimation>
         </Col>
         <Col xs={24} sm={24} lg={6}>
-          <ScrollAnimation duration={1} animateIn="flipInY">
+          <ScrollAnimation animateOnce={true} duration={1} animateIn="fadeIn">
             <img
               className="img-fluid w-100"
               src="/images/image-19.png"
@@ -60,7 +60,7 @@ export default function Home() {
         </Col>
 
         <Col xs={12} sm={12} lg={6}>
-          <ScrollAnimation duration={1} animateIn="flipInY">
+          <ScrollAnimation animateOnce={true} duration={1} animateIn="fadeIn">
             <img
               className="img-fluid w-100"
               src="/images/image-20.png"
@@ -69,7 +69,7 @@ export default function Home() {
           </ScrollAnimation>
         </Col>
         <Col xs={12} sm={12} lg={6}>
-          <ScrollAnimation duration={1} animateIn="flipInY">
+          <ScrollAnimation animateOnce={true} duration={1} animateIn="fadeIn">
             <img
               className="img-fluid w-100"
               src="/images/image-21.png"
@@ -78,7 +78,7 @@ export default function Home() {
           </ScrollAnimation>
         </Col>
         <Col xs={12} sm={12} lg={6}>
-          <ScrollAnimation duration={1} animateIn="flipInY">
+          <ScrollAnimation animateOnce={true} duration={1} animateIn="fadeIn">
             <img
               className="img-fluid w-100"
               src="/images/image-22.png"

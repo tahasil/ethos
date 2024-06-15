@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header3 from "../../component/header/header3";
 import Footer3 from "../../component/footer/footer3";
 import Select from "react-dropdown-select";
@@ -7,6 +7,7 @@ import { Wrapper, XButton } from "../../styles/GlobalStyle3";
 import Joinus from "../../component/joinus/index";
 import Connect from "../../component/connect/index";
 import styled from "styled-components";
+import ScrollAnimation from "react-animate-on-scroll";
 import {
   StoryWrap,
   HeroStory,
@@ -154,23 +155,46 @@ export default function Header({ onJoinUsClick }) {
         <HeroStory style={{ backgroundColor: "#020412" }}>
           <Header3 onJoinUsClick={() => handleModalOpen("join")} />
           <Wrapper>
-            <StyledRow gutter={[8, 8]}>
-              <StyledCol xs={24} sm={12}>
+            <Row gutter={[16, 16]}>
+              <Col xs={24} sm={12}>
                 <TreeImgContainer>
-                  <Image src="/images/white-tree.png" alt="" />
+                  <ScrollAnimation
+                    animateOnce={true}
+                    duration={1}
+                    animateIn="fadeIn"
+                  >
+                    <Image src="/images/white-tree.png" alt="" />
+                  </ScrollAnimation>
                 </TreeImgContainer>
-              </StyledCol>
-              <StyledCol xs={24} sm={9}>
-                <TextWrapper style={{ marginTop: "100px" }}>
-                  <Title>Quis enim lobortis scelerisque fermentum dui</Title>
-                  <Paragraph style={{ fontSize: "15px", marginTop: "20px" }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do Eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </Paragraph>
-                </TextWrapper>
-              </StyledCol>
-            </StyledRow>
+              </Col>
+
+              <Col
+                xs={24}
+                sm={12}
+                style={{ display: "flex", alignItems: "center" }}
+              >
+                <div style={{ padding: "20px" }}>
+                  <ScrollAnimation
+                    animateOnce={true}
+                    duration={1}
+                    animateIn="fadeIn"
+                  >
+                    <Title>Quis enim lobortis scelerisque fermentum dui</Title>
+                  </ScrollAnimation>
+                  <ScrollAnimation
+                    animateOnce={true}
+                    duration={1}
+                    animateIn="fadeIn"
+                  >
+                    <Paragraph>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </Paragraph>
+                  </ScrollAnimation>
+                </div>
+              </Col>
+            </Row>
 
             <XCard>
               <Row gutter={[15, 15]}>
@@ -265,43 +289,45 @@ export default function Header({ onJoinUsClick }) {
 
         <CardMainContainer>
           <CardContainer>
-            <Row gutter={[15, 15]} style={{ justifyContent: "space-evenly" }}>
-              {data.map((event, index) => (
-                <Col
-                  key={index}
-                  xs={24}
-                  sm={12}
-                  lg={7}
-                  style={{ marginBottom: "20px" }}
-                >
-                  <Card
-                    style={cardTag}
-                    cover={<img alt="example" src={event.cardImg} />}
+            <ScrollAnimation animateOnce={true} duration={1} animateIn="fadeIn">
+              <Row gutter={[15, 15]} style={{ justifyContent: "space-evenly" }}>
+                {data.map((event, index) => (
+                  <Col
+                    key={index}
+                    xs={24}
+                    sm={12}
+                    lg={7}
+                    style={{ marginBottom: "20px" }}
                   >
-                    <CardDateMainContainer>
-                      <CardDateContainer>
-                        <DateTxt>06</DateTxt>
-                        <MonthTxt>Jun</MonthTxt>
-                      </CardDateContainer>
-                      <CardTitle>{event.title}</CardTitle>
-                    </CardDateMainContainer>
+                    <Card
+                      style={cardTag}
+                      cover={<img alt="example" src={event.cardImg} />}
+                    >
+                      <CardDateMainContainer>
+                        <CardDateContainer>
+                          <DateTxt>06</DateTxt>
+                          <MonthTxt>Jun</MonthTxt>
+                        </CardDateContainer>
+                        <CardTitle>{event.title}</CardTitle>
+                      </CardDateMainContainer>
 
-                    <CardTimeImg>
-                      <img style={timeIcon} src="/images/time.png" alt="" />
-                      <TimeTxt>{event.dateTime}</TimeTxt>
-                    </CardTimeImg>
-                    <LocationContainer>
-                      <img
-                        style={locationImg}
-                        src="/images/location.png"
-                        alt=""
-                      />
-                      <LocationTxt>{event.location}</LocationTxt>
-                    </LocationContainer>
-                  </Card>
-                </Col>
-              ))}
-            </Row>
+                      <CardTimeImg>
+                        <img style={timeIcon} src="/images/time.png" alt="" />
+                        <TimeTxt>{event.dateTime}</TimeTxt>
+                      </CardTimeImg>
+                      <LocationContainer>
+                        <img
+                          style={locationImg}
+                          src="/images/location.png"
+                          alt=""
+                        />
+                        <LocationTxt>{event.location}</LocationTxt>
+                      </LocationContainer>
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
+            </ScrollAnimation>
             <Col xs={24} className="mt-5 text-center">
               <XButton>Load More</XButton>
             </Col>

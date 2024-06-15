@@ -16,19 +16,18 @@ export default function Home({ content, button }) {
               lg={{ span: 20, offset: 2 }}
               className="text-center"
             >
-              <ScrollAnimation duration={1} animateIn="slideInUp">
-                <LargePara>
-                  <span>Lorem ipsum dolor sit amet,</span> consectetur
-                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat.
-                </LargePara>
-              </ScrollAnimation>
+              {/* <ScrollAnimation duration={1} animateIn="slideInUp"> */}
+              <LargePara>
+                <span>Lorem ipsum dolor sit amet,</span> consectetur adipiscing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </LargePara>
+              {/* </ScrollAnimation> */}
             </Col>
           )}
           <Col xs={24} className="mt-5">
-            <ScrollAnimation duration={1} animateIn="zoomInRight">
+            <ScrollAnimation animateOnce={true} duration={1} animateIn="fadeIn">
               <img
                 className="img-fluid w-100"
                 src="/images/image-23.png"

@@ -158,6 +158,7 @@ export const Title = styled.h1`
   }
 `;
 
+
 export const CardTitle = styled.h1`
   font-weight: 800;
   font-size: 18px;
@@ -291,7 +292,7 @@ export const CardDateMainContainer = styled.div`
 `;
 
 export const TreeImgContainer = styled.div`
-  margin-left: 20%;
+  // margin-left: 20%;
   min-width: 70%;
   max-width: 350px;
   height: auto;
@@ -335,6 +336,8 @@ export const Phrase = styled.h3`
   margin-bottom: 8px;
   margin-left: 10px;
 `;
+
+
 
 export const cardTag = {
   backgroundColor: "#161825",

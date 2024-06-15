@@ -206,7 +206,7 @@ export default function Home() {
                 <Lottie
                   className="treeCiruleAnimtn m-auto"
                   animationData={TreeStory}
-                  loop={true}
+                  loop={false}
                 />
               </Col>
             </Row>
