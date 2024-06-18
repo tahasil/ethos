@@ -158,13 +158,7 @@ export default function Header({ onJoinUsClick }) {
             <Row gutter={[16, 16]}>
               <Col xs={24} sm={12}>
                 <TreeImgContainer>
-                  <ScrollAnimation
-                    animateOnce={true}
-                    duration={1}
-                    animateIn="fadeIn"
-                  >
-                    <Image src="/images/white-tree.png" alt="" />
-                  </ScrollAnimation>
+                  <Image src="/images/white-tree.png" alt="" />
                 </TreeImgContainer>
               </Col>
 
