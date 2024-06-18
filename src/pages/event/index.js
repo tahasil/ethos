@@ -13,7 +13,6 @@ import {
   HeroStory,
   DropdownDiv,
   DropdownMainContainer,
-  upcomingEventsTxt,
   UpcomingEventMainContainer,
   CardMainContainer,
   cardTag,
@@ -234,9 +233,7 @@ export default function Header({ onJoinUsClick }) {
         <Wrapper>
           <Row gutter={[0, 15]} style={{ marginBottom: "40px" }}>
             <Col xs={24} sm={24} lg={14}>
-              <UpcomingEventsTxt style={upcomingEventsTxt}>
-                Upcoming Events
-              </UpcomingEventsTxt>
+              <UpcomingEventsTxt>Upcoming Events</UpcomingEventsTxt>
             </Col>
             <Col xs={24} sm={24} lg={10}>
               <Row gutter={[15, 15]}>

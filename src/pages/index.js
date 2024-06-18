@@ -322,19 +322,13 @@ export default function Home() {
               sm={{ span: 24, order: 1 }}
               lg={{ span: 12, order: 2 }}
             >
-              <ScrollAnimation
-                animateOnce={true}
-                duration={1}
-                animateIn="fadeIn"
-              >
-                <XTitle2 className="mb-4">
-                  Perception of Boston’s Innovation Ecosystem
-                </XTitle2>
-                <ul className="list3">
-                  <li>Fragmented players, funding gaps, longer timelines</li>
-                  <li>Disconnect between academic and applied spheres</li>
-                </ul>
-              </ScrollAnimation>
+              <XTitle2 className="mb-4">
+                Perception of Boston’s Innovation Ecosystem
+              </XTitle2>
+              <ul className="list3">
+                <li>Fragmented players, funding gaps, longer timelines</li>
+                <li>Disconnect between academic and applied spheres</li>
+              </ul>
             </Col>
           </Row>
         </Wrapper>

@@ -158,7 +158,6 @@ export const Title = styled.h1`
   }
 `;
 
-
 export const CardTitle = styled.h1`
   font-weight: 800;
   font-size: 18px;
@@ -337,8 +336,6 @@ export const Phrase = styled.h3`
   margin-left: 10px;
 `;
 
-
-
 export const cardTag = {
   backgroundColor: "#161825",
   borderRadius: "10px",
@@ -357,3 +354,6 @@ export const timeIcon = {
   marginRight: "10px",
   filter: "saturate(0.1) brightness(50%)",
 };
+
+const EventyStyle = () => {};
+export default EventyStyle;
