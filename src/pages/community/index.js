@@ -197,17 +197,17 @@ export default function Home() {
             </Row>
             <Row>
               <Col xs={24}>
-                {/* <img
+                <img
                   className="img-fluid m-auto"
                   src="/images/image-16.svg"
                   alt=""
-                /> */}
+                />
 
-                <Lottie
+                {/* <Lottie
                   className="treeCiruleAnimtn m-auto"
                   animationData={TreeStory}
                   loop={false}
-                />
+                /> */}
               </Col>
             </Row>
           </Wrapper>

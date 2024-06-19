@@ -35,7 +35,7 @@ export default function MyApp({ Component, pageprops }) {
         <Spin fullscreen></Spin>
       ) : (
         <>
-          <AnimatedCursor
+          {/* <AnimatedCursor
             color="58,127,208"
             innerSize={8}
             outerSize={35}
@@ -45,6 +45,35 @@ export default function MyApp({ Component, pageprops }) {
             hasBlendMode={true}
             outerStyle={{
               mixBlendMode: "exclusion",
+              zIndex: "999",
+            }}
+            innerStyle={{
+              backgroundColor: "#FFFFFF",
+              mixBlendMode: "exclusion",
+            }}
+            clickables={[
+              "a, p, h1, h2, h3, h4, h5, h6, span",
+              'input[type="text"]',
+              'input[type="email"]',
+              'input[type="number"]',
+              'input[type="submit"]',
+              "select",
+              "textarea",
+              "button",
+              ".link",
+            ]}
+          /> */}
+
+          <AnimatedCursor
+            color="#fff"
+            innerSize={8}
+            outerSize={35}
+            innerScale={1}
+            outerScale={1.7}
+            outerAlpha={0}
+            outerStyle={{
+              mixBlendMode: "exclusion",
+              backgroundColor: "#FFFFFF",
               zIndex: "999",
             }}
             innerStyle={{
