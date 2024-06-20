@@ -24,7 +24,7 @@ export default function Home() {
               </li>
             </ul>
           </Col>
-          <Col xs={24} sm={12} lg={12} className="mt-4 mt-sm-0 text-sm-end">
+          <Col xs={24} sm={12} lg={12} className="my-4 m-ysm-0 text-sm-end">
             <ul className="socialLinks">
               <li>
                 <a href="#">
@@ -45,7 +45,7 @@ export default function Home() {
           </Col>
         </Row>
         <Row>
-          <Col xs={24} className="copyWriter">
+          <Col xs={24} className="copyWriter text-lg-center">
             © {new Date().getFullYear()} Aiolos Cloud All Rights Reserved
           </Col>
         </Row>

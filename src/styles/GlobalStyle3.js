@@ -454,7 +454,6 @@ export const XFooter2 = styled.section`
   .copyWriter {
     font-size: 14px;
     color: #fff;
-    text-align: center;
     margin-top: 15px;
   }
 `;
