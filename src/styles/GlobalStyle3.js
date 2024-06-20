@@ -451,6 +451,12 @@ export const XFooter2 = styled.section`
     line-height: 26px;
     color: #ffffff;
   }
+  .copyWriter {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+  }
 `;
 export const XAIInnovators = styled.section`
   background: linear-gradient(

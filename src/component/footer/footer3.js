@@ -44,6 +44,11 @@ export default function Home() {
             </ul>
           </Col>
         </Row>
+        <Row>
+          <Col xs={24} className="copyWriter">
+            © {new Date().getFullYear()} Aiolos Cloud All Rights Reserved
+          </Col>
+        </Row>
       </Wrapper>
     </XFooter2>
   );

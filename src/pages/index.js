@@ -64,16 +64,16 @@ export default function Home() {
                 {/* </ScrollAnimation>/ */}
               </Col>
               <Col className="mt-5" xs={24}>
-                {/* <img
+                <img
                   className="img-fluid m-auto"
                   src="/images/hero-3.svg"
                   alt=""
-                /> */}
-                <Lottie
+                />
+                {/* <Lottie
                   className="treeAnimation m-auto"
                   animationData={Tree}
                   loop={false}
-                />
+                /> */}
               </Col>
             </Row>
           </Wrapper>
@@ -358,22 +358,22 @@ export default function Home() {
               {/* </ScrollAnimation> */}
             </Col>
             <Col xs={24} sm={24} lg={24} className="mt-4 text-center">
-              {/* <img
+              <img
                 className="img-fluid m-auto"
                 src="/images/image-14.svg"
                 alt=""
-              /> */}
-              <ScrollAnimation
+              />
+              {/* <ScrollAnimation
                 animateOnce={true}
                 duration={1}
                 animateIn="fadeIn"
-              >
-                <Lottie
+              > */}
+              {/* <Lottie
                   className="infographic m-auto"
                   animationData={Infographic}
                   loop={false}
-                />
-              </ScrollAnimation>
+                /> */}
+              {/* </ScrollAnimation> */}
             </Col>
           </Row>
         </Wrapper>
