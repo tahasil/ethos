@@ -35,11 +35,6 @@ export default function Home({ content, button }) {
               />
             </ScrollAnimation>
           </Col>
-          {button !== false && (
-            <Col xs={24} className="mt-5 text-center">
-              <XButton>Let’s Connect</XButton>
-            </Col>
-          )}
         </Row>
       </Wrapper>
     </>
