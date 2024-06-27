@@ -605,12 +605,12 @@ export default function Header({ onJoinUsClick }) {
 
         {/* <Gallery /> */}
       </StoryWrap>
-      {/* <Connect />
+      {/* <Connect /> */}
       <Joinus
         contactUs={contactUs}
         handleModalOpen={handleModalOpen}
         handleCancel={handleCancel}
-      /> */}
+      />
       <Footer3 />
     </>
   );
