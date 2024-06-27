@@ -275,6 +275,7 @@ export const XTimeline = styled(Timeline)`
     height: 20px;
     background: linear-gradient(90deg, #3a7fd0 0%, #51b29c 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    margin-inline-start: -5px !important;
   }
   .ant-timeline-item-tail {
     border-inline-start: 8px solid rgba(255, 255, 255, 0.09);
