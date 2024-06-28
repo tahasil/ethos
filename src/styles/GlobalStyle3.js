@@ -353,6 +353,7 @@ export const XFooter2 = styled.section`
   width: 100%;
   position: relative;
   background: #000;
+  border-top: 1px solid #363935;
   h6 {
     margin: 0px;
     font-weight: 500;
