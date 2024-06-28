@@ -164,6 +164,43 @@ button.headerBtn {
   background: url("/images/sub-hero.svg") no-repeat left center;
   background-size: 40% 130%;
 }
+.timelineFocys {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.timelineFocys:before {
+  content: "";
+  position: absolute;
+  top: 2%;
+  left: 0;
+  min-width: 500px;
+  min-height: 1200px;
+  background: transparent url("/images/story-focus-left.svg") no-repeat top left;
+  background-size: 100% 100%;
+}
+.timelineFocys:after {
+  content: "";
+  position: absolute;
+  bottom: 24%;
+  right: 0;
+  min-width: 500px;
+  min-height: 1200px;
+  background: transparent url("/images/story-focus-right.svg") no-repeat bottom
+    right;
+  background-size: 100% 100%;
+  @media only screen and (max-width: 768.99px) {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 768.99px) {
+  .timelineFocys:before {
+    display: none;
+  }
+  .timelineFocys:after {
+    bottom: 45%;
+  }
+}
 /* .App {
   overflow-x: hidden;
 } */
