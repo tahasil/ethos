@@ -18,11 +18,13 @@ const collapseData = [
     children: (
       <>
         <p>
-          Cambridge Innovation Center (CIC)’s mission is to “fix the world
-          through innovation”. We believe that we can make a difference by
-          helping innovators bring their ideas to fruition, and that 1,000s of
-          innovations by CIC based innovators will collectively lead to a very
-          different world.
+          Æthos is helping Cambridge Innovation Center to reach talented
+          researchers and innovators working on AI solutions to public health
+          issues facing Massachusetts. Cambridge Innovation Center (CIC)’s
+          mission is to “fix the world through innovation”. We believe that we
+          can make a difference by helping innovators bring their ideas to
+          fruition, and that 1,000s of innovations by CIC based innovators will
+          collectively lead to a very different world.
         </p>
         <p>
           One of our roles is to connect people who have technical abilities

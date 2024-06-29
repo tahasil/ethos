@@ -289,6 +289,7 @@ export const FreeSample = styled.section`
   .cardWrap {
     width: 100%;
     position: relative;
+    height: 100%;
     background: rgba(255, 255, 255, 0.09);
     mix-blend-mode: normal;
     border-radius: 10px;
@@ -472,6 +473,22 @@ export const XAIInnovators = styled.section`
     .infographic {
       width: 100%;
     }
+  }
+`;
+export const MahiSection = styled.section`
+  width: 100%;
+  position: relative;
+  background: #161825;
+  @media only screen and (max-width: 768.99px) {
+    .infographic {
+      width: 100%;
+    }
+  }
+  .link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #51b29c;
   }
 `;
 export const XContactModal = styled(Modal)`

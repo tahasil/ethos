@@ -21,13 +21,13 @@ export default function Home() {
           <Col xs={24} sm={12} md={10} lg={8}>
             <ul className="footerLinks">
               <li>
-                <Link href="#">Story</Link>
+                <Link href="/story">Story</Link>
               </li>
               <li>
-                <Link href="#">Community</Link>
+                <Link href="/community">Community</Link>
               </li>
               <li>
-                <Link href="#">Events</Link>
+                <Link href="/event">Events</Link>
               </li>
             </ul>
           </Col>

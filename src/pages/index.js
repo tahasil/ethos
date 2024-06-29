@@ -17,17 +17,20 @@ import {
   XContactModal,
   XInputModal,
   XButtonModal,
+  MahiSection,
 } from "../styles/GlobalStyle3";
 import { LeftOutlined } from "@ant-design/icons";
 import Lottie from "lottie-react";
 import icon1 from "../../public/jsons/watering-can.json";
 import icon2 from "../../public/jsons/sun.json";
 import icon3 from "../../public/jsons/planting.json";
+import Link from "next/link";
 import Tree from "../../public/jsons/tree.json";
 import Infographic from "../../public/jsons/arrow_infographic.json";
 
 import Joinus from "../component/joinus/index";
 import ScrollAnimation from "react-animate-on-scroll";
+import ReactPlayer from "react-player";
 export default function Home() {
   const [contactUs, setContactUs] = useState([false, ""]);
 
@@ -145,11 +148,13 @@ export default function Home() {
                   duration={1}
                   animateIn="fadeIn"
                 >
-                  <img
+                  {/* <img
                     className="img-fluid m-auto"
                     src="/images/image-11.png"
                     alt=""
-                  />
+                  /> */}
+
+                  <ReactPlayer url="https://www.youtube.com/watch?v=qNiBo5JJFkU" />
                 </ScrollAnimation>
                 {/* <ReactPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" /> */}
               </Col>
@@ -280,7 +285,7 @@ export default function Home() {
               </ScrollAnimation>
             </Col>
           </Row>
-          <Row>
+          {/* <Row>
             <Col
               xs={{ span: 10, offset: 7 }}
               sm={{ span: 10, offset: 7 }}
@@ -298,7 +303,7 @@ export default function Home() {
                 />
               </ScrollAnimation>
             </Col>
-          </Row>
+          </Row> */}
           <Row gutter={[15, 15]} className="mt-5 align-items-center">
             <Col
               xs={{ span: 24, order: 2 }}
@@ -380,9 +385,13 @@ export default function Home() {
       </XAIInnovators>
       <Wrapper className="py-5">
         <Row gutter={[15, 15]} className="align-items-center">
-          <Col xs={24} sm={24} lg={12}>
+          <Col
+            xs={{ span: 24, order: 2 }}
+            sm={{ span: 24, order: 2 }}
+            lg={{ span: 12, order: 1 }}
+          >
             {/* <ScrollAnimation duration={1} animateIn="fadeInUp"> */}
-            <XTitle2 className="mb-4">Æthos Team</XTitle2>
+            <XTitle2 className="mb-4 d-none d-lg-block">Æthos Team</XTitle2>
             <XPara1 className="mb-4">
               The dream team draws on experience in applied machine learning,
               national innovation policy, B2B SaaS, design, VR, philosophy,
@@ -398,7 +407,15 @@ export default function Home() {
             </XPara1>
             {/* </ScrollAnimation> */}
           </Col>
-          <Col xs={24} sm={24} lg={12} className="text-center my-4 my-md-0">
+          <Col
+            xs={{ span: 24, order: 1 }}
+            sm={{ span: 24, order: 1 }}
+            lg={{ span: 12, order: 2 }}
+            className="text-center my-4 my-md-0"
+          >
+            <XTitle2 className="mb-4 text-start d-block d-lg-none">
+              Æthos Team
+            </XTitle2>
             <ScrollAnimation animateOnce={true} duration={1} animateIn="fadeIn">
               <img
                 className="img-fluid m-auto"
@@ -409,7 +426,45 @@ export default function Home() {
           </Col>
         </Row>
       </Wrapper>
-
+      <MahiSection className="py-5">
+        <Wrapper>
+          <Row gutter={[15, 15]} className="align-items-center">
+            <Col xs={24} sm={24} lg={12} className="text-center my-4 my-md-0">
+              <XTitle2 className="mb-4 text-start d-block d-lg-none">
+                Massachusetts AI Health Innovation (MAHI) Grant
+              </XTitle2>
+              <ScrollAnimation
+                animateOnce={true}
+                duration={1}
+                animateIn="fadeIn"
+              >
+                <img
+                  className="img-fluid m-auto"
+                  src="/images/image-35.png"
+                  alt=""
+                />
+              </ScrollAnimation>
+            </Col>
+            <Col xs={24} sm={24} lg={12}>
+              <XTitle2 className="mb-4 d-none d-lg-block">
+                Massachusetts AI Health Innovation (MAHI) Grant
+              </XTitle2>
+              <XPara1 className="mb-2">
+                Æthos is helping Cambridge Innovation Center (CIC) to reach
+                talented researchers and innovators working on AI solutions to
+                public health issues facing Massachusetts. CIC's mission is to
+                'fix the world through innovation'. CIC has announced a grant to
+                help AI innovators bring their ideas to fruition to the benefit
+                of public health. To that end, they are taking applications from
+                eligible projects for up to 500k of development assistance!
+              </XPara1>
+              <Link className="link" href="/mahi-grant">
+                Learn More
+              </Link>
+            </Col>
+          </Row>
+        </Wrapper>
+      </MahiSection>
       <Joinus
         contactUs={contactUs}
         handleModalOpen={handleModalOpen}
