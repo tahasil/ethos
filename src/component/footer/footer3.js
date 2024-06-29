@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Space, Input, Button } from "antd";
+import { Row, Col, Space, Input, Button, Form, notification } from "antd";
 import {
   Wrapper,
   XFooter2,
@@ -14,6 +14,31 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 export default function Home() {
+  const [form] = Form.useForm();
+
+  const handleSubmit = async (values) => {
+    try {
+      const response = await fetch("/api/v1/form/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...values }),
+      });
+      console.log('Form submitted:', response.data);
+      notification.success({
+        message: "Successfully subscribed to newsletter!",
+      });
+      form.resetFields();
+    } catch (error) {
+      console.error('Form submission error:', error);
+      notification.error({
+        message: "Failed to subscribe. Please try again later.",
+      });
+      form.resetFields();
+    }
+  };
+
   return (
     <XFooter2>
       <Wrapper className="py-4 borderRight">
@@ -44,11 +69,26 @@ export default function Home() {
                     width: "100%",
                   }}
                 >
-                  <XInputNewsLetter
-                    size="large"
-                    placeholder="Enter your email address"
-                  />
-                  <XButtonNews type="primary">Subscribe</XButtonNews>
+                  <Form
+                    form={form}
+                    onFinish={handleSubmit}
+                    layout="inline"
+                  // style={{ width: '100%' }}
+                  >
+                    <Form.Item
+                      name="email"
+                      rules={[
+                        { required: true, message: 'Please enter your email address!' },
+                        { type: 'email', message: 'Please enter a valid email address!' },
+                      ]}
+                    >
+                      <XInputNewsLetter
+                        size="large"
+                        placeholder="Enter your email address"
+                      />
+                    </Form.Item>
+                    <XButtonNews type="primary" htmlType="submit">Subscribe</XButtonNews>
+                  </Form>
                 </Space>
               </Col>
             </Row>

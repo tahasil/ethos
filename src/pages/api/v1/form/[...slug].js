@@ -10,6 +10,9 @@ handler.use('/api/vi/form/[...slug]', async (req, res, next) => {
     next();
 });
 
+handler.get('/api/v1/form/get-signed-url',(req, res) => {
+    return FormController.getSignedURL(req, res);
+});
 handler.post('/api/v1/form/mahi',(req, res) => {
     return FormController.mahiForm(req, res);
 });
