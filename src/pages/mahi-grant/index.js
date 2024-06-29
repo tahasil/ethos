@@ -8,6 +8,7 @@ import Gallery from "../../component/gallery/index";
 import Connect from "../../component/connect/index";
 import { MahiWrap, MahiStory, XCollapse, XCard } from "./indexStyle";
 import ScrollAnimation from "react-animate-on-scroll";
+import Link from "next/link";
 //import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const collapseData = [
@@ -215,9 +216,13 @@ export default function Header({ onJoinUsClick }) {
                 xs={24}
                 sm={24}
                 lg={{ span: 14, offset: 5 }}
-                className="text-center my-0 my-lg-4"
+                className="text-center my-0 my-lg-3"
               >
                 <h2>(MAHI) Grant</h2>
+
+                <Link href="/aethos-station">
+                  <XButton className="mt-4">APPLY NOW</XButton>
+                </Link>
               </Col>
               <Col xs={24} className="text-center mt-5">
                 <ScrollAnimation
@@ -258,7 +263,9 @@ export default function Header({ onJoinUsClick }) {
                 <h1>Massachusetts AI Health Innovation</h1>
               </Col>
               <Col xs={24} sm={6} lg={4} className="text-center text-sm-end">
-                <XButton>APPLY NOW</XButton>
+                <Link href="/aethos-station">
+                  <XButton>APPLY NOW</XButton>
+                </Link>
               </Col>
             </Row>
           </XCard>
