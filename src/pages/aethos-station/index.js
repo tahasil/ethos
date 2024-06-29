@@ -106,27 +106,42 @@ const steps = [
         </Row>
         <Row gutter={[15, 0]} className="mt-4">
           <Col xs={24} sm={12}>
-            <Form.Item>
+          <Form.Item
+              name="fname"
+              rules={[{ required: true, message: 'Please enter your first name' }]}
+            >
               <XInputPage placeholder="Full name" size="large" />
             </Form.Item>
           </Col>
           <Col xs={24} sm={12}>
-            <Form.Item>
+            <Form.Item
+              name="lname"
+              rules={[{ required: true, message: 'Please enter your last name' }]}
+            >
               <XInputPage placeholder="Last name" size="large" />
             </Form.Item>
           </Col>
           <Col xs={24} sm={12}>
-            <Form.Item>
+          <Form.Item
+              name="email"
+              rules={[{ required: true, message: 'Please enter your email' }, { type: 'email', message: 'Please enter a valid email' }]}
+            >
               <XInputPage placeholder="Email" size="large" />
             </Form.Item>
           </Col>
           <Col xs={24} sm={12}>
-            <Form.Item>
+          <Form.Item
+              name="project_name"
+              rules={[{ required: true, message: 'Please enter your project name' }]}
+            >
               <XInputPage placeholder="Project name" size="large" />
             </Form.Item>
           </Col>
           <Col xs={24} sm={12}>
-            <Form.Item>
+             <Form.Item
+              name="phone"
+              rules={[{ required: true, message: 'Please enter your phone number' }]}
+            >
               <XInputPage placeholder="Phone no." size="large" />
             </Form.Item>
           </Col>
@@ -152,7 +167,10 @@ const steps = [
         </Row>
         <Row gutter={[15, 0]} className="mt-4">
           <Col xs={24}>
-            <Form.Item>
+          <Form.Item
+              name="problem_statement"
+              rules={[{ required: true, message: 'Please describe the problem you are trying to solve' }]}
+            >
               <XInputPage.TextArea
                 style={{
                   background: "none",
@@ -164,7 +182,10 @@ const steps = [
             </Form.Item>
           </Col>
           <Col xs={24}>
-            <Form.Item>
+          <Form.Item
+              name="solution_description"
+              rules={[{ required: true, message: 'Please describe your motivation' }]}
+            >
               <XInputPage.TextArea
                 style={{
                   background: "none",
@@ -176,7 +197,10 @@ const steps = [
             </Form.Item>
           </Col>
           <Col xs={24}>
-            <Form.Item>
+          <Form.Item
+              name="solution"
+              rules={[{ required: true, message: 'Please describe your solution' }]}
+            >
               <XInputPage.TextArea
                 style={{
                   background: "none",
@@ -188,7 +212,10 @@ const steps = [
             </Form.Item>
           </Col>
           <Col xs={24}>
-            <Form.Item>
+          <Form.Item
+              name="sustainable_business"
+              rules={[{ required: true, message: 'Please describe how it can become a sustainable business' }]}
+            >
               <XInputPage.TextArea
                 style={{
                   background: "none",
@@ -205,6 +232,10 @@ const steps = [
             <TitleForm>Stage of Development *</TitleForm>
           </Col>
           <Col xs={24}>
+          <Form.Item
+              name="development_stage"
+              rules={[{ required: true, message: 'Please select your stage of development' }]}
+            >
             <XRadio.Group className="w-100">
               <Row>
                 <Col xs={12} sm={6} lg={4}>
@@ -236,9 +267,13 @@ const steps = [
                 </Col>
               </Row>
             </XRadio.Group>
+            </Form.Item>
           </Col>
           <Col xs={24}>
-            <Form.Item>
+          <Form.Item
+              name="founder_summary"
+              rules={[{ required: true, message: 'Please describe the members of your project' }]}
+            >
               <XInputPage.TextArea
                 style={{
                   background: "none",
@@ -275,7 +310,10 @@ const steps = [
         </Row>
         <Row gutter={[15, 0]} className="mt-4">
           <Col xs={24}>
-            <Form.Item>
+          <Form.Item
+              name="challenges_facing"
+              rules={[{ required: true, message: 'Please describe the main challenges you are facing' }]}
+            >
               <XInputPage.TextArea
                 style={{
                   background: "none",
@@ -287,7 +325,10 @@ const steps = [
             </Form.Item>
           </Col>
           <Col xs={24}>
-            <Form.Item>
+          <Form.Item
+              name="contribution"
+              rules={[{ required: true, message: 'Please describe how you hope to contribute to the Æthos Community' }]}
+            >
               <XInputPage.TextArea
                 style={{
                   background: "none",
@@ -299,7 +340,10 @@ const steps = [
             </Form.Item>
           </Col>
           <Col xs={24}>
-            <Form.Item>
+          <Form.Item
+              name="goals"
+              rules={[{ required: true, message: 'Please describe your goals' }]}
+            >
               <XInputPage.TextArea
                 style={{
                   background: "none",
@@ -316,6 +360,10 @@ const steps = [
             <TitleForm>How did you find out about Æthos? *</TitleForm>
           </Col>
           <Col xs={24} sm={24} md={24} lg={24}>
+          <Form.Item
+              name="aethos_found"
+              rules={[{ required: true, message: 'Please select' }]}
+            >
             <XRadio.Group className="w-100">
               <Row>
                 <Col xs={24} sm={6} lg={4}>
@@ -339,10 +387,11 @@ const steps = [
                 </Col>
               </Row>
             </XRadio.Group>
+            </Form.Item>
           </Col>
         </Row>
         <Row gutter={[15, 0]} className="mt-4">
-          <Col xs={24} sm={12} lg={24}>
+          {/* <Col xs={24} sm={12} lg={24}>
             <Form.Item>
               <XInputPage.TextArea
                 style={{
@@ -353,9 +402,12 @@ const steps = [
                 size="large"
               />
             </Form.Item>
-          </Col>
+          </Col> */}
           <Col xs={24} sm={12} lg={24}>
-            <Form.Item>
+          <Form.Item
+              name="referred"
+              rules={[{ required: true, message: 'Please enter who referred you' }]}
+            >
               <XInputPage
                 placeholder="If you were referred by someone, who referred you?"
                 size="large"
@@ -363,7 +415,10 @@ const steps = [
             </Form.Item>
           </Col>
           <Col xs={24} sm={12} lg={24}>
-            <Form.Item>
+          <Form.Item
+              name="relevant_info"
+              rules={[{ required: true, message: 'Please enter who relevant info' }]}
+            >
               <XInputPage.TextArea
                 style={{
                   background: "none",
@@ -379,25 +434,54 @@ const steps = [
     ),
   },
 ];
+
 export default function Header({ onJoinUsClick }) {
+  const [form] = Form.useForm();
   const [contactUs, setContactUs] = useState([false, ""]);
+  const [current, setCurrent] = useState(0);
+  
   const handleModalOpen = (content) => {
     setContactUs([true, content]);
   };
+
   const handleCancel = () => {
     setContactUs([false, ""]);
   };
-  const [current, setCurrent] = useState(0);
+
   const next = () => {
-    setCurrent(current + 1);
+    form.validateFields().then(() => {
+      setCurrent(current + 1);
+    }).catch((info) => {
+      console.log('Validate Failed:', info);
+    });
   };
+
   const prev = () => {
     setCurrent(current - 1);
   };
+
   const items = steps.map((item) => ({
     key: item.title,
     title: item.title,
   }));
+
+  const onFinish = (values) => {
+    console.log('Success:', values);
+    // axios.post('/api/submit', values)
+    //   .then((response) => {
+    //     notification.success({
+    //       message: 'Success',
+    //       description: 'Your application has been submitted successfully!',
+    //     });
+    //   })
+    //   .catch((error) => {
+    //     console.error('Error:', error);
+    //     notification.error({
+    //       message: 'Error',
+    //       description: 'There was an error submitting your application.',
+    //     });
+    //   });
+  };
 
   return (
     <>
@@ -431,6 +515,7 @@ export default function Header({ onJoinUsClick }) {
           <XCard>
             <Row>
               <Col xs={24}>
+              <Form form={form} layout="vertical" onFinish={onFinish}>
                 <XSteps current={current} items={items} />
                 <StepDataWrapper>{steps[current].content}</StepDataWrapper>
                 <Row className="mt-4 text-end">
@@ -455,6 +540,7 @@ export default function Header({ onJoinUsClick }) {
                     )}
                   </Col>
                 </Row>
+                </Form>
               </Col>
             </Row>
           </XCard>

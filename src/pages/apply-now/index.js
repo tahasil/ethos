@@ -167,7 +167,6 @@ export default function Header({ onJoinUsClick }) {
           </Wrapper>
         </MahiStory>
         <Wrapper className="pb-5">
-          <Form onFinish={onFinish} onSubmit={handleAction} autoComplete="off">
             <XCard>
               <Row>
                 <Col xs={24} className="text-center">
@@ -251,7 +250,7 @@ export default function Header({ onJoinUsClick }) {
                             Developing the idea on the side
                           </XRadio>
                           <XRadio value="It's just an idea!">
-                            It's just an idea!
+                            {"It's just an idea!"}
                           </XRadio>
                         </Space>
                       </XRadio.Group>
@@ -374,7 +373,6 @@ export default function Header({ onJoinUsClick }) {
                 </Row>
               </Form>
           </XCard>
-          </Form>
         </Wrapper>
       </MahiWrap>
       <Footer3 />
