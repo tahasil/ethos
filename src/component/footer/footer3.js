@@ -58,7 +58,7 @@ export default function Home() {
             sm={12}
             md={24}
             lg={6}
-            className="my-4 m-ysm-0 text-md-center text-sm-end"
+            className="my-4 text-sm-end text-md-center text-lg-end"
           >
             <ul className="socialLinks">
               <li>

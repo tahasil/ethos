@@ -214,7 +214,13 @@ span.antdDragger .ant-upload-drag {
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 10px !important;
 }
-
+.backBtn {
+  background: linear-gradient(
+    90deg,
+    rgba(58, 127, 208, 0.2) 0%,
+    rgba(81, 178, 156, 0.2) 100%
+  ) !important;
+}
 /* .App {
   overflow-x: hidden;
 } */
