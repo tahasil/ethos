@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
-import { Button, Card, Input, Modal } from "antd";
+import { Button, Card, Input, Modal, Radio, Upload } from "antd";
 export const Wrapper = styled.section`
   position: relative;
   width: 80% !important;
@@ -600,7 +600,17 @@ export const XButtonNews = styled(Button)`
     color: #f0fdf4 !important;
   }
 `;
-
+export const TitleCopy = styled.section`
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 0px;
+  .copy {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    opacity: 0.8;
+  }
+`;
 export const XInputPage = styled(Input)`
   background: none !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -620,15 +630,40 @@ export const TitleForm = styled.p`
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
+  margin: 15px 0px 0px 0px;
 `;
-export const TitleCopy = styled.section`
-  background: rgba(255, 255, 255, 0.1);
-  padding: 15px 0px;
-  .copy {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #ffffff;
+export const XRadio = styled(Radio)`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  opacity: 0.8;
+  margin: 5px 0px;
+  .ant-radio-inner {
+    background: none;
+  }
+  .ant-radio-checked .ant-radio-inner {
+    background: #fff;
+    border-color: #fff;
     opacity: 0.8;
+  }
+  .ant-radio-checked .ant-radio-inner:after {
+    background-color: #161825;
+  }
+`;
+export const XFormButton = styled(Button)`
+  background: linear-gradient(90deg, #3a7fd0 0%, #51b29c 100%);
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
+  border-radius: 30px;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 26px;
+  color: #f0fdf4;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(90deg, #3a7fd0 0%, #51b29c 100%) !important;
+    color: #f0fdf4 !important;
   }
 `;

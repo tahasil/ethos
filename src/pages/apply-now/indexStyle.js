@@ -1,15 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
-import { Card, Steps } from "antd";
+import { Collapse, Card } from "antd";
 
-export const StationWrap = styled.section`
+export const MahiWrap = styled.section`
   width: 100%;
   position: relative;
   background: #000;
 `;
-export const StationBg = styled.section`
+export const MahiStory = styled.section`
   background: #000 url("/images/mahi-bg.svg") no-repeat top center;
-  background-size: 100% 120%;
+  background-size: 300% 300%;
   @media only screen and (max-width: 576.99px) {
     background-size: 130% 160%;
   }
@@ -79,6 +79,5 @@ export const XCard = styled(Card)`
   @media only screen and (max-width: 768.99px) {
   }
 `;
-
 const StoryStyle = () => {};
 export default StoryStyle;

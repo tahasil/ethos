@@ -3,6 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Wrapper, XButton } from "../../styles/GlobalStyle3";
+import Link from "next/link";
 
 export default function Header({ onJoinUsClick }) {
   return (
@@ -29,9 +30,12 @@ export default function Header({ onJoinUsClick }) {
                 <Nav.Link href="/story">Story</Nav.Link>
                 <Nav.Link href="/community">Community</Nav.Link>
                 <Nav.Link href="/event">Events</Nav.Link>
-                <XButton className="headerBtn" onClick={onJoinUsClick}>
+                {/* <XButton className="headerBtn" onClick={onJoinUsClick}>
                   Join Us
-                </XButton>
+                </XButton> */}
+                <Link href="/aethos-station">
+                  <XButton className="headerBtn">Join Us</XButton>
+                </Link>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

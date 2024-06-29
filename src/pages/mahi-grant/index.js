@@ -220,7 +220,7 @@ export default function Header({ onJoinUsClick }) {
               >
                 <h2>(MAHI) Grant</h2>
 
-                <Link href="/aethos-station">
+                <Link href="/apply-now">
                   <XButton className="mt-4">APPLY NOW</XButton>
                 </Link>
               </Col>
@@ -263,7 +263,7 @@ export default function Header({ onJoinUsClick }) {
                 <h1>Massachusetts AI Health Innovation</h1>
               </Col>
               <Col xs={24} sm={6} lg={4} className="text-center text-sm-end">
-                <Link href="/aethos-station">
+                <Link href="/apply-now">
                   <XButton>APPLY NOW</XButton>
                 </Link>
               </Col>

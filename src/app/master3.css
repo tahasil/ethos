@@ -201,6 +201,20 @@ button.headerBtn {
     bottom: 45%;
   }
 }
+.ant-upload-para {
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  opacity: 0.5;
+}
+span.antdDragger .ant-upload-drag {
+  background: rgba(58, 127, 208, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 10px !important;
+}
+
 /* .App {
   overflow-x: hidden;
 } */
