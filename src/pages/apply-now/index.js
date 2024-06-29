@@ -18,6 +18,14 @@ import {
 } from "../../styles/GlobalStyle3";
 
 const { Dragger } = Upload;
+
+const onFinish = () => {
+  console.log("Success:");
+};
+const handleAction = () => {
+  console.log("WIP.....");
+};
+
 export default function Header({ onJoinUsClick }) {
   const [form] = Form.useForm();
   const [contactUs, setContactUs] = useState([false, ""]);
@@ -136,6 +144,7 @@ export default function Header({ onJoinUsClick }) {
     return isLt10M;
   };
 
+
   return (
     <>
       <MahiWrap>
@@ -158,144 +167,147 @@ export default function Header({ onJoinUsClick }) {
           </Wrapper>
         </MahiStory>
         <Wrapper className="pb-5">
-          <XCard>
-            <Row>
-              <Col xs={24} className="text-center">
-                <h1>Apply Now</h1>
-              </Col>
-            </Row>
-            <Form form={form} onFinish={handleSubmit}>
+          <Form onFinish={onFinish} onSubmit={handleAction} autoComplete="off">
+            <XCard>
+              <Row>
+                <Col xs={24} className="text-center">
+                  <h1>Apply Now</h1>
+                </Col>
+              </Row>
+              <Form form={form} onFinish={handleSubmit}>
               <Row gutter={[15, 0]} className="mt-5">
-                <Col xs={24} sm={12}>
-                  <Form.Item name="name" rules={[{ required: true, message: 'Please enter your name' }]}>
-                    <XInputPage placeholder="Full name" size="large" />
-                  </Form.Item>
-                </Col>
-                <Col xs={24} sm={12}>
-                  <Form.Item name="email" rules={[{ required: true, type: 'email', message: 'Please enter a valid email' }]}>
-                    <XInputPage placeholder="Email" size="large" />
-                  </Form.Item>
-                </Col>
-                <Col xs={24}>
-                  <Form.Item name="problem_statement" rules={[{ required: true, message: 'Please describe the problem statement' }]}>
-                    <XInputPage.TextArea
-                      style={{
-                        background: "none",
-                        border: "1px solid rgba(255, 255, 255, 0.1)",
-                      }}
-                      placeholder="What problem do you want to address in public health using AI?"
-                      size="large"
-                    />
-                  </Form.Item>
-                </Col>
-                <Col xs={24}>
-                  <Form.Item name="solution_description" rules={[{ required: true, message: 'Please describe your solution' }]}>
-                    <XInputPage.TextArea
-                      style={{
-                        background: "none",
-                        border: "1px solid rgba(255, 255, 255, 0.1)",
-                      }}
-                      placeholder="Please describe your solution. How would you describe the expected outcome of this solution?"
-                      size="large"
-                    />
-                  </Form.Item>
-                </Col>
-                <Col xs={24}>
-                  <Form.Item name="technical_elements" rules={[{ required: true, message: 'Please describe the technical elements' }]}>
-                    <XInputPage.TextArea
-                      style={{
-                        background: "none",
-                        border: "1px solid rgba(255, 255, 255, 0.1)",
-                      }}
-                      placeholder="In as much depth as you can, please outline the technical elements required to build your solution so that the CIC Technology team can evaluate its feasibility."
-                      size="large"
-                    />
-                  </Form.Item>
-                </Col>
-              </Row>
-              <Row gutter={[15, 15]} className="mt-0">
-                <Col xs={24}>
-                  <TitleForm>
-                    What option best describes the stage of your idea
-                  </TitleForm>
-                </Col>
-                <Col xs={24}>
-                  <Form.Item name="stage" rules={[{ required: true, message: 'Please select the stage of your idea' }]}>
+                  <Col xs={24} sm={12}>
+                    <Form.Item name="name" rules={[{ required: true, message: 'Please enter your name' }]}
+                  >
+                      <XInputPage placeholder="Full name" size="large" />
+                    </Form.Item>
+                  </Col>
+                  <Col xs={24} sm={12}>
+                    <Form.Item name="email" rules={[{ required: true, type: 'email', message: 'Please enter a valid email' }]}>
+                      <XInputPage placeholder="Email" size="large" />
+                    </Form.Item>
+                  </Col>
+                  <Col xs={24}>
+                    <Form.Item name="problem_statement" rules={[{ required: true, message: 'Please describe the problem statement' }]}>
+                      <XInputPage.TextArea
+                        style={{
+                          background: "none",
+                          border: "1px solid rgba(255, 255, 255, 0.1)",
+                        }}
+                        placeholder="What problem do you want to address in public health using AI?"
+                        size="large"
+                      />
+                    </Form.Item>
+                  </Col>
+                  <Col xs={24}>
+                    <Form.Item name="solution_description" rules={[{ required: true, message: 'Please describe your solution' }]}>
+                      <XInputPage.TextArea
+                        style={{
+                          background: "none",
+                          border: "1px solid rgba(255, 255, 255, 0.1)",
+                        }}
+                        placeholder="Please describe your solution. How would you describe the expected outcome of this solution?"
+                        size="large"
+                      />
+                    </Form.Item>
+                  </Col>
+                  <Col xs={24}>
+                    <Form.Item name="technical_elements" rules={[{ required: true, message: 'Please describe the technical elements' }]}>
+                      <XInputPage.TextArea
+                        style={{
+                          background: "none",
+                          border: "1px solid rgba(255, 255, 255, 0.1)",
+                        }}
+                        placeholder="In as much depth as you can, please outline the technical elements required to build your solution so that the CIC Technology team can evaluate its feasibility."
+                        size="large"
+                      />
+                    </Form.Item>
+                  </Col>
+                </Row>
+                <Row gutter={[15, 15]} className="mt-0">
+                  <Col xs={24}>
+                    <TitleForm>
+                      What option best describes the stage of your idea
+                    </TitleForm>
+                  </Col>
+                  <Col xs={24}>
+                    <Form.Item name="stage" rules={[{ required: true, message: 'Please select the stage of your idea' }]}>
                     <XRadio.Group>
-                      <Space direction="vertical">
-                        <XRadio value="Building a company with a team and an MVP">
-                          Building a company with a team and an MVP
-                        </XRadio>
-                        <XRadio value="Working towards building a team and an MVP">
-                          Working towards building a team and an MVP
-                        </XRadio>
-                        <XRadio value="Working towards the solution from within an existing organisation">
-                          Working towards the solution from within an existing
-                          organisation
-                        </XRadio>
-                        <XRadio value="Conducting research pointing towards the solution">
-                          Conducting research pointing towards the solution
-                        </XRadio>
-                        <XRadio value="Developing the idea on the side">
-                          Developing the idea on the side
-                        </XRadio>
-                        <XRadio value="It's just an idea!">
-                          It's just an idea!
-                        </XRadio>
-                      </Space>
-                    </XRadio.Group>
-                  </Form.Item>
+                        <Space direction="vertical">
+                          <XRadio value="Building a company with a team and an MVP">
+                            Building a company with a team and an MVP
+                          </XRadio>
+                          <XRadio value="Working towards building a team and an MVP">
+                            Working towards building a team and an MVP
+                          </XRadio>
+                          <XRadio value="Working towards the solution from within an existing organisation">
+                            Working towards the solution from within an existing
+                            organisation
+                          </XRadio>
+                          <XRadio value="Conducting research pointing towards the solution">
+                            Conducting research pointing towards the solution
+                          </XRadio>
+                          <XRadio value="Developing the idea on the side">
+                            Developing the idea on the side
+                          </XRadio>
+                          <XRadio value="It's just an idea!">
+                            It's just an idea!
+                          </XRadio>
+                        </Space>
+                      </XRadio.Group>
+                    </Form.Item>
                 </Col>
-              </Row>
-              <Row gutter={[15, 15]} className="mt-4">
-                <Col xs={24}>
-                  <TitleForm>
-                    Given the resources available via this grant, are you prepared
-                    to take primary responsibility for driving this solution
-                    forward and gathering any other necessary resources? *
-                  </TitleForm>
-                </Col>
-                <Col xs={24}>
-                  <Form.Item name="responsibility_consent" rules={[{ required: true, message: 'Please select your preparedness' }]}>
+                </Row>
+                <Row gutter={[15, 15]} className="mt-4">
+                  <Col xs={24}>
+                    <TitleForm>
+                      Given the resources available via this grant, are you
+                      prepared to take primary responsibility for driving this
+                      solution forward and gathering any other necessary
+                    resources? *
+                    </TitleForm>
+                  </Col>
+                  <Col xs={24}>
+                    <Form.Item name="responsibility_consent" rules={[{ required: true, message: 'Please select your preparedness' }]}>
                     <XRadio.Group>
-                      <Space direction="vertical">
-                        <XRadio value="Yes">Yes</XRadio>
-                        <XRadio value="No">No</XRadio>
-                      </Space>
-                    </XRadio.Group>
-                  </Form.Item>
+                        <Space direction="vertical">
+                          <XRadio value="Yes">Yes</XRadio>
+                          <XRadio value="No">No</XRadio>
+                        </Space>
+                      </XRadio.Group>
+                    </Form.Item>
                 </Col>
-              </Row>
-              <Row gutter={[15, 15]} className="mt-4">
-                <Col xs={24}>
-                  <TitleForm>
-                    Who are the primary stakeholders you will need to work with to
-                    build the solution
-                  </TitleForm>
-                </Col>
-                <Col xs={24}>
-                  <Form.Item name="stakeholders" rules={[{ required: true, message: 'Please select primary stakeholders' }]}>
+                </Row>
+                <Row gutter={[15, 15]} className="mt-4">
+                  <Col xs={24}>
+                    <TitleForm>
+                      Who are the primary stakeholders you will need to work with
+                      to build the solution
+                    </TitleForm>
+                  </Col>
+                  <Col xs={24}>
+                    <Form.Item name="stakeholders" rules={[{ required: true, message: 'Please select primary stakeholders' }]}>
                     <XRadio.Group>
-                      <Space direction="vertical">
-                        <XRadio value="Policy makers">Policy makers</XRadio>
-                        <XRadio value="Practicioners">Practicioners</XRadio>
-                        <XRadio value="The public">The public</XRadio>
-                        <XRadio value="Institutions">Institutions</XRadio>
-                        <XRadio value="Other">Other</XRadio>
-                      </Space>
-                    </XRadio.Group>
-                  </Form.Item>
+                        <Space direction="vertical">
+                          <XRadio value="Policy makers">Policy makers</XRadio>
+                          <XRadio value="Practicioners">Practicioners</XRadio>
+                          <XRadio value="The public">The public</XRadio>
+                          <XRadio value="Institutions">Institutions</XRadio>
+                          <XRadio value="Other">Other</XRadio>
+                        </Space>
+                      </XRadio.Group>
+                    </Form.Item>
                 </Col>
-              </Row>
-              <Row gutter={[15, 15]} className="mt-4">
-                <Col xs={24}>
-                  <TitleForm>
-                    Submit a pitch deck, white paper, website, research study, or
-                    other media form that explains your solution.
-                  </TitleForm>
-                </Col>
-                <Col xs={24}>
-                  <Form.Item
+                </Row>
+                <Row gutter={[15, 15]} className="mt-4">
+                  <Col xs={24}>
+                    <TitleForm>
+                      Submit a pitch deck, white paper, website, research study,
+                      or other media form that explains your solution.
+                    </TitleForm>
+                  </Col>
+                  <Col xs={24}>
+                    <Form.Item
                     rules={[
                       {
                         required: true,
@@ -325,43 +337,44 @@ export default function Header({ onJoinUsClick }) {
                       maxCount={1}
                       onRemove={() => setFileList([])}
                     >
-                      <p className="ant-upload-drag-icon">
-                        <img
-                          className="img-fluid m-auto"
-                          src="/images/upload-icon.svg"
-                          alt=""
-                        />
-                      </p>
-                      <p className="ant-upload-para">Upload File</p>
-                    </Dragger>
-                  </Form.Item>
+                        <p className="ant-upload-drag-icon">
+                          <img
+                            className="img-fluid m-auto"
+                            src="/images/upload-icon.svg"
+                            alt=""
+                          />
+                        </p>
+                        <p className="ant-upload-para">Upload File</p>
+                      </Dragger>
+                    </Form.Item>
                 </Col>
-              </Row>
-              <Row gutter={[15, 15]} className="mt-4">
-                <Col xs={24}>
-                  <TitleForm>
-                    Are you prepared to take questions about your solution on June
-                    27th at Venture Café in Cambridge from 6:00 to 7:00 pm?
-                  </TitleForm>
-                </Col>
-                <Col xs={24}>
-                  <Form.Item name="question_consent" rules={[{ required: true, message: 'Please select your preparedness to take questions' }]}>
+                </Row>
+                <Row gutter={[15, 15]} className="mt-4">
+                  <Col xs={24}>
+                    <TitleForm>
+                      Are you prepared to take questions about your solution on
+                      June 27th at Venture Café in Cambridge from 6:00 to 7:00 pm?
+                    </TitleForm>
+                  </Col>
+                  <Col xs={24}>
+                    <Form.Item name="question_consent" rules={[{ required: true, message: 'Please select your preparedness to take questions' }]}>
                     <XRadio.Group>
-                      <Space direction="vertical">
-                        <XRadio value="Yes">Yes</XRadio>
-                        <XRadio value="No">No</XRadio>
-                      </Space>
-                    </XRadio.Group>
-                  </Form.Item>
+                        <Space direction="vertical">
+                          <XRadio value="Yes">Yes</XRadio>
+                          <XRadio value="No">No</XRadio>
+                        </Space>
+                      </XRadio.Group>
+                    </Form.Item>
                 </Col>
-              </Row>
-              <Row gutter={[15, 15]} className="mt-4">
-                <Col xs={24} className="text-center">
-                  <XFormButton htmlType="submit">Submit</XFormButton>
-                </Col>
-              </Row>
-            </Form>
+                </Row>
+                <Row gutter={[15, 15]} className="mt-4">
+                  <Col xs={24} className="text-center">
+                    <XFormButton type="submit" htmlType="submit">Submit</XFormButton>
+                  </Col>
+                </Row>
+              </Form>
           </XCard>
+          </Form>
         </Wrapper>
       </MahiWrap>
       <Footer3 />

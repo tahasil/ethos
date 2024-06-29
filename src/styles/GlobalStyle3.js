@@ -289,6 +289,7 @@ export const FreeSample = styled.section`
   .cardWrap {
     width: 100%;
     position: relative;
+    height: 100%;
     background: rgba(255, 255, 255, 0.09);
     mix-blend-mode: normal;
     border-radius: 10px;
@@ -472,6 +473,22 @@ export const XAIInnovators = styled.section`
     .infographic {
       width: 100%;
     }
+  }
+`;
+export const MahiSection = styled.section`
+  width: 100%;
+  position: relative;
+  background: #161825;
+  @media only screen and (max-width: 768.99px) {
+    .infographic {
+      width: 100%;
+    }
+  }
+  .link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #51b29c;
   }
 `;
 export const XContactModal = styled(Modal)`
@@ -671,5 +688,21 @@ export const XFormButton = styled(Button)`
   &:focus {
     background: linear-gradient(90deg, #3a7fd0 0%, #51b29c 100%) !important;
     color: #f0fdf4 !important;
+  }
+`;
+export const VideoPlayerWrap = styled.section`
+  .playeHeight {
+    width: 100% !important;
+    height: 338px !important;
+  }
+  @media only screen and (max-width: 768.99px) {
+    iframe {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
   }
 `;

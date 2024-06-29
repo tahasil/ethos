@@ -20,6 +20,7 @@ import {
   XTimelineMob,
 } from "./indexStyle";
 import ScrollAnimation from "react-animate-on-scroll";
+import Link from "next/link";
 //import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Header({ onJoinUsClick }) {
@@ -256,9 +257,9 @@ export default function Header({ onJoinUsClick }) {
                                 anticipated in operational costs each month! The
                                 radio head model works!
                               </p>
-                              <a href="#">
+                              <Link href="/visions">
                                 Read the full vision statement here
-                              </a>
+                              </Link>
                             </Col>
                           </Row>
                         </div>
