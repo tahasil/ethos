@@ -690,3 +690,19 @@ export const XFormButton = styled(Button)`
     color: #f0fdf4 !important;
   }
 `;
+export const VideoPlayerWrap = styled.section`
+  .playeHeight {
+    width: 100% !important;
+    height: 338px !important;
+  }
+  @media only screen and (max-width: 768.99px) {
+    iframe {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+`;

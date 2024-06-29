@@ -18,6 +18,7 @@ import {
   XInputModal,
   XButtonModal,
   MahiSection,
+  VideoPlayerWrap,
 } from "../styles/GlobalStyle3";
 import { LeftOutlined } from "@ant-design/icons";
 import Lottie from "lottie-react";
@@ -30,7 +31,7 @@ import Infographic from "../../public/jsons/arrow_infographic.json";
 
 import Joinus from "../component/joinus/index";
 import ScrollAnimation from "react-animate-on-scroll";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/youtube";
 export default function Home() {
   const [contactUs, setContactUs] = useState([false, ""]);
 
@@ -153,8 +154,23 @@ export default function Home() {
                     src="/images/image-11.png"
                     alt=""
                   /> */}
-
-                  <ReactPlayer url="https://www.youtube.com/watch?v=qNiBo5JJFkU" />
+                  <VideoPlayerWrap>
+                    <ReactPlayer
+                      url="https://www.youtube.com/embed/qNiBo5JJFkU?si=H74o8nTRxrDioCda?autoplay=1&loop=1&showinfo=0&controls=0"
+                      width="100%"
+                      className="playeHeight"
+                      loop={true}
+                      playing={true}
+                      controls={false}
+                      muted={false}
+                      volume={false}
+                      config={{
+                        youtube: {
+                          playerVars: { autoplay: 1, showinfo: 0 },
+                        },
+                      }}
+                    />
+                  </VideoPlayerWrap>
                 </ScrollAnimation>
                 {/* <ReactPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" /> */}
               </Col>
