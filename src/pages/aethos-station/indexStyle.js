@@ -79,6 +79,72 @@ export const XCard = styled(Card)`
   @media only screen and (max-width: 768.99px) {
   }
 `;
-
+export const XSteps = styled(Steps)`
+  width: 100%;
+  position: relative;
+  .ant-steps-item-active .ant-steps-item-icon,
+  .ant-steps-item-finish .ant-steps-item-icon {
+    background: linear-gradient(104.79deg, #51b29c 0%, #3a7fd0 100%) !important;
+  }
+  .ant-steps-item-icon {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .ant-steps-item-title {
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 30px !important;
+    color: #ffffff !important;
+    opacity: 0.8 !important;
+    &:after {
+      display: none;
+    }
+  }
+  .ant-steps-item-active .ant-steps-item-title {
+    color: #fff !important;
+    opacity: 1 !important;
+  }
+  .ant-steps-item-finish .ant-steps-item-title {
+    color: #51b29c !important;
+    opacity: 1 !important;
+  }
+  .ant-steps-item-finish .ant-steps-icon,
+  .ant-steps-icon {
+    color: #fff !important;
+  }
+  @media only screen and (max-width: 768.99px) {
+  }
+`;
+export const StepDataWrapper = styled.section`
+  width: 100%;
+  position: relative;
+  min-height: 300px !important;
+  padding: 15px 0px;
+`;
+export const XFormData = styled.section`
+  hr {
+    margin: 30px 0px 15px 0px;
+    border-top: 1px dashed rgba(255, 255, 255, 03);
+  }
+  ul.listFirst {
+    margin: 0px;
+    padding: 0px;
+  }
+  ul.listFirst li {
+    display: list-item;
+    list-style-type: disc;
+    margin-left: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ffffff;
+    opacity: 0.8;
+    ul li {
+      margin-left: 15px;
+    }
+  }
+  @media only screen and (max-width: 768.99px) {
+  }
+`;
 const StoryStyle = () => {};
 export default StoryStyle;

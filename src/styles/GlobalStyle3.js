@@ -631,6 +631,12 @@ export const TitleForm = styled.p`
   line-height: 20px;
   color: #ffffff;
   margin: 15px 0px 0px 0px;
+  span {
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.6;
+  }
 `;
 export const XRadio = styled(Radio)`
   font-weight: 400;
