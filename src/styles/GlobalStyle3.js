@@ -67,6 +67,7 @@ export const Hero = styled.section`
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.4);
     transform: rotate(-90deg);
+    z-index: 9999;
   }
 `;
 export const XInputHero = styled(Input)`
@@ -134,6 +135,10 @@ export const XBecomeMember = styled.section`
     text-align: center;
     color: #ffffff;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @media only screen and (max-width: 991.99px) {
+      font-size: 30px;
+      line-height: 40px;
+    }
   }
 `;
 export const XTags = styled.span`
