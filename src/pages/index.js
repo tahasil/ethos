@@ -466,13 +466,13 @@ export default function Home() {
                 Massachusetts AI Health Innovation (MAHI) Grant
               </XTitle2>
               <XPara1 className="mb-2">
-                Æthos is helping Cambridge Innovation Center (CIC) to reach
+                {`Æthos is helping Cambridge Innovation Center (CIC) to reach
                 talented researchers and innovators working on AI solutions to
                 public health issues facing Massachusetts. CIC's mission is to
                 'fix the world through innovation'. CIC has announced a grant to
                 help AI innovators bring their ideas to fruition to the benefit
                 of public health. To that end, they are taking applications from
-                eligible projects for up to 500k of development assistance!
+                eligible projects for up to 500k of development assistance!`}
               </XPara1>
               <Link className="link" href="/mahi-grant">
                 Learn More

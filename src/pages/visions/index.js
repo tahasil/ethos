@@ -18,10 +18,10 @@ const collapseData = [
     children: (
       <>
         <p>
-          ‘Æthos’ is the character of shared beliefs held by a community. We are
+         {` ‘Æthos’ is the character of shared beliefs held by a community. We are
           creating a community where entrepreneurs share values, principles, and
           single space while building 'AI-first" companies that will reshape the
-          world for generations to come." We call this community Project Æthos.
+          world for generations to come." We call this community Project Æthos.`}
         </p>
         <p>
           At Project Æthos, we are assembling a diverse group of innovators
@@ -137,12 +137,12 @@ const collapseData = [
             expertise.
           </li>
           <li>
-            <strong>Growth and Consistency: </strong> we propose Station members
+            <strong>Growth and Consistency: </strong>{` we propose Station members
             set goals at the beginning of their time to allow the Æthos team and
             fellow members to assist in and track their success. We foresee that
             many successful teams will outgrow the space, making way for new
             members. This cycle of gradual renewal balances the growth of our
-            members' ventures with a desire to keep a consistent culture.
+            members' ventures with a desire to keep a consistent culture.`}
           </li>
           <li>
             <strong>Proximity: </strong> repeated exposure to each other in a
@@ -225,13 +225,13 @@ const collapseData = [
         <p>The Station application process is anticipated to include:</p>
         <ul>
           <li>
-            Submission of a pitch deck and/or other materials explaining the
+           {` Submission of a pitch deck and/or other materials explaining the
             applicant's work (publications, past projects etc) and a cover
             letter outlining intentions and expectations, including measurable
             goals for where the applicant sees their venture in 1 year’s time.
             They should also mention a few ways they anticipate contributing
             with their 2 hours a month. Allowances will be made applicants to
-            maintain confidential elements of their plans as needed.
+            maintain confidential elements of their plans as needed.`}
           </li>
           <li>
             Applications are first assessed by the Æthos team and a group of
@@ -265,11 +265,11 @@ const collapseData = [
         <p>A note on terms, conditions, and community governance:</p>
         <ul>
           <li>
-            As soon as practical, Project Æthos intends to cover Station's space
+            {`As soon as practical, Project Æthos intends to cover Station's space
             costs via sponsorship and rely less on members to cover these costs.
             In the near term, however, we must quickly establish the community
             and determine what early members can contribute towards covering the
-            cost of the space.
+            cost of the space.`}
           </li>
           <li>
             Members will be asked to sign service agreements with the management
