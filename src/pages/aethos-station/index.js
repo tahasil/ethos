@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header3 from "../../component/header/header3";
 import Footer3 from "../../component/footer/footer3";
-import { Row, Col, Form, Space } from "antd";
+import { Row, Col, Form, Space, notification } from "antd";
 import Joinus from "../../component/joinus/index";
 import Gallery from "../../component/gallery/index";
 import Connect from "../../component/connect/index";
@@ -437,9 +437,11 @@ const steps = [
 
 export default function Header({ onJoinUsClick }) {
   const [form] = Form.useForm();
+  const [formData, setFormData] = useState({});
   const [contactUs, setContactUs] = useState([false, ""]);
   const [current, setCurrent] = useState(0);
-  
+  const [loading, setLoading] = useState(false);
+
   const handleModalOpen = (content) => {
     setContactUs([true, content]);
   };
@@ -449,7 +451,8 @@ export default function Header({ onJoinUsClick }) {
   };
 
   const next = () => {
-    form.validateFields().then(() => {
+    form.validateFields().then((values) => {
+      setFormData({ ...formData, ...values });
       setCurrent(current + 1);
     }).catch((info) => {
       console.log('Validate Failed:', info);
@@ -465,22 +468,33 @@ export default function Header({ onJoinUsClick }) {
     title: item.title,
   }));
 
-  const onFinish = (values) => {
-    console.log('Success:', values);
-    // axios.post('/api/submit', values)
-    //   .then((response) => {
-    //     notification.success({
-    //       message: 'Success',
-    //       description: 'Your application has been submitted successfully!',
-    //     });
-    //   })
-    //   .catch((error) => {
-    //     console.error('Error:', error);
-    //     notification.error({
-    //       message: 'Error',
-    //       description: 'There was an error submitting your application.',
-    //     });
-    //   });
+  const onFinish = async (values) => {
+    const finalData = { ...formData, ...values };
+    setLoading(true)
+    try {
+          const response = await fetch("/api/v1/form/join", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify( finalData ),
+          });
+          notification.success({
+            message: "Your application has been submitted successfully!",
+          });
+          setLoading(false)
+          form.resetFields();
+          setFormData({})
+          setCurrent(0)
+        } catch (error) {
+          setLoading(false)
+          console.error('Form submission error:', error);
+          form.resetFields();
+          setFormData({})
+          notification.error({
+            message: "There was an error submitting your application.",
+          });
+        }
   };
 
   return (
@@ -528,6 +542,8 @@ export default function Header({ onJoinUsClick }) {
                     {current === steps.length - 1 && (
                       <XButton
                         type="primary"
+                        htmlType="submit"
+                        loading={loading}
                         //   onClick={() => message.success("Processing complete!")}
                       >
                         Submit

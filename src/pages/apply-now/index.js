@@ -30,6 +30,7 @@ export default function Header({ onJoinUsClick }) {
   const [form] = Form.useForm();
   const [contactUs, setContactUs] = useState([false, ""]);
   const [fileList, setFileList] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const getSignedUrl = async (fileData,ext) => {
     const response = await fetch(`/api/v1/form/get-signed-url?action=putObject&folder_name=uploads&file_name=${fileData.originFileObj.name}&ext=${ext}&id=${fileData.originFileObj.uid}`, {
@@ -57,6 +58,7 @@ export default function Header({ onJoinUsClick }) {
 
 
   const handleSubmit = async (values) => {
+    setLoading(true)
     try {
       let fileLinks = [];
       if (fileList.length > 0) {
@@ -69,24 +71,31 @@ export default function Header({ onJoinUsClick }) {
         }));
       }
 
+       // Remove the upload field from the form values
+       const { upload, ...restValues } = values;
+
       const response = await fetch('/api/v1/form/mahi', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ ...values,  fileLink: fileLinks.length > 0 ? fileLinks[0] : '', }),
+        body: JSON.stringify({ ...restValues, fileLink: fileLinks.length > 0 ? fileLinks[0] : '' }),
+        // body: JSON.stringify({ ...values,  fileLink: fileLinks.length > 0 ? fileLinks[0] : '', }),
       });
 
       if (!response.ok) {
+        setLoading(false)
         throw new Error('Failed to submit form');
       }
 
       notification.success({
         message: 'Form submitted successfully!',
       });
+      setLoading(false)
       form.resetFields();
       setFileList([]);
     } catch (error) {
+      setLoading(false)
       form.resetFields();
       setFileList([]);
       console.error('Form submission error:', error);
@@ -307,6 +316,7 @@ export default function Header({ onJoinUsClick }) {
                   </Col>
                   <Col xs={24}>
                     <Form.Item
+                     name="upload"
                     rules={[
                       {
                         required: true,
@@ -368,7 +378,7 @@ export default function Header({ onJoinUsClick }) {
                 </Row>
                 <Row gutter={[15, 15]} className="mt-4">
                   <Col xs={24} className="text-center">
-                    <XFormButton type="submit" htmlType="submit">Submit</XFormButton>
+                    <XFormButton loading={loading} type="submit" htmlType="submit">Submit</XFormButton>
                   </Col>
                 </Row>
               </Form>

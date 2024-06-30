@@ -15,8 +15,11 @@ import {
 import Link from "next/link";
 export default function Home() {
   const [form] = Form.useForm();
+  const [loading, setLoading] = useState(false);
+
 
   const handleSubmit = async (values) => {
+    setLoading(true)
     try {
       const response = await fetch("/api/v1/form/newsletter", {
         method: "POST",
@@ -25,12 +28,13 @@ export default function Home() {
         },
         body: JSON.stringify({ ...values }),
       });
-      console.log('Form submitted:', response.data);
+      setLoading(false)
       notification.success({
         message: "Successfully subscribed to newsletter!",
       });
       form.resetFields();
     } catch (error) {
+      setLoading(false)
       console.error('Form submission error:', error);
       notification.error({
         message: "Failed to subscribe. Please try again later.",
@@ -43,7 +47,7 @@ export default function Home() {
     <XFooter2>
       <Wrapper className="py-4 borderRight">
         <Row gutter={[15, 15]} className="align-items-center">
-          <Col xs={24} sm={12} md={10} lg={8}>
+          <Col xs={24} sm={12} md={10} lg={6}>
             <ul className="footerLinks">
               <li>
                 <Link href="/story">Story</Link>
@@ -56,7 +60,7 @@ export default function Home() {
               </li> */}
             </ul>
           </Col>
-          <Col xs={24} sm={12} md={14} lg={10}>
+          <Col xs={24} sm={12} md={14} lg={12}>
             <Row align="middle">
               <Col xs={24} sm={24} md={12} lg={10} className="my-3 my-sm-0">
                 <ul className="footerLinks">
@@ -73,7 +77,6 @@ export default function Home() {
                     form={form}
                     onFinish={handleSubmit}
                     layout="inline"
-                  // style={{ width: '100%' }}
                   >
                     <Form.Item
                       name="email"
@@ -87,7 +90,7 @@ export default function Home() {
                         placeholder="Enter your email address"
                       />
                     </Form.Item>
-                    <XButtonNews type="primary" htmlType="submit">Subscribe</XButtonNews>
+                    <XButtonNews loading={loading} type="primary" htmlType="submit">Subscribe</XButtonNews>
                   </Form>
                 </Space>
               </Col>
