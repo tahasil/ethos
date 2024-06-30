@@ -28,7 +28,7 @@ export default function Header({ onJoinUsClick }) {
             <Offcanvas.Body className="mobileAlign">
               <Nav className="justify-content-end flex-grow-1 align-items-center">
                 <Nav.Link href="/story">Story</Nav.Link>
-                <Nav.Link href="/community">Community</Nav.Link>
+                <Nav.Link href="/#">Community</Nav.Link>
                 {/* <Nav.Link href="/event">Events</Nav.Link> */}
                 {/* <XButton className="headerBtn" onClick={onJoinUsClick}>
                   Join Us
