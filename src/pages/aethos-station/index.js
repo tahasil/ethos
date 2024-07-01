@@ -192,6 +192,10 @@ export default function Header({ onJoinUsClick }) {
                 name="phone"
                 rules={[
                   { required: true, message: "Please enter your phone number" },
+                  {
+                    pattern: /^[0-9]+$/,
+                    message: "Phone number must contain only numbers",
+                  },
                 ]}
               >
                 <XInputPage placeholder="Phone no." size="large" />
@@ -464,6 +468,10 @@ export default function Header({ onJoinUsClick }) {
                   {
                     required: true,
                     message: "Please enter USD/person/month",
+                  },
+                  {
+                    pattern: /^[0-9]+$/,
+                    message: "Please enter a valid number for USD/person/month",
                   },
                 ]}
               >
