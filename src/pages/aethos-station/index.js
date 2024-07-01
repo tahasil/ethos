@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header3 from "../../component/header/header3";
 import Footer3 from "../../component/footer/footer3";
-import { Row, Col, Form, Space, notification } from "antd";
+import { Row, Col, Form, Space, notification, Upload } from "antd";
 import Joinus from "../../component/joinus/index";
 import Gallery from "../../component/gallery/index";
 import Connect from "../../component/connect/index";
@@ -24,7 +24,7 @@ import {
   XFormButton,
   XButton,
 } from "../../styles/GlobalStyle3";
-
+const { Dragger } = Upload;
 const steps = [
   {
     title: "Eligibility & Instructions",
@@ -422,16 +422,33 @@ const steps = [
               <XInputPage placeholder="Enter USD/person/month" size="large" />
             </Form.Item>
           </Col>
+        </Row>
+        <Row gutter={[15, 15]}>
           <Col xs={24}>
+            <TitleForm>
+              While not required, please submit any pitch decks, white papers,
+              websites, or other relevant content that will help us understand
+              what you are building!
+            </TitleForm>
+          </Col>
+          <Col xs={24} className="mt-2">
             <Form.Item>
-              <XInputPage.TextArea
-                style={{
-                  background: "none",
-                  border: "1px solid rgba(255, 255, 255, 0.1)",
-                }}
-                placeholder="While not required, please submit any pitch decks, white papers, websites, or other relevant content that will help us understand what you are building!"
-                size="large"
-              />
+              <Dragger
+                className="antdDragger"
+                //beforeUpload={beforeUpload}
+                //onChange={handleUploadChange}
+                maxCount={1}
+                //onRemove={() => setFileList([])}
+              >
+                <p className="ant-upload-drag-icon">
+                  <img
+                    className="img-fluid m-auto"
+                    src="/images/upload-icon.svg"
+                    alt=""
+                  />
+                </p>
+                <p className="ant-upload-para">Upload File</p>
+              </Dragger>
             </Form.Item>
           </Col>
         </Row>

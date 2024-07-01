@@ -532,31 +532,56 @@ export const XContactModal = styled(Modal)`
     cursor: pointer !important;
     color: #fff;
   }
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+  }
+  input:-moz-placeholder,
+  textarea:-moz-placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+  }
+  input::-moz-placeholder,
+  textarea::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+  }
+  input,
+  textarea {
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+  }
+  .link {
+    cursor: pointer !important;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #51b29c;
+  }
 `;
 export const XInputModal = styled(Input)`
   cursor: auto !important;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
   color: #fff;
-  &::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.2) !important;
-  }
-  &:placeholder {
-    color: rgba(255, 255, 255, 0.2) !important;
-  }
-  :placeholder {
-    color: rgba(255, 255, 255, 0.2) !important;
-  }
-  ::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.2) !important;
-  }
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+
   &:hover,
   &:focus,
   &:focus-within,
   &:not(.ant-input-disabled) {
     background: transparent !important;
-    border-color: rgba(255, 255, 255, 0.5) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
   }
 `;
 export const XButtonModal = styled(Button)`

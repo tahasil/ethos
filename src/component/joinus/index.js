@@ -11,6 +11,7 @@ import {
 } from "../../styles/GlobalStyle3";
 import { LargePara } from "../../pages/community/indexStyle";
 import ScrollAnimation from "react-animate-on-scroll";
+import Link from "next/link";
 
 export default function JoinUs({ contactUs, handleModalOpen, handleCancel }) {
   const [form] = Form.useForm();
@@ -68,19 +69,17 @@ export default function JoinUs({ contactUs, handleModalOpen, handleCancel }) {
                 <p>
                   If you’re building with AI in Boston, Berlin, or Tokyo and are
                   looking to find your home, give us a shout! We’d love to get
-                  to know you and see whether the Æthos community would be right
-                  for you.
+                  to know you and see whether the Æthos community We'd love to
+                  get to know you!
                 </p>
               </div>
             </Col>
             <Col xs={24} sm={24} lg={12}>
               <div className="cardWrap">
                 <p>
-                  If you work in AI ethics, represent a corporation, an
-                  investor, or a service provider or any other entity on our
-                  stakeholder map with resources to bring to founders, tell us a
-                  little about yourself! We aspire to be a conduit for your
-                  tools to reach the front line of development.
+                  If you identify with any stakeholder on our map eager to
+                  support our work or bring resources to AI innovators, tell us
+                  a little about yourself!
                 </p>
               </div>
             </Col>
@@ -137,7 +136,7 @@ export default function JoinUs({ contactUs, handleModalOpen, handleCancel }) {
                         <XInputModal size="large" placeholder="Name" />
                       </Form.Item>
                     </Col>
-                    <Col xs={24} className="my-4 text-center">
+                    <Col xs={24} className="text-center">
                       <Form.Item
                         name="email"
                         rules={[
@@ -154,6 +153,30 @@ export default function JoinUs({ contactUs, handleModalOpen, handleCancel }) {
                         <XInputModal size="large" placeholder="Email address" />
                       </Form.Item>
                     </Col>
+                    <Col xs={24} className="text-center">
+                      <Form.Item
+                        name="email"
+                        rules={[
+                          {
+                            required: true,
+                            message: "Please enter your email",
+                          },
+                          {
+                            type: "email",
+                            message: "Please enter a valid email",
+                          },
+                        ]}
+                      >
+                        <XInputModal.TextArea
+                          style={{
+                            background: "none",
+                            border: "1px solid rgba(255, 255, 255, 0.1)",
+                          }}
+                          size="large"
+                          placeholder="Message"
+                        />
+                      </Form.Item>
+                    </Col>
                     <Col xs={24}>
                       <XButtonModal
                         loading={buttonLoading}
@@ -163,6 +186,14 @@ export default function JoinUs({ contactUs, handleModalOpen, handleCancel }) {
                       >
                         Submit
                       </XButtonModal>
+                    </Col>
+                    <Col xs={24} className="my-4">
+                      <p>
+                        Alternatively you can reach at{" "}
+                        <Link href="mailto:info@aethos.org" className="link">
+                          info@aethos.org
+                        </Link>
+                      </p>
                     </Col>
                   </Row>
                 </Form>
