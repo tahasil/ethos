@@ -153,6 +153,7 @@ export default function Home() {
                     src="/images/image-11.png"
                     alt=""
                   /> */}
+                  <div style={{ pointerEvents: 'none' }}>
                   <VideoPlayerWrap>
                     <ReactPlayer
                       url="https://www.youtube.com/embed/qNiBo5JJFkU?si=H74o8nTRxrDioCda?autoplay=1&loop=1&showinfo=0&controls=0"
@@ -165,11 +166,12 @@ export default function Home() {
                       volume={false}
                       config={{
                         youtube: {
-                          playerVars: { autoplay: 1, showinfo: 0 },
+                          playerVars: { autoplay: 1, showinfo: 0, disablekb: 1 },
                         },
                       }}
                     />
                   </VideoPlayerWrap>
+                  </div>
                 </ScrollAnimation>
                 {/* <ReactPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" /> */}
               </Col>

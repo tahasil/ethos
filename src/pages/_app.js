@@ -23,7 +23,7 @@ export default function Aethos({ Component, pageprops }) {
   return (
     <div className="App">
       <Head>
-        <title>Aethos</title>
+        <title>ÆTHOS</title>
         <link rel="icon" href="/images/logo2.svg" />
         <link
           rel="stylesheet"
