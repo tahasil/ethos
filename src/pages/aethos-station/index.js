@@ -153,7 +153,7 @@ export default function Header({ onJoinUsClick }) {
                   { required: true, message: "Please enter your first name" },
                 ]}
               >
-                <XInputPage placeholder="Full name" size="large" />
+                <XInputPage placeholder="First name" size="large" />
               </Form.Item>
             </Col>
             <Col xs={24} sm={12}>
