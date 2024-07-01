@@ -254,6 +254,11 @@ export default function Header({ onJoinUsClick }) {
         );
       }
 
+       // Explicitly set the consent value
+       if (values.consent) {
+        values.consent = "Yes, I have read and affirm that my application conforms to the terms and requirements of the grant.";
+      }
+      
       // Remove the upload field from the form values
       const { upload, ...restValues } = values;
 
@@ -381,18 +386,26 @@ export default function Header({ onJoinUsClick }) {
               </Row>
               <Row>
                 <Col xs={24}>
-                  <XCheckbox value="I have read and affirm that my application conforms to the terms and requirements of the grant.">
+                <Form.Item
+                    name="consent"
+                    valuePropName="checked"
+                    rules={[
+                      { required: true, message: "Please select the checkbox for consent" },
+                    ]}
+                  >
+                  <XCheckbox value="Yes, I have read and affirm that my application conforms to the terms and requirements of the grant.">
                     I have read and affirm that my application conforms to the
                     terms and requirements of the grant.
                   </XCheckbox>
+                  </Form.Item>
                 </Col>
               </Row>
-              <Row gutter={[15, 0]} className="mt-5">
+              <Row gutter={[15, 0]} className="">
                 <Col xs={24} sm={12}>
                   <Form.Item
                     name="name"
                     rules={[
-                      { required: true, message: "Please enter your name" },
+                      { required: true, message: "Please enter your full name" },
                     ]}
                   >
                     <XInputPage placeholder="Full name" size="large" />
@@ -588,7 +601,7 @@ export default function Header({ onJoinUsClick }) {
                         validator: (_, value) => {
                           if (fileList.length === 0) {
                             return Promise.reject(
-                              new Error("Please upload at least one document!")
+                              new Error("Please upload a file!")
                             );
                           }
                           return Promise.resolve();
@@ -617,36 +630,15 @@ export default function Header({ onJoinUsClick }) {
               </Row>
               <Row gutter={[15, 15]}>
                 <Col xs={24}>
-                  {/* <TitleForm>
-                    Are you prepared to take questions about your solution on
-                    June 27th at Venture Café in Cambridge from 6:00 to 7:00 pm?
-                  </TitleForm> */}
                 </Col>
                 <Col xs={24}>
-                  {/* <Form.Item
-                    name="question_consent"
-                    rules={[
-                      {
-                        required: true,
-                        message:
-                          "Please select your preparedness to take questions",
-                      },
-                    ]}
-                  >
-                    <XRadio.Group>
-                      <Space direction="vertical">
-                        <XRadio value="Yes">Yes</XRadio>
-                        <XRadio value="No">No</XRadio>
-                      </Space>
-                    </XRadio.Group>
-                  </Form.Item> */}
                   <Col xs={24}>
                     <Form.Item
-                      // name="problem_statement"
+                      name="securing_plan"
                       rules={[
                         {
                           required: true,
-                          // message: "Please describe the problem statement",
+                          message: "Please briefly outline your plan for securing such support",
                         },
                       ]}
                     >
