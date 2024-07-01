@@ -41,15 +41,46 @@ button {
 }
 .navbar-toggler {
   color: var(--white);
-  background: var(--white);
+  background: none;
+  outline: none;
+  border: none;
+  &:focus {
+    box-shadow: none;
+  }
+  svg {
+    color: #fff;
+    font-size: 1.8rem;
+  }
 }
 .navbarBg {
   background: transparent;
   padding: 0px;
 }
+.offcanvas-header {
+  background: linear-gradient(104.79deg, #51b29c 0%, #3a7fd0 100%);
+  border-bottom: 1px solid #ccc;
+  @media only screen and (max-width: 768.99px) {
+    img {
+      width: 60%;
+    }
+  }
+}
+.mobileAlign {
+  @media only screen and (max-width: 768.99px) {
+    a {
+      display: block !important;
+    }
+    .headerBtn {
+      width: 100%;
+      display: block !important;
+      margin: 5px 0px 0px 0px !important;
+    }
+  }
+}
 .mobileAlign div {
   @media only screen and (max-width: 991.99px) {
     align-items: baseline !important;
+    display: block;
   }
 }
 .navbar {
