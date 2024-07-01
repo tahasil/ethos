@@ -73,7 +73,7 @@ const collapseData = [
           in any way for this work, and will cover the cost of initial hosting
           and testing, but the awardee should have a proposal for how it can be
           responsible for any long-term third party hosting, maintenance,
-          enhancement and similar costs that go beyond the funds in the grant. 
+          enhancement and similar costs that go beyond the funds in the grant.
           Depending on the scope of the app, this cost could be minimal or
           significant.
         </p>
@@ -254,11 +254,11 @@ export default function Header({ onJoinUsClick }) {
         );
       }
 
-       // Explicitly set the consent value
-       if (values.consent) {
+      // Explicitly set the consent value
+      if (values.consent) {
         values.consent = "Yes, I have read and affirm that my application conforms to the terms and requirements of the grant.";
       }
-      
+
       // Remove the upload field from the form values
       const { upload, ...restValues } = values;
 
@@ -386,17 +386,17 @@ export default function Header({ onJoinUsClick }) {
               </Row>
               <Row>
                 <Col xs={24}>
-                <Form.Item
+                  <Form.Item
                     name="consent"
                     valuePropName="checked"
                     rules={[
                       { required: true, message: "Please select the checkbox for consent" },
                     ]}
                   >
-                  <XCheckbox value="Yes, I have read and affirm that my application conforms to the terms and requirements of the grant.">
-                    I have read and affirm that my application conforms to the
-                    terms and requirements of the grant.
-                  </XCheckbox>
+                    <XCheckbox value="Yes, I have read and affirm that my application conforms to the terms and requirements of the grant.">
+                      I have read and affirm that my application conforms to the
+                      terms and requirements of the grant.
+                    </XCheckbox>
                   </Form.Item>
                 </Col>
               </Row>
@@ -415,11 +415,8 @@ export default function Header({ onJoinUsClick }) {
                   <Form.Item
                     name="email"
                     rules={[
-                      {
-                        required: true,
-                        type: "email",
-                        message: "Please enter a valid email",
-                      },
+                      { required: true, message: "Please enter your email" },
+                      { type: "email", message: "Please enter a valid email" },
                     ]}
                   >
                     <XInputPage placeholder="Email" size="large" />
@@ -601,7 +598,7 @@ export default function Header({ onJoinUsClick }) {
                         validator: (_, value) => {
                           if (fileList.length === 0) {
                             return Promise.reject(
-                              new Error("Please upload a file!")
+                              new Error("Please select a file!")
                             );
                           }
                           return Promise.resolve();

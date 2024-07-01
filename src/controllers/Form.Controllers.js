@@ -5,55 +5,55 @@ const sheets = google.sheets('v4');
 
 
 exports.getSignedURL = async (req, res) => {
-	let id = req.query.id || req.AuthData?.id || '';
-	let folder_name = req.query.folder_name || '';
-	let file_name = req.query.file_name || '';
-	let ext = req.query.ext || '';
-	let action = req.query.action || 'putObject';
-	if (!folder_name && !file_name && !ext) {
-		return helper.response(
-			res,
-			req.logger,
-			false,
-			'Bad request: Folder name, File Name, and ext required',
-			null,
-			null,
-			500,
-		);
-	}
+    let id = req.query.id || req.AuthData?.id || '';
+    let folder_name = req.query.folder_name || '';
+    let file_name = req.query.file_name || '';
+    let ext = req.query.ext || '';
+    let action = req.query.action || 'putObject';
+    if (!folder_name && !file_name && !ext) {
+        return helper.response(
+            res,
+            req.logger,
+            false,
+            'Bad request: Folder name, File Name, and ext required',
+            null,
+            null,
+            500,
+        );
+    }
 
-	try {
-		const s3 = new AWS.S3({
-			endpoint: process.env.S3_ENDPOINT,
-			accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-			secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-			Bucket: process.env.S3_BUCKET_NAME,
-			signatureVersion: 'v4',
-			region: process.env.AWS_REGION,
-		});
+    try {
+        const s3 = new AWS.S3({
+            endpoint: process.env.S3_ENDPOINT,
+            accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+            secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+            Bucket: process.env.S3_BUCKET_NAME,
+            signatureVersion: 'v4',
+            region: process.env.AWS_REGION,
+        });
 
-		const params = {
-			Bucket: process.env.S3_BUCKET_NAME,
-			Key: `${folder_name}/${id}/${file_name}.${ext}`,
-			Expires: 60 * 5,
-			ContentType: 'application/octet-stream',
-		};
+        const params = {
+            Bucket: process.env.S3_BUCKET_NAME,
+            Key: `${folder_name}/${id}/${file_name}.${ext}`,
+            Expires: 60 * 5,
+            ContentType: 'application/octet-stream',
+        };
 
-		console.log('key', params.Key);
+        console.log('key', params.Key);
 
-		const response = s3.getSignedUrl(action, params);
-        return res.status(200).send({response:response});
-	} catch (error) {
-		return res.send(
-			res,
-			req.logger,
-			false,
-			'Something went wrong',
-			null,
-			null,
-			500,
-		);
-	}
+        const response = s3.getSignedUrl(action, params);
+        return res.status(200).send({ response: response });
+    } catch (error) {
+        return res.send(
+            res,
+            req.logger,
+            false,
+            'Something went wrong',
+            null,
+            null,
+            500,
+        );
+    }
 };
 
 exports.mahiForm = async (req, res) => {
@@ -88,7 +88,7 @@ exports.mahiForm = async (req, res) => {
 
         // Define the values to append
         const values = [
-            [estTimestamp,consent, name, email, problem_statement, solution_description, technical_elements, stage, responsibility_consent, stakeholders, fileLink, securing_plan]
+            [estTimestamp, consent, name, email, problem_statement, solution_description, technical_elements, stage, responsibility_consent, stakeholders, fileLink, securing_plan]
         ];
 
         // Append the data to the Google Sheet
@@ -118,18 +118,27 @@ exports.joinForm = async (req, res) => {
         const email = req.body.email || '';
         const project_name = req.body.project_name || '';
         const phone = req.body.phone || '';
+        const linkedin = req.body.linkedin || '';
+        const team = req.body.team || '';
+        const when_aethos = req.body.when_aethos || '';
+        const cic_member = req.body.cic_member || '';
         const problem_statement = req.body.problem_statement || '';
         const solution_description = req.body.solution_description || '';
-        const solution = req.body.solution || '';
         const sustainable_business = req.body.sustainable_business || '';
-        const development_stage = req.body.development_stage || '';
-        const founder_summary = req.body.founder_summary || '';
-        const challenges_facing = req.body.challenges_facing || '';
+        const gaps = req.body.gaps || '';
+        const resources = req.body.resources || '';
+        const yourself = req.body.yourself || '';
+        const hours_spend = req.body.hours_spend || '';
+        const usd = req.body.usd || '';
+        const fileLink = req.body.fileLink || '';
+        const why_aethos = req.body.why_aethos || '';
         const contribution = req.body.contribution || '';
         const goals = req.body.goals || '';
+        const joining = req.body.joining || '';
         const aethos_found = req.body.aethos_found || '';
         const referred = req.body.referred || '';
         const relevant_info = req.body.relevant_info || '';
+
 
         // Authorize the client
         const authClient = new google.auth.JWT(
@@ -153,15 +162,23 @@ exports.joinForm = async (req, res) => {
                 email,
                 project_name,
                 phone,
+                linkedin,
+                team,
+                when_aethos,
+                cic_member,
                 problem_statement,
                 solution_description,
-                solution,
                 sustainable_business,
-                development_stage,
-                founder_summary,
-                challenges_facing,
+                gaps,
+                resources,
+                yourself,
+                hours_spend,
+                usd,
+                fileLink,
+                why_aethos,
                 contribution,
                 goals,
+                joining,
                 aethos_found,
                 referred,
                 relevant_info
