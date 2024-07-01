@@ -128,13 +128,12 @@ export default function Home() {
                   We are creating communities where roughly 100 leading
                   entrepreneurs share values and resources in a single space
                   while building “AI-first” companies that will reshape the
-                  world for generation to come.
+                  world for generations to come.
                 </p>
                 <p>
-                  We do not seek profit and have no shareholders. We take no
-                  equity from our members. Æthos seeks to bring resources closer
-                  to founders and in return, we ask our members to uphold our
-                  values.
+                  We take no equity from our members. Æthos seeks to bring
+                  resources closer to founders and in return, we ask our members
+                  to uphold our values.
                 </p>
                 {/* </ScrollAnimation> */}
               </Col>
@@ -211,14 +210,14 @@ export default function Home() {
                   />
                   <h3 className="my-3">Neutrality</h3>
                   <p>
-                    Æthos believes the most efficient community to grow in
-                    contains deep domain knowledge from diverse fields alongside
-                    technical expertise in AI. From energy to medicine, from
-                    music to agriculture, Æthos sees AI being horizontally
-                    applied with shared pain points arising left and right.
-                    What’s more, our mission and structure allow us to partner
-                    with otherwise competitive interests from across the
-                    innovation ecosystem.
+                    Æthos believes the most efficient community contains deep
+                    domain knowledge from diverse fields alongside technical
+                    expertise in AI. From energy to medicine, from music to
+                    agriculture, Æthos sees AI being horizontally applied with
+                    shared pain points arising left and right with many shared
+                    pain points. What’s more, our mission and structure allow us
+                    to partner with otherwise competitive interests from across
+                    the innovation ecosystem.
                   </p>
                 </XCardTrsap>
               </Col>
@@ -233,14 +232,14 @@ export default function Home() {
                   />
                   <h3 className="my-3">Responsible Impact</h3>
                   <p>
-                    Æthos seeks founders who are pursuing missions with human
-                    stakeholders and an intent to drive AI forward while
-                    safeguarding for the downstream impacts of their technology.
-                    By concentrating for founders the resources they need to win
-                    in an environment characterized by belonging and mutual
-                    respect, we believe their approach to technology will
-                    increasingly reflect a shared responsibility towards
-                    humanity.
+                    The Æthos seeks innovators who are developing AI
+                    technologies that extend beyond the capabilities of
+                    pre-existing, out-of-the-box models, adding new
+                    functionalities or novel use cases that show potential to
+                    address unsolved problems of significance to society. By
+                    providing the community a resource rich environment, we
+                    promote trust, mutual respect and a shared responsibility
+                    toward humanity.
                   </p>
                 </XCardTrsap>
               </Col>
@@ -262,11 +261,10 @@ export default function Home() {
               Æthos takes on the innovation ecosystem’s challenges
             </XTitle2>
             <XPara1>
-              While we intend to go global with sites in Berlin and Tokyo
-              planned, for love of our city as our starting point, we
-              interviewed nearly 100 AI founders in and major stakeholders in
-              Boston’s innovation ecosystem to understand how we can contribute.
-              Here’s some of what we heard:
+              Boston is our starting point where we began building the first
+              Station by interviewing nearly 100 AI founders. We are also
+              beginning to form communities in Berlin and Tokyo. Here is some of
+              what we heard:
             </XPara1>
             {/* </ScrollAnimation> */}
           </Col>
@@ -277,13 +275,12 @@ export default function Home() {
           <Row gutter={[15, 15]} className="align-items-center">
             <Col xs={24} sm={24} lg={12}>
               {/* <ScrollAnimation duration={1} animateIn="fadeInUp"> */}
-              <XTitle2 className="mb-4">Entrepreneurs’ Interests</XTitle2>
+              <XTitle2 className="mb-4">
+                Perceptions of Boston's AI innovation ecosystem
+              </XTitle2>
               <ul className="list3">
-                <li>Desire for a pre-selected support community of peers</li>
-                <li>
-                  Consolidated access to resources to focus more on building and
-                  talking to customers
-                </li>
+                <li>Fragmented players, funding gaps, longer timelines</li>
+                <li>Disconnect between academic and applied spheres</li>
               </ul>
               {/* </ScrollAnimation> */}
             </Col>
@@ -343,12 +340,16 @@ export default function Home() {
               sm={{ span: 24, order: 1 }}
               lg={{ span: 12, order: 2 }}
             >
-              <XTitle2 className="mb-4">
-                Perception of Boston’s Innovation Ecosystem
-              </XTitle2>
+              <XTitle2 className="mb-4">Entrepreneurs’ Interests</XTitle2>
               <ul className="list3">
-                <li>Fragmented players, funding gaps, longer timelines</li>
-                <li>Disconnect between academic and applied spheres</li>
+                <li>
+                  Desire for a carefully selected support community of peers
+                </li>
+                <li>
+                  Reducing the amount of time spent searching for resources so
+                  they can focus on building great products and talking to
+                  customers.
+                </li>
               </ul>
             </Col>
           </Row>
@@ -409,11 +410,12 @@ export default function Home() {
             {/* <ScrollAnimation duration={1} animateIn="fadeInUp"> */}
             <XTitle2 className="mb-4 d-none d-lg-block">Æthos Team</XTitle2>
             <XPara1 className="mb-4">
-              The dream team draws on experience in applied machine learning,
-              national innovation policy, B2B SaaS, design, VR, philosophy,
-              music, finance, management, education, product development, and,
-              of course, entrepreneurship. Together we represent 6
-              nationalities!
+              The dream team behind Æthos draws on experience in applied machine
+              learning, national innovation policy, B2B SaaS, design, VR,
+              philosophy, music, finance, management, education, product
+              development, and, of course, entrepreneurship. Together we
+              represent 6 nationalities! We speak 9 languages and hail from 6
+              countries.
             </XPara1>
             <XPara1>
               We are a still mostly volunteer team of visionaries who enjoy
@@ -466,13 +468,7 @@ export default function Home() {
                 Massachusetts AI Health Innovation (MAHI) Grant
               </XTitle2>
               <XPara1 className="mb-2">
-                {`Æthos is helping Cambridge Innovation Center (CIC) to reach
-                talented researchers and innovators working on AI solutions to
-                public health issues facing Massachusetts. CIC's mission is to
-                'fix the world through innovation'. CIC has announced a grant to
-                help AI innovators bring their ideas to fruition to the benefit
-                of public health. To that end, they are taking applications from
-                eligible projects for up to 500k of development assistance!`}
+                {`Æthos is helping Cambridge Innovation Center (CIC) to reach talented researchers and innovators working on AI solutions to public health issues facing Massachusetts. CIC's mission is to 'fix the world through innovation'. CIC has announced a grant to help AI innovators bring their ideas to fruition to the benefit of public health. To that end, they are taking applications from eligible projects for up to 500k of development assistance!`}
               </XPara1>
               <Link className="link" href="/mahi-grant">
                 Learn More

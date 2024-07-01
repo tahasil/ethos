@@ -11,6 +11,7 @@ import {
   XOutlined,
   FacebookOutlined,
   LinkedinOutlined,
+  InstagramOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
 export default function Home() {
@@ -111,18 +112,24 @@ export default function Home() {
             className="my-4 text-sm-end text-md-center text-lg-end"
           >
             <ul className="socialLinks">
-              <li>
-                <Link href="#">
-                  <XOutlined />
-                </Link>
-              </li>
-              <li>
+              {/* <li>
                 <Link href="#">
                   <FacebookOutlined />
                 </Link>
+              </li> */}
+              <li>
+                <Link
+                  target="_blank"
+                  href="https://www.instagram.com/project_aethos/"
+                >
+                  <InstagramOutlined />
+                </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link
+                  target="_blank"
+                  href="https://www.linkedin.com/company/projectaethos/"
+                >
                   <LinkedinOutlined />
                 </Link>
               </li>
