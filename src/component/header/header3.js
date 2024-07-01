@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Wrapper, XButton } from "../../styles/GlobalStyle3";
 import Link from "next/link";
-
+import { MenuFoldOutlined } from "@ant-design/icons";
 export default function Header({ onJoinUsClick }) {
   return (
     <div className="navbarBg">
@@ -13,7 +13,10 @@ export default function Header({ onJoinUsClick }) {
           <Navbar.Brand href="/">
             <img src="/images/logo2.svg" alt="Logo" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
+
+          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`}>
+            <MenuFoldOutlined />
+          </Navbar.Toggle>
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-lg`}
             aria-labelledby={`offcanvasNavbarLabel-expand-lg`}
