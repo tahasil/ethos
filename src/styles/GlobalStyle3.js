@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
-import { Button, Card, Input, Modal, Radio, Upload } from "antd";
+import { Button, Card, Input, Modal, Radio, Upload, Checkbox } from "antd";
 export const Wrapper = styled.section`
   position: relative;
   width: 80% !important;
@@ -709,5 +709,33 @@ export const VideoPlayerWrap = styled.section`
       left: 0;
       right: 0;
     }
+  }
+`;
+export const XCheckbox = styled(Checkbox)`
+  color: rgba(255, 255, 255, 0.6);
+  .ant-checkbox-inner {
+    background: none;
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background: none !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  .ant-checkbox-wrapper:hover .ant-checkbox-checked .ant-checkbox-inner {
+    background: none !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  .ant-checkbox-checked:hover .ant-checkbox-checked .ant-checkbox-inner {
+    background: none !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  .ant-checkbox-checked:after {
+    border-color: rgba(255, 255, 255, 0.2); !important;
+  }
+  .ant-checkbox:hover::after {
+    border-color: rgba(255, 255, 255, 0.2); !important;
+  }
+  .ant-checkbox:hover .ant-checkbox-inner {
+    border-color: rgba(255, 255, 255, 0.2); !important;
   }
 `;

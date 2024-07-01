@@ -79,5 +79,91 @@ export const XCard = styled(Card)`
   @media only screen and (max-width: 768.99px) {
   }
 `;
+export const XCollapse = styled(Collapse)`
+  width: 100%;
+  position: relative;
+  border: none;
+  .ant-collapse-header {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
+    @media only screen and (max-width: 768.99px) {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+  .ant-collapse-header-text {
+    color: #fff;
+  }
+  .ant-collapse-item {
+    margin-bottom: 30px;
+    border-color: rgba(255, 255, 255, 0.1);
+    &:last-child {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0px;
+      .ant-collapse-header,
+      .ant-collapse-content {
+        border-radius: 0px;
+      }
+    }
+  }
+  .ant-collapse-content {
+    background: none;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    p {
+      margin: 0px 0px 15px 0px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+      opacity: 0.8;
+      @media only screen and (max-width: 768.99px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      span {
+        font-weight: 600;
+      }
+    }
+    ul {
+      margin: 0px;
+      padding: 0px;
+    }
+    ul li {
+      margin-left: 15px;
+      display: list-item;
+      list-style-type: disc;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: #ffffff;
+      opacity: 0.8;
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #ffffff;
+        opacity: 0.8;
+        span {
+          font-weight: 600;
+        }
+      }
+      &:last-child {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .ant-collapse-content-active {
+    border-bottom: none;
+  }
+  .ant-collapse-expand-icon {
+    color: #fff;
+  }
+`;
 const StoryStyle = () => {};
 export default StoryStyle;
