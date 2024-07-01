@@ -51,9 +51,9 @@ export default function Home() {
               <li>
                 <Link href="/story">Story</Link>
               </li>
-              {/* <li>
-                <Link href="/community">Community</Link>
-              </li> */}
+              <li>
+                <Link href="/#">Community</Link>
+              </li>
               {/* <li>
                 <Link href="/event">Events</Link>
               </li> */}
