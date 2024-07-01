@@ -276,7 +276,7 @@ export default function Home() {
             <Col xs={24} sm={24} lg={12}>
               {/* <ScrollAnimation duration={1} animateIn="fadeInUp"> */}
               <XTitle2 className="mb-4">
-                Perceptions of Boston's AI innovation ecosystem
+                {`Perceptions of Boston's AI innovation ecosystem`}
               </XTitle2>
               <ul className="list3">
                 <li>Fragmented players, funding gaps, longer timelines</li>
