@@ -17,39 +17,67 @@ export default function JoinUs({ contactUs, handleModalOpen, handleCancel }) {
   const [form] = Form.useForm();
   const [buttonLoading, setButtonLoading] = useState(false);
 
+  // Submit for email api
+  // const handleSubmit = async (values) => {
+  //   try {
+  //     setButtonLoading(true);
+  //     const source = contactUs[1];
+  //     const response = await fetch("/api/v1/join-us", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({ ...values, source }),
+  //     });
+
+  //     if (response.ok) {
+  //       setButtonLoading(false);
+  //       const data = await response.json();
+  //       notification.success({
+  //         message: "Success",
+  //         description: data.message,
+  //       });
+  //       form.resetFields();
+  //       handleCancel();
+  //     } else {
+  //       setButtonLoading(false);
+  //       throw new Error("Error submitting the form");
+  //     }
+  //   } catch (error) {
+  //     setButtonLoading(false);
+  //     console.error("Error submitting form:", error);
+  //     notification.error({
+  //       message: "Error",
+  //       description:
+  //         "There was an error submitting the form. Please try again.",
+  //     });
+  //     form.resetFields();
+  //     handleCancel();
+  //   }
+  // };
+
   const handleSubmit = async (values) => {
     try {
       setButtonLoading(true);
-      const source = contactUs[1];
-      const response = await fetch("/api/v1/join-us", {
+      const response = await fetch("/api/v1/form/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ ...values, source }),
+        body: JSON.stringify({ ...values }),
       });
-
-      if (response.ok) {
-        setButtonLoading(false);
-        const data = await response.json();
-        notification.success({
-          message: "Success",
-          description: data.message,
-        });
-        form.resetFields();
-        handleCancel();
-      } else {
-        setButtonLoading(false);
-        throw new Error("Error submitting the form");
-      }
-    } catch (error) {
+      notification.success({
+        message: "Form submitted successfully!",
+      });
+      form.resetFields();
       setButtonLoading(false);
-      console.error("Error submitting form:", error);
+      handleCancel();
+    } catch (error) {
+      console.error('Form submission error:', error);
       notification.error({
-        message: "Error",
-        description:
-          "There was an error submitting the form. Please try again.",
+        message: "There was an error submitting the form. Please try again.",
       });
+      setButtonLoading(false);
       form.resetFields();
       handleCancel();
     }
@@ -67,10 +95,10 @@ export default function JoinUs({ contactUs, handleModalOpen, handleCancel }) {
             <Col xs={24} sm={24} lg={12}>
               <div className="cardWrap">
                 <p>
-                  If you’re building with AI in Boston, Berlin, or Tokyo and are
+                  {` If you’re building with AI in Boston, Berlin, or Tokyo and are
                   looking to find your home, give us a shout! We’d love to get
                   to know you and see whether the Æthos community We'd love to
-                  get to know you!
+                  get to know you!`}
                 </p>
               </div>
             </Col>
@@ -155,15 +183,11 @@ export default function JoinUs({ contactUs, handleModalOpen, handleCancel }) {
                     </Col>
                     <Col xs={24} className="text-center">
                       <Form.Item
-                        name="email"
+                        name="message"
                         rules={[
                           {
                             required: true,
-                            message: "Please enter your email",
-                          },
-                          {
-                            type: "email",
-                            message: "Please enter a valid email",
+                            message: "Please enter message",
                           },
                         ]}
                       >
