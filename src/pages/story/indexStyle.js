@@ -8,10 +8,10 @@ export const StoryWrap = styled.section`
   background: #000;
 `;
 export const HeroStory = styled.section`
-  background: #000 url("/images/story-bg.svg") no-repeat top center;
-  background-size: 100% 107%;
+  background: transparent url("/images/story-bg.svg") no-repeat top center;
+  background-size: 100% 25%;
   @media only screen and (max-width: 576.99px) {
-    background-size: 130% 160%;
+    background-size: 170% 15%;
   }
   h1 {
     margin: 0px;
@@ -239,6 +239,12 @@ export const XTimeline = styled(Timeline)`
     filter: gray; /* IE6-9 */
     -webkit-filter: grayscale(100%);
   }
+  .ant-timeline-item-left p {
+    text-align: left;
+  }
+  .ant-timeline-item-right p {
+    text-align: right;
+  }
   .ant-timeline-item-left,
   .ant-timeline-item-right {
     &:hover {
@@ -404,6 +410,7 @@ export const XTimelineMob = styled(Timeline)`
     letter-spacing: -0.02em;
     color: #ffffff;
     opacity: 0.8;
+    text-align: left;
     @media only screen and (max-width: 768.99px) {
       font-size: 16px;
       line-height: 20px;
@@ -420,7 +427,7 @@ export const XTimelineMob = styled(Timeline)`
     }
   }
   .ant-timeline-item img {
-    margin-top: 50px;
+    padding-top: 50px;
   }
   .ant-timeline-item-head {
     top: 50%;

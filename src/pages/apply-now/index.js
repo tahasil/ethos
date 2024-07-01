@@ -377,7 +377,7 @@ export default function Header({ onJoinUsClick }) {
                 <Col xs={24}>
                   <XCollapse
                     collapsible="header"
-                    defaultActiveKey={["1"]}
+                    defaultActiveKey={["0"]}
                     items={collapseData}
                     expandIconPosition="right"
                     accordion={true}

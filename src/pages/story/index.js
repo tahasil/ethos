@@ -49,7 +49,7 @@ export default function Header({ onJoinUsClick }) {
               >
                 <p>How Æthos came to be and where we are going</p>
               </Col>
-              <Col xs={24} className="text-center mt-2">
+              {/* <Col xs={24} className="text-center mt-2">
                 <ScrollAnimation
                   animateOnce={true}
                   duration={2}
@@ -63,11 +63,10 @@ export default function Header({ onJoinUsClick }) {
                     alt=""
                   />
                 </ScrollAnimation>
-              </Col>
+              </Col> */}
             </Row>
           </Wrapper>
-        </HeroStory>
-        {/* <div className="storySub mb-5">
+          {/* <div className="storySub mb-5">
           <Wrapper className="my-5">
             <Row className="mb-5">
               <Col
@@ -113,280 +112,17 @@ export default function Header({ onJoinUsClick }) {
             </Wrapper>
           </div>
         </div> */}
-        <div className="timelineFocys my-5">
-          <Wrapper>
-            <Row>
-              <Col xs={24} sm={24} md={24} lg={24}>
-                <XTimeline
-                  className="d-none d-sm-block"
-                  mode="alternate"
-                  items={[
-                    {
-                      label: (
-                        <Row className="py-5">
-                          <Col xs={24}>
-                            <img
-                              className="img-fluid"
-                              src="/images/image-24.png"
-                              alt=""
-                            />
-                          </Col>
-                        </Row>
-                      ),
-                      children: (
-                        <div className="timelineData">
-                          <Row>
-                            <Col xs={24}>
-                              <h6>March 17th</h6>
-                              <p>
-                                Sam returns to Boston from Vienna and births the
-                                idea
-                              </p>
-                            </Col>
-                          </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                    {
-                      label: (
-                        <Row className="py-5">
-                          <Col xs={24}>
-                            <img
-                              className="img-fluid"
-                              src="/images/image-25.png"
-                              alt=""
-                            />
-                          </Col>
-                        </Row>
-                      ),
-                      children: (
-                        <div className="timelineData">
-                          <Row>
-                            <Col xs={24}>
-                              <h6>Late March - early April</h6>
-                              <p>
-                                Sam interviews 50 AI founders who tell him about
-                                what Æthos can be, this number would grow and
-                                also include several members of the current
-                                team!
-                              </p>
-                            </Col>
-                          </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                    {
-                      label: (
-                        <Row className="py-5">
-                          <Col xs={24}>
-                            <img
-                              className="img-fluid"
-                              src="/images/image-26.png"
-                              alt=""
-                            />
-                          </Col>
-                        </Row>
-                      ),
-                      children: (
-                        <div className="timelineData">
-                          <Row>
-                            <Col xs={24}>
-                              <h6>April 16</h6>
-                              <p>
-                                A team joins, Æthos incorporates as a
-                                Massachusetts Benefit Corporation with no
-                                shareholders, buys aethos.org, picks a logo
-                              </p>
-                            </Col>
-                          </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                    {
-                      label: (
-                        <Row className="py-5">
-                          <Col xs={24}>
-                            <img
-                              className="img-fluid"
-                              src="/images/image-27.png"
-                              alt=""
-                            />
-                          </Col>
-                        </Row>
-                      ),
-                      children: (
-                        <div className="timelineData">
-                          <Row>
-                            <Col xs={24}>
-                              <h6>April 24</h6>
-                              <p>
-                                Café Æthos is approved by the Cambridge
-                                Redevelopment Authority to go in Kendall Square
-                                , licensing and installation expected to last
-                                the summer
-                              </p>
-                            </Col>
-                          </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                    {
-                      label: (
-                        <Row className="py-5">
-                          <Col xs={24}>
-                            <img
-                              className="img-fluid"
-                              src="/images/image-28.png"
-                              alt=""
-                            />
-                          </Col>
-                        </Row>
-                      ),
-                      children: (
-                        <div className="timelineData">
-                          <Row>
-                            <Col xs={24}>
-                              <h6>Early May</h6>
-                              <p>
-                                Socioeconomic and financing differences average
-                                out to an initial mean of just $5 under what we
-                                anticipated in operational costs each month! The
-                                radio head model works!
-                              </p>
-                              <Link href="/visions">
-                                Read the full vision statement here
-                              </Link>
-                            </Col>
-                          </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                    {
-                      label: (
-                        <Row className="py-5">
-                          <Col xs={24}>
-                            <img
-                              className="img-fluid"
-                              src="/images/image-29.png"
-                              alt=""
-                            />
-                          </Col>
-                        </Row>
-                      ),
-                      children: (
-                        <div className="timelineData">
-                          <Row>
-                            <Col xs={24}>
-                              <h6>May 14</h6>
-                              <p>
-                                The 7th floor space opens as Æthos Station
-                                ground zero and first members begin signing up
-                                and moving in!
-                              </p>
-                            </Col>
-                          </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                    {
-                      label: (
-                        <Row className="py-5">
-                          <Col xs={24}>
-                            <img
-                              className="img-fluid"
-                              src="/images/image-30.png"
-                              alt=""
-                            />
-                          </Col>
-                        </Row>
-                      ),
-                      children: (
-                        <div className="timelineData">
-                          <Row>
-                            <Col xs={24}>
-                              <h6>May 30th</h6>
-                              <p>
-                                Æthos leads a community ideation session on AI
-                                in Public Health, our first public event at
-                                Venture Café
-                              </p>
-                            </Col>
-                          </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                    {
-                      label: (
-                        <Row className="py-5">
-                          <Col xs={24}>
-                            <img
-                              className="img-fluid"
-                              src="/images/image-31.png"
-                              alt=""
-                            />
-                          </Col>
-                        </Row>
-                      ),
-                      children: (
-                        <div className="timelineData">
-                          <Row>
-                            <Col xs={24}>
-                              <h6>June 20th</h6>
-                              <p>
-                                First Community night with a demo from storyfave
-                              </p>
-                            </Col>
-                          </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                    {
-                      label: (
-                        <Row className="py-5">
-                          <Col xs={24}>
-                            <img
-                              className="img-fluid"
-                              src="/images/image-32.png"
-                              alt=""
-                            />
-                          </Col>
-                        </Row>
-                      ),
-                      children: (
-                        <div className="timelineData">
-                          <Row>
-                            <Col xs={24}>
-                              <h6>June 27th</h6>
-                              <p>
-                                Part II of AI for public health at Venture Café.
-                                CIC announces grant programme to support ai
-                                innovation towards public health and Æthos
-                                announces early collaborations with (list of
-                                first sponsors)
-                              </p>
-                            </Col>
-                          </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                  ]}
-                />
-                <XTimelineMob
-                  className="d-block d-sm-none"
-                  items={[
-                    {
-                      children: (
-                        <div className="timelineData">
-                          <Row>
+          <div className="timelineFocys mt-5">
+            <Wrapper>
+              <Row>
+                <Col xs={24} sm={24} md={24} lg={24}>
+                  <XTimeline
+                    className="d-none d-sm-block"
+                    mode="alternate"
+                    items={[
+                      {
+                        label: (
+                          <Row className="py-5">
                             <Col xs={24}>
                               <img
                                 className="img-fluid"
@@ -394,22 +130,27 @@ export default function Header({ onJoinUsClick }) {
                                 alt=""
                               />
                             </Col>
-                            <Col xs={24}>
-                              <h6>March 17th</h6>
-                              <p>
-                                Sam returns to Boston from Vienna and births the
-                                idea
-                              </p>
-                            </Col>
                           </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                    {
-                      children: (
-                        <div className="timelineData">
-                          <Row>
+                        ),
+                        children: (
+                          <div className="timelineData">
+                            <Row>
+                              <Col xs={24}>
+                                <h6>March 17th</h6>
+                                <p>
+                                  Sam Rowe lands back in Cambridge from Vienna
+                                  and begins exploring what it would take to
+                                  build a values based community for AI
+                                </p>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                      {
+                        label: (
+                          <Row className="py-5">
                             <Col xs={24}>
                               <img
                                 className="img-fluid"
@@ -417,24 +158,29 @@ export default function Header({ onJoinUsClick }) {
                                 alt=""
                               />
                             </Col>
-                            <Col xs={24}>
-                              <h6>Late March - early April</h6>
-                              <p>
-                                Sam interviews 50 AI founders who tell him about
-                                what Æthos can be, this number would grow and
-                                also include several members of the current
-                                team!
-                              </p>
-                            </Col>
                           </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                    {
-                      children: (
-                        <div className="timelineData">
-                          <Row>
+                        ),
+                        children: (
+                          <div className="timelineData">
+                            <Row>
+                              <Col xs={24}>
+                                <h6>Late March - early April</h6>
+                                <p>
+                                  Sam interviews 50+ AI founders who tell him
+                                  about their experience building in Boston and
+                                  how they imagine a community could support
+                                  them on their journey. Several members of the
+                                  current team emerge from this process!
+                                </p>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                      {
+                        label: (
+                          <Row className="py-5">
                             <Col xs={24}>
                               <img
                                 className="img-fluid"
@@ -442,76 +188,90 @@ export default function Header({ onJoinUsClick }) {
                                 alt=""
                               />
                             </Col>
+                          </Row>
+                        ),
+                        children: (
+                          <div className="timelineData">
+                            <Row>
+                              <Col xs={24}>
+                                <h6>April 16</h6>
+                                <p>
+                                  The name Æthos is chosen, a volunteer team
+                                  forms, Æthos incorporates as a Massachusetts
+                                  Benefit Corporation with no shareholders, a
+                                  domain is purchased and a logo is picked.
+                                </p>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                      {
+                        label: (
+                          <Row className="py-5">
                             <Col xs={24}>
-                              <h6>April 16</h6>
-                              <p>
-                                A team joins, Æthos incorporates as a
-                                Massachusetts Benefit Corporation with no
-                                shareholders, buys aethos.org, picks a logo
-                              </p>
+                              <img
+                                className="img-fluid"
+                                src="/images/image-27.png"
+                                alt=""
+                              />
                             </Col>
                           </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                    {
-                      children: (
-                        <div className="timelineData">
-                          <Col xs={24}>
-                            <img
-                              className="img-fluid"
-                              src="/images/image-27.png"
-                              alt=""
-                            />
-                          </Col>
-                          <Row>
+                        ),
+                        children: (
+                          <div className="timelineData">
+                            <Row>
+                              <Col xs={24}>
+                                <h6>April 24</h6>
+                                <p>
+                                  Café Æthos is approved by the Cambridge
+                                  Redevelopment Authority to go in Kendall
+                                  Square, licensing and installation will
+                                  hopefully complete in early Fall.
+                                </p>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                      {
+                        label: (
+                          <Row className="py-5">
                             <Col xs={24}>
-                              <h6>April 24</h6>
-                              <p>
-                                Café Æthos is approved by the Cambridge
-                                Redevelopment Authority to go in Kendall Square
-                                , licensing and installation expected to last
-                                the summer
-                              </p>
+                              <img
+                                className="img-fluid"
+                                src="/images/image-28.png"
+                                alt=""
+                              />
                             </Col>
                           </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                    {
-                      children: (
-                        <div className="timelineData">
-                          <Col xs={24}>
-                            <img
-                              className="img-fluid"
-                              src="/images/image-28.png"
-                              alt=""
-                            />
-                          </Col>
-                          <Row>
-                            <Col xs={24}>
-                              <h6>Early May</h6>
-                              <p>
-                                Socioeconomic and financing differences average
-                                out to an initial mean of just $5 under what we
-                                anticipated in operational costs each month! The
-                                radio head model works!
-                              </p>
-                              <a href="#">
-                                Read the full vision statement here
-                              </a>
-                            </Col>
-                          </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                    {
-                      children: (
-                        <div className="timelineData">
-                          <Row>
+                        ),
+                        children: (
+                          <div className="timelineData">
+                            <Row>
+                              <Col xs={24}>
+                                <h6>Early May</h6>
+                                <p>
+                                  Before raising any sponsorship, to cover the
+                                  initial costs of the Station, Æthos surveys 25
+                                  early movers to see what they could
+                                  contribute. The initial average lands $5 under
+                                  our target.
+                                </p>
+                                <Link href="/visions">
+                                  Read the full vision statement here
+                                </Link>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                      {
+                        label: (
+                          <Row className="py-5">
                             <Col xs={24}>
                               <img
                                 className="img-fluid"
@@ -519,23 +279,27 @@ export default function Header({ onJoinUsClick }) {
                                 alt=""
                               />
                             </Col>
-                            <Col xs={24}>
-                              <h6>May 14</h6>
-                              <p>
-                                The 7th floor space opens as Æthos Station
-                                ground zero and first members begin signing up
-                                and moving in!
-                              </p>
-                            </Col>
                           </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                    {
-                      children: (
-                        <div className="timelineData">
-                          <Row>
+                        ),
+                        children: (
+                          <div className="timelineData">
+                            <Row>
+                              <Col xs={24}>
+                                <h6>May 14</h6>
+                                <p>
+                                  The 7th floor space opens as Æthos Station
+                                  ground zero and first members begin signing up
+                                  and moving in!
+                                </p>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                      {
+                        label: (
+                          <Row className="py-5">
                             <Col xs={24}>
                               <img
                                 className="img-fluid"
@@ -543,45 +307,55 @@ export default function Header({ onJoinUsClick }) {
                                 alt=""
                               />
                             </Col>
+                          </Row>
+                        ),
+                        children: (
+                          <div className="timelineData">
+                            <Row>
+                              <Col xs={24}>
+                                <h6>May 30th</h6>
+                                <p>
+                                  Æthos leads a community ideation session on AI
+                                  in Public Health, our first public event at
+                                  Venture Café (2 Floors below the Station)
+                                </p>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                      {
+                        label: (
+                          <Row className="py-5">
                             <Col xs={24}>
-                              <h6>May 30th</h6>
-                              <p>
-                                Æthos leads a community ideation session on AI
-                                in Public Health, our first public event at
-                                Venture Café
-                              </p>
+                              <img
+                                className="img-fluid"
+                                src="/images/image-31.png"
+                                alt=""
+                              />
                             </Col>
                           </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                    {
-                      children: (
-                        <div className="timelineData">
-                          <Col xs={24}>
-                            <img
-                              className="img-fluid"
-                              src="/images/image-31.png"
-                              alt=""
-                            />
-                          </Col>
-                          <Row>
-                            <Col xs={24}>
-                              <h6>June 20th</h6>
-                              <p>
-                                First Community night with a demo from storyfave
-                              </p>
-                            </Col>
-                          </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                    {
-                      children: (
-                        <div className="timelineData">
-                          <Row>
+                        ),
+                        children: (
+                          <div className="timelineData">
+                            <Row>
+                              <Col xs={24}>
+                                <h6>June 20th</h6>
+                                <p>
+                                  The first community dinner in the Station
+                                  brings together the early movers over temaki
+                                  sushi and a demo from Storyfave
+                                </p>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                      {
+                        label: (
+                          <Row className="py-5">
                             <Col xs={24}>
                               <img
                                 className="img-fluid"
@@ -589,27 +363,286 @@ export default function Header({ onJoinUsClick }) {
                                 alt=""
                               />
                             </Col>
-                            <Col xs={24}>
-                              <h6>June 27th</h6>
-                              <p>
-                                Part II of AI for public health at Venture Café.
-                                CIC announces grant programme to support ai
-                                innovation towards public health and Æthos
-                                announces early collaborations with (list of
-                                first sponsors)
-                              </p>
-                            </Col>
                           </Row>
-                        </div>
-                      ),
-                      color: "#FFF",
-                    },
-                  ]}
-                />
-              </Col>
-            </Row>
-          </Wrapper>
-        </div>
+                        ),
+                        children: (
+                          <div className="timelineData">
+                            <Row>
+                              <Col xs={24}>
+                                <h6>June 27th</h6>
+                                <p>
+                                  Æthos hosts the second part of the AI for
+                                  public health event series and opens
+                                  applications to the CIC MAHI grant{" "}
+                                  <Link href="/apply-now">
+                                    https://aethos.org/apply-now.
+                                  </Link>{" "}
+                                  Early collaborators are announced such as
+                                  Forum VC, Google Cloud, and Augmentation Lab.
+                                </p>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                    ]}
+                  />
+                  <XTimelineMob
+                    className="d-block d-sm-none"
+                    items={[
+                      {
+                        children: (
+                          <div className="timelineData">
+                            <Row>
+                              <Col xs={24}>
+                                <img
+                                  className="img-fluid"
+                                  src="/images/image-24.png"
+                                  alt=""
+                                />
+                              </Col>
+                              <Col xs={24}>
+                                <h6>March 17th</h6>
+                                <p>
+                                  Sam Rowe lands back in Cambridge from Vienna
+                                  and begins exploring what it would take to
+                                  build a values based community for AI
+                                </p>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                      {
+                        children: (
+                          <div className="timelineData">
+                            <Row>
+                              <Col xs={24}>
+                                <img
+                                  className="img-fluid"
+                                  src="/images/image-25.png"
+                                  alt=""
+                                />
+                              </Col>
+                              <Col xs={24}>
+                                <h6>Late March - early April</h6>
+                                <p>
+                                  Sam interviews 50+ AI founders who tell him
+                                  about their experience building in Boston and
+                                  how they imagine a community could support
+                                  them on their journey. Several members of the
+                                  current team emerge from this process!
+                                </p>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                      {
+                        children: (
+                          <div className="timelineData">
+                            <Row>
+                              <Col xs={24}>
+                                <img
+                                  className="img-fluid"
+                                  src="/images/image-26.png"
+                                  alt=""
+                                />
+                              </Col>
+                              <Col xs={24}>
+                                <h6>April 16</h6>
+                                <p>
+                                  The name Æthos is chosen, a volunteer team
+                                  forms, Æthos incorporates as a Massachusetts
+                                  Benefit Corporation with no shareholders, a
+                                  domain is purchased and a logo is picked.
+                                </p>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                      {
+                        children: (
+                          <div className="timelineData">
+                            <Col xs={24}>
+                              <img
+                                className="img-fluid"
+                                src="/images/image-27.png"
+                                alt=""
+                              />
+                            </Col>
+                            <Row>
+                              <Col xs={24}>
+                                <h6>April 24</h6>
+                                <p>
+                                  Café Æthos is approved by the Cambridge
+                                  Redevelopment Authority to go in Kendall
+                                  Square, licensing and installation will
+                                  hopefully complete in early Fall.
+                                </p>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                      {
+                        children: (
+                          <div className="timelineData">
+                            <Col xs={24}>
+                              <img
+                                className="img-fluid"
+                                src="/images/image-28.png"
+                                alt=""
+                              />
+                            </Col>
+                            <Row>
+                              <Col xs={24}>
+                                <h6>Early May</h6>
+                                <p>
+                                  Before raising any sponsorship, to cover the
+                                  initial costs of the Station, Æthos surveys 25
+                                  early movers to see what they could
+                                  contribute. The initial average lands $5 under
+                                  our target.
+                                </p>
+                                <Link href="/visions">
+                                  Read the full vision statement here
+                                </Link>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                      {
+                        children: (
+                          <div className="timelineData">
+                            <Row>
+                              <Col xs={24}>
+                                <img
+                                  className="img-fluid"
+                                  src="/images/image-29.png"
+                                  alt=""
+                                />
+                              </Col>
+                              <Col xs={24}>
+                                <h6>May 14</h6>
+                                <p>
+                                  The 7th floor space opens as Æthos Station
+                                  ground zero and first members begin signing up
+                                  and moving in!
+                                </p>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                      {
+                        children: (
+                          <div className="timelineData">
+                            <Row>
+                              <Col xs={24}>
+                                <img
+                                  className="img-fluid"
+                                  src="/images/image-30.png"
+                                  alt=""
+                                />
+                              </Col>
+                              <Col xs={24}>
+                                <h6>May 30th</h6>
+                                <p>
+                                  Æthos leads a community ideation session on AI
+                                  in Public Health, our first public event at
+                                  Venture Café (2 Floors below the Station)
+                                </p>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                      {
+                        children: (
+                          <div className="timelineData">
+                            <Col xs={24}>
+                              <img
+                                className="img-fluid"
+                                src="/images/image-31.png"
+                                alt=""
+                              />
+                            </Col>
+                            <Row>
+                              <Col xs={24}>
+                                <h6>June 20th</h6>
+                                <p>
+                                  The first community dinner in the Station
+                                  brings together the early movers over temaki
+                                  sushi and a demo from Storyfave
+                                </p>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                      {
+                        children: (
+                          <div className="timelineData">
+                            <Row>
+                              <Col xs={24}>
+                                <img
+                                  className="img-fluid"
+                                  src="/images/image-32.png"
+                                  alt=""
+                                />
+                              </Col>
+                              <Col xs={24}>
+                                <h6>June 27th</h6>
+                                <p>
+                                  Æthos hosts the second part of the AI for
+                                  public health event series and opens
+                                  applications to the CIC MAHI grant{" "}
+                                  <Link href="/apply-now">
+                                    https://aethos.org/apply-now.
+                                  </Link>{" "}
+                                  Early collaborators are announced such as
+                                  Forum VC, Google Cloud, and Augmentation Lab.
+                                </p>
+                              </Col>
+                            </Row>
+                          </div>
+                        ),
+                        color: "#FFF",
+                      },
+                    ]}
+                  />
+                </Col>
+                <Col xs={24} className="text-center mt-5">
+                  <ScrollAnimation
+                    animateOnce={true}
+                    duration={2}
+                    animateIn="fadeIn"
+                  >
+                    <img
+                      className="img-fluid m-auto"
+                      width={1237}
+                      height={767}
+                      src="/images/hero-story.png"
+                      alt=""
+                    />
+                  </ScrollAnimation>
+                </Col>
+              </Row>
+            </Wrapper>
+          </div>
+        </HeroStory>
         {/* <Gallery /> */}
       </StoryWrap>
       {/* <Connect /> */}

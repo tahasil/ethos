@@ -172,7 +172,7 @@ button.headerBtn {
 .timelineFocys:before {
   content: "";
   position: absolute;
-  top: 2%;
+  top: 15%;
   left: 0;
   min-width: 500px;
   min-height: 1200px;
