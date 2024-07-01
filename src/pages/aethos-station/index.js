@@ -398,14 +398,6 @@ const steps = [
             </Form.Item>
           </Col>
           <Col xs={24}>
-            <Form.Item>
-              <XInputPage
-                placeholder="How many hours per week are you and your team  currently able to spend on your venture?"
-                size="large"
-              />
-            </Form.Item>
-          </Col>
-          <Col xs={24}>
             <TitleForm>
               We estimate monthly operating costs at roughly $1,000/mo per
               person. Our goal as a non profit, however, is to cover initial
