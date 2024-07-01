@@ -143,6 +143,9 @@ export const XFormData = styled.section`
       margin-left: 15px;
     }
   }
+  a {
+    color: #51b29c;
+  }
   @media only screen and (max-width: 768.99px) {
   }
 `;
